@@ -215,7 +215,7 @@ export default function Navbar() {
                   {/* Dropdown */}
                   {item.children && openDropdown === item.label && (
                     <div
-                      className="absolute top-full left-0 min-w-[240px] bg-white rounded-xl shadow-xl shadow-black/10 border border-gray-100 z-50 overflow-hidden"
+                      className="absolute top-full left-0 min-w-[240px] bg-white rounded-xl shadow-xl shadow-black/10 border border-gray-100 z-50"
                       style={{ transform: "translateY(4px)" }}
                     >
                       {/* Blue top accent */}
