@@ -14,7 +14,13 @@ const eyeTests = [
   { label: "Tonometry", href: "/services/tonometry" },
   { label: "Visual Field Test", href: "/services/visual-field" },
   { label: "A-Scan Ultrasound", href: "/services/a-scan" },
-  { label: "Automated Refraction", href: "/services/automated-refraction" },
+  { label: "Automated Refraction", href: "/services/automated-refractor" },
+  { label: "Lens Meter", href: "/services/lens-meter" },
+];
+
+const laserTreatments = [
+  { label: "Argon Laser Trabeculoplasty (ALT)", href: "/services/argon-laser" },
+  { label: "Yag Laser", href: "/services/yag-laser" },
 ];
 
 const navItems = [
@@ -43,7 +49,7 @@ const navItems = [
       { label: "Cornea Transplant", href: "/services/cornea" },
       { label: "Optic Department", href: "/services/optic" },
       { label: "General Eye Examination", href: "/services/general-exam" },
-      { label: "Laser Treatments", href: "/services/laser", sub: eyeTests },
+      { label: "Laser Treatments", href: "/services/laser", sub: laserTreatments },
     ],
   },
   {
@@ -59,6 +65,7 @@ const navItems = [
     label: "News",
     href: "/news",
     children: [
+      { label: "Blog", href: "/news/blog" },
       { label: "Eye Conditions", href: "/news/eye-conditions" },
       { label: "Publications", href: "/news/publications" },
       { label: "Gallery", href: "/news/gallery" },
@@ -116,6 +123,7 @@ function DropdownItem({ item }: { item: typeof navItems[0] }) {
 export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [mobileExpanded, setMobileExpanded] = useState<string | null>(null);
+  const [mobileSubExpanded, setMobileSubExpanded] = useState<string | null>(null);
   const [scrolled, setScrolled] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
   const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
@@ -292,17 +300,49 @@ export default function Navbar() {
                 </div>
                 {item.children && mobileExpanded === item.label && (
                   <div className="pl-4 pb-2">
-                    {item.children.map((child) => (
-                      <Link
-                        key={child.label}
-                        href={child.href}
-                        onClick={() => setMobileOpen(false)}
-                        className="block py-2 text-[#6b7280] hover:text-[#1a2a6c] text-sm"
-                        style={{ fontFamily: "'Poppins', sans-serif" }}
-                      >
-                        {child.label}
-                      </Link>
-                    ))}
+                    {item.children.map((child) => {
+                      const hasSub = "sub" in child && child.sub && child.sub.length > 0;
+                      return (
+                        <div key={child.label}>
+                          <div className="flex items-center justify-between">
+                            <Link
+                              href={child.href}
+                              onClick={() => !hasSub && setMobileOpen(false)}
+                              className="flex-1 py-2 text-[#6b7280] hover:text-[#1a2a6c] text-sm"
+                              style={{ fontFamily: "'Poppins', sans-serif" }}
+                            >
+                              {child.label}
+                            </Link>
+                            {hasSub && (
+                              <button
+                                onClick={() => setMobileSubExpanded(mobileSubExpanded === child.label ? null : child.label)}
+                                className="p-1.5 text-gray-400"
+                              >
+                                <ChevronDown
+                                  size={14}
+                                  className={`transition-transform ${mobileSubExpanded === child.label ? "rotate-180" : ""}`}
+                                />
+                              </button>
+                            )}
+                          </div>
+                          {hasSub && mobileSubExpanded === child.label && (
+                            <div className="pl-4 pb-1">
+                              {child.sub!.map((s) => (
+                                <Link
+                                  key={s.label}
+                                  href={s.href}
+                                  onClick={() => setMobileOpen(false)}
+                                  className="block py-1.5 text-[#6b7280] hover:text-[#1a2a6c] text-xs"
+                                  style={{ fontFamily: "'Poppins', sans-serif" }}
+                                >
+                                  {s.label}
+                                </Link>
+                              ))}
+                            </div>
+                          )}
+                        </div>
+                      );
+                    })}
                   </div>
                 )}
               </div>

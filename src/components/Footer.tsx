@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { MapPin, Phone, Mail, Clock, Share2, Camera, Send, PlayCircle } from "lucide-react";
+import InstagramIcon from "./InstagramIcon";
 
 const quickLinks = [
   { label: "Home", href: "/" },
@@ -73,12 +74,20 @@ export default function Footer() {
             </ul>
 
             <div className="flex gap-2.5">
-              {[Share2, Camera, Send, PlayCircle].map((Icon, i) => (
-                <a key={i} href="#"
-                  className="w-8 h-8 rounded-full bg-white/10 hover:bg-[#e62d26] flex items-center justify-center text-white/50 hover:text-white transition-all">
-                  <Icon size={14} />
-                </a>
-              ))}
+              <a href="https://www.instagram.com/internationaleyehospital/" target="_blank" rel="noopener noreferrer"
+                className="w-8 h-8 rounded-full bg-white/10 hover:bg-[#e62d26] flex items-center justify-center text-white/50 hover:text-white transition-all"
+                title="@internationaleyehospital">
+                <InstagramIcon size={14} />
+              </a>
+              <a href="#" className="w-8 h-8 rounded-full bg-white/10 hover:bg-[#e62d26] flex items-center justify-center text-white/50 hover:text-white transition-all">
+                <Camera size={14} />
+              </a>
+              <a href="#" className="w-8 h-8 rounded-full bg-white/10 hover:bg-[#e62d26] flex items-center justify-center text-white/50 hover:text-white transition-all">
+                <Send size={14} />
+              </a>
+              <a href="#" className="w-8 h-8 rounded-full bg-white/10 hover:bg-[#e62d26] flex items-center justify-center text-white/50 hover:text-white transition-all">
+                <PlayCircle size={14} />
+              </a>
             </div>
           </div>
 

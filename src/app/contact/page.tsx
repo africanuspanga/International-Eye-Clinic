@@ -3,6 +3,7 @@ import Footer from "@/components/Footer";
 import WhatsApp from "@/components/WhatsApp";
 import PageHero from "@/components/PageHero";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
+import InstagramIcon from "@/components/InstagramIcon";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -55,6 +56,12 @@ export default function ContactPage() {
                     title: "Email",
                     lines: ["info@eye.co.tz"],
                     href: "mailto:info@eye.co.tz",
+                  },
+                  {
+                    icon: InstagramIcon,
+                    title: "Instagram",
+                    lines: ["@internationaleyehospital"],
+                    href: "https://www.instagram.com/internationaleyehospital/",
                   },
                 ].map((c) => {
                   const Icon = c.icon;

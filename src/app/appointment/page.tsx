@@ -8,7 +8,11 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Book Appointment | International Eye Hospital",
-  description: "Book an appointment with our specialist ophthalmologists at International Eye Hospital, Dar es Salaam.",
+  description: "Book an appointment online with our specialist ophthalmologists at International Eye Hospital, Dar es Salaam. Call +255 784 104 300.",
+  openGraph: {
+    title: "Book Appointment | International Eye Hospital",
+    description: "Schedule your eye consultation with internationally trained ophthalmologists in Dar es Salaam.",
+  },
 };
 
 export default function AppointmentPage() {

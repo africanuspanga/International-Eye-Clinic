@@ -9,7 +9,11 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "About Us | International Eye Hospital",
-  description: "Learn about International Eye Hospital — our mission, values, quality policy, and commitment to world-class eye care in Tanzania.",
+  description: "Learn about International Eye Hospital — our mission, values, quality policy, and commitment to world-class eye care in Tanzania since 2014.",
+  openGraph: {
+    title: "About Us | International Eye Hospital",
+    description: "Our mission, values, quality policy, and commitment to world-class eye care in Tanzania.",
+  },
 };
 
 const values = [
