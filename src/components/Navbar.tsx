@@ -57,7 +57,9 @@ const navItems = [
     children: [
       { label: "Dr. Muammer Coskun", href: "/doctors/muammer-coskun" },
       { label: "Dr. Vangilisasi Msola", href: "/doctors/vangilisasi-msola" },
+      { label: "Dr. Zayd Mohamed Sangey", href: "/doctors/zayd-sangey" },
       { label: "Harley H. Mkini", href: "/doctors/harley-mkini" },
+      { label: "Michael Machimu", href: "/doctors/michael-machimu" },
     ],
   },
   {

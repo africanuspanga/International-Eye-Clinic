@@ -9,7 +9,9 @@ const doctorOptions = [
   "Any Available Doctor",
   "Dr. Muammer Coskun",
   "Dr. Vangilisasi Msola",
+  "Dr. Zayd Mohamed Sangey",
   "Harley H. Mkini",
+  "Michael Machimu",
 ];
 
 const serviceOptions = [
