@@ -107,7 +107,7 @@ export default function WhyUsPage() {
                 <div className="mt-8">
                   <Link
                     href="/appointment"
-                    className="inline-flex items-center gap-2 bg-[#e62d26] hover:bg-[#c4201a] text-white font-semibold px-7 py-3.5 rounded-full transition-colors"
+                    className="inline-flex items-center gap-2 bg-[#1a2a6c] hover:bg-[#243688] text-white font-semibold px-7 py-3.5 rounded-full transition-colors"
                     style={{ fontFamily: "'Poppins', sans-serif" }}
                   >
                     Book Appointment <ArrowRight size={16} />
@@ -118,13 +118,13 @@ export default function WhyUsPage() {
               <div className="relative">
                 <div className="relative rounded-2xl overflow-hidden shadow-xl aspect-[4/5]">
                   <Image
-                    src="/images/lasik 1.jpg"
-                    alt="Advanced laser eye treatment at International Eye Hospital"
+                    src="/images/eye examination 8.jpg"
+                    alt="Advanced eye treatment at International Eye Hospital"
                     fill
                     className="object-cover"
                   />
                 </div>
-                <div className="absolute -bottom-5 -left-5 bg-[#1a2a6c] text-white rounded-2xl p-5 shadow-xl">
+                <div className="absolute -bottom-5 -left-5 bg-[#e62d26] text-white rounded-2xl p-5 shadow-xl">
                   <div
                     className="text-3xl font-bold"
                     style={{ fontFamily: "'Merriweather', serif" }}
@@ -163,8 +163,8 @@ export default function WhyUsPage() {
                     key={r.title}
                     className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 hover-lift"
                   >
-                    <div className="w-12 h-12 bg-[#e8edf7] rounded-xl flex items-center justify-center mb-4">
-                      <Icon size={22} className="text-[#1a2a6c]" />
+                    <div className="w-12 h-12 bg-[#fdecea] rounded-xl flex items-center justify-center mb-4">
+                      <Icon size={22} className="text-[#e62d26]" />
                     </div>
                     <h3
                       className="font-bold text-[#111827] mb-2 text-sm"
@@ -185,7 +185,7 @@ export default function WhyUsPage() {
           </div>
         </section>
 
-        <section className="py-16 bg-[#1a2a6c]">
+        <section className="py-16 bg-[#e62d26]">
           <div className="max-w-3xl mx-auto px-6 text-center">
             <h2
               className="text-4xl font-bold text-white mb-4"
@@ -201,7 +201,7 @@ export default function WhyUsPage() {
             </p>
             <Link
               href="/appointment"
-              className="inline-flex items-center gap-2 bg-[#e62d26] hover:bg-[#c4201a] text-white font-semibold px-8 py-3.5 rounded-full transition-colors"
+              className="inline-flex items-center gap-2 bg-[#1a2a6c] hover:bg-[#243688] text-white font-semibold px-8 py-3.5 rounded-full transition-colors"
               style={{ fontFamily: "'Poppins', sans-serif" }}
             >
               Book Appointment <ArrowRight size={16} />

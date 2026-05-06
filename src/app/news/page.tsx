@@ -14,10 +14,10 @@ export const metadata: Metadata = {
 };
 
 const categories = [
-  { icon: BookOpen, label: "Eye Health Blog", href: "/news/blog", desc: "Evidence-based articles and tips from our ophthalmologists — simple 3-minute reads.", color: "bg-[#e8edf7] text-[#1a2a6c]" },
+  { icon: BookOpen, label: "Eye Health Blog", href: "/news/blog", desc: "Evidence-based articles and tips from our ophthalmologists — simple 3-minute reads.", color: "bg-[#fdecea] text-[#e62d26]" },
   { icon: ImageIcon, label: "Gallery", href: "/news/gallery", desc: "Photos of our facilities, equipment, staff, and community outreach programs.", color: "bg-purple-50 text-purple-600" },
   { icon: FileText, label: "Publications", href: "/news/publications", desc: "Medical publications, research, and updates from our specialist doctors.", color: "bg-green-50 text-green-600" },
-  { icon: Video, label: "Videos", href: "/news/videos", desc: "Educational videos about eye care, surgical procedures, and patient stories.", color: "bg-red-50 text-red-600" },
+  { icon: Video, label: "Videos", href: "/news/videos", desc: "Educational videos about eye care, surgical procedures, and patient stories.", color: "bg-blue-50 text-blue-600" },
   { icon: Star, label: "Testimonies", href: "/news/testimonies", desc: "Real stories from patients who have experienced life-changing care at our hospital.", color: "bg-amber-50 text-amber-600" },
   { icon: Download, label: "Brochures", href: "/news/brochures", desc: "Download patient guides, service brochures, and health information booklets.", color: "bg-teal-50 text-teal-600" },
 ];
@@ -46,7 +46,7 @@ export default function NewsPage() {
                 </h2>
               </div>
               <Link href="/news/blog"
-                className="inline-flex items-center gap-2 text-[#1a2a6c] font-semibold text-sm hover:gap-3 transition-all"
+                className="inline-flex items-center gap-2 text-[#e62d26] font-semibold text-sm hover:gap-3 transition-all"
                 style={{ fontFamily: "'Poppins', sans-serif" }}>
                 View All Articles <ArrowRight size={14} />
               </Link>
@@ -54,11 +54,11 @@ export default function NewsPage() {
             <div className="grid md:grid-cols-3 gap-7">
               {blogPosts.map((post) => (
                 <Link key={post.slug} href={`/news/blog/${post.slug}`}
-                  className="group bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl hover:shadow-black/8 hover:border-[#1a2a6c]/20 transition-all overflow-hidden hover-lift">
+                  className="group bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl hover:shadow-black/8 hover:border-[#e62d26]/20 transition-all overflow-hidden hover-lift">
                   <div className="relative h-48 overflow-hidden">
                     <Image src={post.image} alt={post.title} fill className="object-cover group-hover:scale-105 transition-transform duration-500" sizes="33vw" />
                     <div className="absolute top-3 left-3">
-                      <span className="bg-[#e62d26] text-white text-xs font-semibold px-3 py-1 rounded-full" style={{ fontFamily: "'Poppins', sans-serif" }}>
+                      <span className="bg-[#1a2a6c] text-white text-xs font-semibold px-3 py-1 rounded-full" style={{ fontFamily: "'Poppins', sans-serif" }}>
                         {post.category}
                       </span>
                     </div>
@@ -67,10 +67,10 @@ export default function NewsPage() {
                     <div className="flex items-center gap-2 text-[#6b7280] text-xs mb-2" style={{ fontFamily: "'Poppins', sans-serif" }}>
                       <Clock size={11} /> {post.readTime} · {post.date}
                     </div>
-                    <h3 className="font-bold text-[#111827] text-sm leading-snug mb-3 group-hover:text-[#1a2a6c] transition-colors" style={{ fontFamily: "'Poppins', sans-serif" }}>
+                    <h3 className="font-bold text-[#111827] text-sm leading-snug mb-3 group-hover:text-[#e62d26] transition-colors" style={{ fontFamily: "'Poppins', sans-serif" }}>
                       {post.title}
                     </h3>
-                    <div className="flex items-center gap-1.5 text-[#1a2a6c] text-sm font-semibold group-hover:gap-2.5 transition-all" style={{ fontFamily: "'Poppins', sans-serif" }}>
+                    <div className="flex items-center gap-1.5 text-[#e62d26] text-sm font-semibold group-hover:gap-2.5 transition-all" style={{ fontFamily: "'Poppins', sans-serif" }}>
                       Read Article <ArrowRight size={13} />
                     </div>
                   </div>
@@ -94,11 +94,11 @@ export default function NewsPage() {
                 const Icon = c.icon;
                 return (
                   <Link key={c.label} href={c.href}
-                    className="group bg-white border border-gray-100 rounded-2xl p-7 hover:shadow-xl hover:shadow-black/8 hover:border-[#1a2a6c]/20 transition-all hover-lift">
+                    className="group bg-white border border-gray-100 rounded-2xl p-7 hover:shadow-xl hover:shadow-black/8 hover:border-[#e62d26]/20 transition-all hover-lift">
                     <div className={`w-12 h-12 rounded-xl flex items-center justify-center mb-5 ${c.color}`}>
                       <Icon size={22} />
                     </div>
-                    <h3 className="font-bold text-[#111827] text-lg mb-2 group-hover:text-[#1a2a6c] transition-colors" style={{ fontFamily: "'Poppins', sans-serif" }}>
+                    <h3 className="font-bold text-[#111827] text-lg mb-2 group-hover:text-[#e62d26] transition-colors" style={{ fontFamily: "'Poppins', sans-serif" }}>
                       {c.label}
                     </h3>
                     <p className="text-[#6b7280] text-sm leading-relaxed" style={{ fontFamily: "'Poppins', sans-serif" }}>
@@ -111,7 +111,7 @@ export default function NewsPage() {
           </div>
         </section>
 
-        <section className="py-16 bg-[#1a2a6c]">
+        <section className="py-16 bg-[#e62d26]">
           <div className="max-w-3xl mx-auto px-6 text-center">
             <h2 className="text-4xl font-bold text-white mb-4" style={{ fontFamily: "'Merriweather', serif" }}>
               Have an Eye Health Question?
@@ -120,7 +120,7 @@ export default function NewsPage() {
               Our specialists are happy to answer your questions — book a consultation today.
             </p>
             <Link href="/appointment"
-              className="inline-block bg-[#e62d26] hover:bg-[#c4201a] text-white font-semibold px-8 py-3.5 rounded-full text-sm transition-colors"
+              className="inline-block bg-[#1a2a6c] hover:bg-[#243688] text-white font-semibold px-8 py-3.5 rounded-full text-sm transition-colors"
               style={{ fontFamily: "'Poppins', sans-serif" }}>
               Book Consultation
             </Link>

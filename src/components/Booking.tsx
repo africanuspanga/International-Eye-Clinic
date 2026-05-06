@@ -3,10 +3,9 @@
 import { useState } from "react";
 import { Calendar, User, Phone, Mail, ChevronRight, CheckCircle2 } from "lucide-react";
 
-const doctors = ["Prof. Dr. A. Bulent Guler", "Dr. Eye Specialist", "Dr. Senior Consultant"];
+const doctors = ["Dr. Muammer Coskun", "Dr. Vangilisasi Msola", "Dr. Zayd Mohamed Sangey", "Harley H. Mkini", "Michael Machimu"];
 const services = [
   "Cataract Surgery Consultation",
-  "LASIK Evaluation",
   "Glaucoma Check",
   "Retina Examination",
   "Cornea Assessment",
@@ -46,7 +45,7 @@ export default function Booking() {
   };
 
   return (
-    <section id="booking" className="relative py-28 bg-[#1a2a6c] overflow-hidden">
+    <section id="booking" className="relative py-28 bg-[#e62d26] overflow-hidden">
       {/* BG decoration */}
       <div
         className="absolute inset-0 opacity-[0.04]"
@@ -150,7 +149,7 @@ export default function Booking() {
                           onClick={() => step > s.n && setStep(s.n as Step)}
                           className={`w-8 h-8 rounded-full flex items-center justify-center text-xs font-bold font-[family-name:var(--font-dm-sans)] transition-all duration-300 ${
                             step >= s.n
-                              ? "bg-[#c49a3c] text-[#1a2a6c]"
+                              ? "bg-[#c49a3c] text-[#e62d26]"
                               : "bg-white/10 text-white/30"
                           }`}
                         >
@@ -200,7 +199,7 @@ export default function Booking() {
                         type="button"
                         disabled={!form.doctor}
                         onClick={() => setStep(2)}
-                        className="w-full flex items-center justify-center gap-2 bg-[#c49a3c] disabled:opacity-30 text-[#1a2a6c] font-semibold font-[family-name:var(--font-dm-sans)] py-3.5 rounded-xl transition-all duration-300 hover:bg-[#deb96a]"
+                        className="w-full flex items-center justify-center gap-2 bg-[#c49a3c] disabled:opacity-30 text-[#e62d26] font-semibold font-[family-name:var(--font-dm-sans)] py-3.5 rounded-xl transition-all duration-300 hover:bg-[#deb96a]"
                       >
                         Continue <ChevronRight size={16} />
                       </button>
@@ -217,9 +216,9 @@ export default function Booking() {
                         onChange={(e) => update("service", e.target.value)}
                         className="w-full bg-white/5 border border-white/20 rounded-xl px-4 py-3.5 text-white font-[family-name:var(--font-dm-sans)] text-sm focus:outline-none focus:border-[#c49a3c] transition-colors"
                       >
-                        <option value="" className="bg-[#1a2a6c] text-white">Select a service...</option>
+                        <option value="" className="bg-[#e62d26] text-white">Select a service...</option>
                         {services.map((s) => (
-                          <option key={s} value={s} className="bg-[#1a2a6c] text-white">{s}</option>
+                          <option key={s} value={s} className="bg-[#e62d26] text-white">{s}</option>
                         ))}
                       </select>
                       <div className="flex gap-3">
@@ -230,7 +229,7 @@ export default function Booking() {
                           type="button"
                           disabled={!form.service}
                           onClick={() => setStep(3)}
-                          className="flex-1 flex items-center justify-center gap-2 bg-[#c49a3c] disabled:opacity-30 text-[#1a2a6c] font-semibold font-[family-name:var(--font-dm-sans)] py-3.5 rounded-xl hover:bg-[#deb96a] transition-colors"
+                          className="flex-1 flex items-center justify-center gap-2 bg-[#c49a3c] disabled:opacity-30 text-[#e62d26] font-semibold font-[family-name:var(--font-dm-sans)] py-3.5 rounded-xl hover:bg-[#deb96a] transition-colors"
                         >
                           Continue <ChevronRight size={16} />
                         </button>
@@ -263,7 +262,7 @@ export default function Booking() {
                               onClick={() => update("time", t)}
                               className={`py-2.5 rounded-lg text-xs font-[family-name:var(--font-dm-sans)] transition-all ${
                                 form.time === t
-                                  ? "bg-[#c49a3c] text-[#1a2a6c] font-semibold"
+                                  ? "bg-[#c49a3c] text-[#e62d26] font-semibold"
                                   : "bg-white/5 border border-white/10 text-white/60 hover:bg-white/10"
                               }`}
                             >
@@ -280,7 +279,7 @@ export default function Booking() {
                           type="button"
                           disabled={!form.date || !form.time}
                           onClick={() => setStep(4)}
-                          className="flex-1 flex items-center justify-center gap-2 bg-[#c49a3c] disabled:opacity-30 text-[#1a2a6c] font-semibold font-[family-name:var(--font-dm-sans)] py-3.5 rounded-xl hover:bg-[#deb96a] transition-colors"
+                          className="flex-1 flex items-center justify-center gap-2 bg-[#c49a3c] disabled:opacity-30 text-[#e62d26] font-semibold font-[family-name:var(--font-dm-sans)] py-3.5 rounded-xl hover:bg-[#deb96a] transition-colors"
                         >
                           Continue <ChevronRight size={16} />
                         </button>
@@ -341,7 +340,7 @@ export default function Booking() {
                         <button
                           type="submit"
                           disabled={!form.name || !form.phone}
-                          className="flex-1 flex items-center justify-center gap-2 bg-[#c49a3c] disabled:opacity-30 text-[#1a2a6c] font-bold font-[family-name:var(--font-dm-sans)] py-3.5 rounded-xl hover:bg-[#deb96a] transition-colors"
+                          className="flex-1 flex items-center justify-center gap-2 bg-[#c49a3c] disabled:opacity-30 text-[#e62d26] font-bold font-[family-name:var(--font-dm-sans)] py-3.5 rounded-xl hover:bg-[#deb96a] transition-colors"
                         >
                           <Calendar size={16} />
                           Confirm Booking

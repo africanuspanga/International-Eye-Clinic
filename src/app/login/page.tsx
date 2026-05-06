@@ -38,7 +38,7 @@ export default function LoginPage() {
       <div className="w-full max-w-md">
         <div className="bg-white rounded-2xl shadow-xl border border-gray-100 p-8">
           <div className="flex items-center justify-center mb-8">
-            <div className="w-14 h-14 rounded-2xl bg-[#1a2a6c] flex items-center justify-center text-white">
+            <div className="w-14 h-14 rounded-2xl bg-[#e62d26] flex items-center justify-center text-white">
               <Eye size={28} />
             </div>
           </div>
@@ -56,7 +56,7 @@ export default function LoginPage() {
           </p>
 
           {error && (
-            <div className="bg-red-50 text-red-600 text-sm rounded-xl p-4 mb-6">
+            <div className="bg-blue-50 text-blue-600 text-sm rounded-xl p-4 mb-6">
               {error}
             </div>
           )}
@@ -74,7 +74,7 @@ export default function LoginPage() {
                 required
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-[#1a2a6c] focus:ring-2 focus:ring-[#1a2a6c]/10 outline-none transition-all text-sm"
+                className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-[#e62d26] focus:ring-2 focus:ring-[#e62d26]/10 outline-none transition-all text-sm"
                 placeholder="admin@eye.co.tz"
               />
             </div>
@@ -90,14 +90,14 @@ export default function LoginPage() {
                 required
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-[#1a2a6c] focus:ring-2 focus:ring-[#1a2a6c]/10 outline-none transition-all text-sm"
+                className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-[#e62d26] focus:ring-2 focus:ring-[#e62d26]/10 outline-none transition-all text-sm"
                 placeholder="••••••••"
               />
             </div>
             <button
               type="submit"
               disabled={loading}
-              className="w-full bg-[#1a2a6c] hover:bg-[#243688] text-white font-semibold py-3.5 rounded-xl text-sm transition-colors disabled:opacity-50 flex items-center justify-center gap-2"
+              className="w-full bg-[#e62d26] hover:bg-[#c4201a] text-white font-semibold py-3.5 rounded-xl text-sm transition-colors disabled:opacity-50 flex items-center justify-center gap-2"
               style={{ fontFamily: "'Poppins', sans-serif" }}
             >
               {loading ? <Loader2 size={16} className="animate-spin" /> : null}

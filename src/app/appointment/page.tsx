@@ -28,7 +28,7 @@ export default function AppointmentPage() {
           breadcrumbs={[{ label: "Book Appointment", href: "/appointment" }]}
         />
 
-        <section className="py-20 bg-[#f0f4fc]">
+        <section className="py-20 bg-[#fdecea]">
           <div className="max-w-7xl mx-auto px-6">
             <div className="grid lg:grid-cols-5 gap-12 items-start">
               {/* Left panel */}
@@ -48,13 +48,13 @@ export default function AppointmentPage() {
                   const Icon = c.icon;
                   return (
                     <div key={c.title} className="flex items-start gap-4 bg-white rounded-xl p-4 shadow-sm border border-gray-100">
-                      <div className="w-10 h-10 bg-[#1a2a6c] rounded-xl flex items-center justify-center flex-shrink-0">
+                      <div className="w-10 h-10 bg-[#e62d26] rounded-xl flex items-center justify-center flex-shrink-0">
                         <Icon size={16} className="text-white" />
                       </div>
                       <div>
                         <p className="text-xs text-[#6b7280] mb-0.5" style={{ fontFamily: "'Poppins', sans-serif" }}>{c.title}</p>
                         {c.href ? (
-                          <a href={c.href} className="text-[#1a2a6c] font-semibold text-sm hover:underline" style={{ fontFamily: "'Poppins', sans-serif" }}>{c.value}</a>
+                          <a href={c.href} className="text-[#e62d26] font-semibold text-sm hover:underline" style={{ fontFamily: "'Poppins', sans-serif" }}>{c.value}</a>
                         ) : (
                           <p className="text-[#111827] font-medium text-sm" style={{ fontFamily: "'Poppins', sans-serif" }}>{c.value}</p>
                         )}
@@ -63,19 +63,19 @@ export default function AppointmentPage() {
                   );
                 })}
 
-                <div className="flex items-start gap-3 bg-[#fdecea] border border-[#e62d26]/20 rounded-xl p-4">
-                  <AlertCircle size={18} className="text-[#e62d26] flex-shrink-0 mt-0.5" />
+                <div className="flex items-start gap-3 bg-[#e8edf7] border border-[#1a2a6c]/20 rounded-xl p-4">
+                  <AlertCircle size={18} className="text-[#1a2a6c] flex-shrink-0 mt-0.5" />
                   <div>
-                    <p className="font-semibold text-[#e62d26] text-sm mb-1" style={{ fontFamily: "'Poppins', sans-serif" }}>Eye Emergency?</p>
+                    <p className="font-semibold text-[#1a2a6c] text-sm mb-1" style={{ fontFamily: "'Poppins', sans-serif" }}>Eye Emergency?</p>
                     <p className="text-[#374151] text-sm" style={{ fontFamily: "'Poppins', sans-serif" }}>
-                      Call immediately: <a href="tel:+255784104300" className="font-bold text-[#e62d26]">+255 784 104 300</a>
+                      Call immediately: <a href="tel:+255784104300" className="font-bold text-[#1a2a6c]">+255 784 104 300</a>
                     </p>
                   </div>
                 </div>
 
                 {/* Insurance */}
-                <div className="bg-[#e8edf7] rounded-xl p-5">
-                  <p className="font-semibold text-[#1a2a6c] text-sm mb-2" style={{ fontFamily: "'Poppins', sans-serif" }}>Insurance Accepted</p>
+                <div className="bg-[#fdecea] rounded-xl p-5">
+                  <p className="font-semibold text-[#e62d26] text-sm mb-2" style={{ fontFamily: "'Poppins', sans-serif" }}>Insurance Accepted</p>
                   <p className="text-[#6b7280] text-xs leading-relaxed" style={{ fontFamily: "'Poppins', sans-serif" }}>
                     We work with 20+ major insurance providers. Please bring your insurance card and confirm coverage before your appointment.
                   </p>

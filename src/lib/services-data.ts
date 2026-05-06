@@ -40,20 +40,7 @@ Glaucoma can be surely diagnosed through a complete eye examination. A glaucoma 
 Glaucoma damage cannot be reversed, it's permanent. Medicine drops, Laser or Surgical treatment help to stop further damage. International eye hospital have full range of equipment to conduct complete test on glaucoma such as high tech microscopes OCT and visual field machines to provide more accuracy results about glaucoma. We also perform surgery to lower intra ocular pressure in case drops couldn't provide good results.`,
     phone: "+255 787 888 130",
   },
-  {
-    slug: "lasik",
-    title: "LASIK – Refractive Surgery",
-    subtitle: "Advanced laser vision correction to free you from glasses",
-    image: "/images/lasik 1.jpg",
-    content: `The excimer laser is a laser which is being used to treat in ophthalmology refractive errors (Myopia, Hyperopia, and Astigmatism). The device is embedded with advanced computer to produce 193nm wavelength ultraviolet light to precisely remove corneal tissue. When the surface of the cornea is reshaped in the right way, light rays will be directed correctly to the retina for clear vision.
 
-Excimer laser corrects both nearsightedness and farsightedness by flattening the cornea or making the cornea steeper respectively. It also corrects astigmatism by smoothing an irregular cornea into a more symmetrical shape.
-
-The excimer laser devices installed in our hospital is of most developed one thus can control the laser light even if the patient moves her eyes. International eye hospital regularly renew itself with the world latest technology.
-
-Now with Lasik application in your life you have a reason to get rid of glasses and one should know that there is a reliable application to get better view.`,
-    phone: "+255 787 888 130",
-  },
   {
     slug: "retina",
     title: "Retina – Diabetic Retinopathy",
@@ -163,9 +150,7 @@ At International Eye Hospital, our retina specialists use FFA alongside OCT and 
 
 The procedure is quick and completely painless. You simply sit in front of the topography machine and rest your chin on a support. The device projects a series of illuminated rings onto your cornea, and a camera captures how these rings are reflected. A computer then analyzes this data to create a detailed three-dimensional map of your corneal surface. The entire process takes only a few minutes per eye and requires no touching of the eye or use of eye drops in most cases.
 
-Corneal topography is essential for diagnosing and monitoring keratoconus, a progressive condition where the cornea thins and bulges into a cone shape. It is also used to evaluate corneal astigmatism, plan refractive surgeries such as LASIK, fit contact lenses (especially for patients with irregular corneas), assess corneal scars and opacities, and evaluate the effects of corneal transplant surgery. The test can detect early signs of corneal abnormalities before they affect vision significantly.
-
-For patients considering LASIK or other refractive procedures, corneal topography is a critical pre-operative test. It helps ensure the cornea has sufficient thickness and a regular shape for surgery, reducing the risk of complications. After surgery, topography helps monitor healing and the effectiveness of the treatment.
+Corneal topography is essential for diagnosing and monitoring keratoconus, a progressive condition where the cornea thins and bulges into a cone shape. It is also used to evaluate corneal astigmatism, fit contact lenses (especially for patients with irregular corneas), assess corneal scars and opacities, and evaluate the effects of corneal transplant surgery. The test can detect early signs of corneal abnormalities before they affect vision significantly.
 
 At International Eye Hospital, our advanced corneal topography system provides the precision needed for accurate diagnosis, customized contact lens fitting, and safe surgical planning, ensuring the best possible outcomes for your vision.`,
     phone: "+255 784 104 300",
@@ -189,15 +174,13 @@ At International Eye Hospital, we use modern automated keratometers that provide
   {
     slug: "pachymetry",
     title: "Pachymetry",
-    subtitle: "Accurate measurement of corneal thickness for glaucoma and refractive surgery",
+    subtitle: "Accurate measurement of corneal thickness for glaucoma assessment and surgical planning",
     image: "/services images/Pachymetry.jpg",
-    content: `Pachymetry is a simple, painless test that measures the thickness of your cornea — the clear window at the front of the eye. Corneal thickness is an important measurement because it can influence eye pressure readings and affect decisions about refractive surgery. A thin cornea may indicate a higher risk for glaucoma, while corneal thickness measurements are essential for determining candidacy for procedures like LASIK.
+    content: `Pachymetry is a simple, painless test that measures the thickness of your cornea — the clear window at the front of the eye. Corneal thickness is an important measurement because it can influence eye pressure readings. A thin cornea may indicate a higher risk for glaucoma, while corneal thickness measurements are essential for surgical planning.
 
 There are two main types of pachymetry: ultrasonic and optical. Ultrasonic pachymetry uses a small probe that gently touches the surface of the eye after numbing drops are applied. The probe emits sound waves that bounce off the back of the cornea, and the device calculates thickness based on how long the sound takes to return. Optical pachymetry uses light instead of sound and does not require any contact with the eye. Both methods are quick, taking only seconds per eye, and are completely painless.
 
 Pachymetry is especially important in glaucoma diagnosis and management. Eye pressure is measured by how much force is needed to flatten a small area of the cornea. If your cornea is thinner than average, eye pressure may read lower than it actually is, potentially masking glaucoma. Conversely, a thicker cornea may give falsely high readings. Knowing your corneal thickness allows your doctor to interpret eye pressure measurements more accurately and assess your true risk for glaucoma.
-
-Before refractive surgery such as LASIK, pachymetry is essential to ensure there is enough corneal tissue to safely reshape the cornea. Patients with very thin corneas may not be suitable candidates for certain laser procedures and may be offered alternative vision correction options.
 
 At International Eye Hospital, pachymetry is performed as part of our comprehensive glaucoma evaluations and pre-surgical screenings, ensuring accurate diagnoses and safe treatment recommendations.`,
     phone: "+255 784 104 300",

@@ -47,11 +47,12 @@ export default function DoctorDetailPage({ doctor }: Props) {
                 {/* Doctor Card */}
                 <div className="bg-[#f8f9fc] rounded-2xl p-6 sm:p-8 border border-gray-100 mb-10">
                   <div className="flex flex-col sm:flex-row gap-6 items-start">
-                    <div className="relative w-32 h-32 sm:w-40 sm:h-40 rounded-2xl overflow-hidden flex-shrink-0 bg-[#e8edf7]">
+                    <div className="relative w-32 h-32 sm:w-40 sm:h-40 rounded-2xl overflow-hidden flex-shrink-0 bg-[#fdecea]">
                       <Image
                         src={doctor.image}
                         alt={doctor.name}
                         fill
+                        sizes="160px"
                         className="object-cover"
                       />
                     </div>
@@ -63,7 +64,7 @@ export default function DoctorDetailPage({ doctor }: Props) {
                         {doctor.name}
                       </h2>
                       <p
-                        className="text-[#e62d26] font-semibold text-sm mb-3"
+                        className="text-[#1a2a6c] font-semibold text-sm mb-3"
                         style={{ fontFamily: "'Poppins', sans-serif" }}
                       >
                         {doctor.title}
@@ -85,10 +86,10 @@ export default function DoctorDetailPage({ doctor }: Props) {
                     return (
                       <div
                         key={card.label}
-                        className="bg-white rounded-xl border border-gray-100 p-5 hover:border-[#1a2a6c]/20 hover:shadow-sm transition-all"
+                        className="bg-white rounded-xl border border-gray-100 p-5 hover:border-[#e62d26]/20 hover:shadow-sm transition-all"
                       >
                         <div className="flex items-center gap-3 mb-2">
-                          <div className="w-9 h-9 rounded-lg bg-[#e8edf7] flex items-center justify-center text-[#1a2a6c]">
+                          <div className="w-9 h-9 rounded-lg bg-[#fdecea] flex items-center justify-center text-[#e62d26]">
                             <Icon size={16} />
                           </div>
                           <span
@@ -112,7 +113,7 @@ export default function DoctorDetailPage({ doctor }: Props) {
                 {/* Associations */}
                 <div className="bg-white rounded-2xl border border-gray-100 p-6 sm:p-8 mb-10">
                   <div className="flex items-center gap-3 mb-5">
-                    <div className="w-10 h-10 rounded-xl bg-[#e8edf7] flex items-center justify-center text-[#1a2a6c]">
+                    <div className="w-10 h-10 rounded-xl bg-[#fdecea] flex items-center justify-center text-[#e62d26]">
                       <Users size={18} />
                     </div>
                     <h3
@@ -129,7 +130,7 @@ export default function DoctorDetailPage({ doctor }: Props) {
                         className="flex items-start gap-3 text-[#374151] text-sm"
                         style={{ fontFamily: "'Poppins', sans-serif" }}
                       >
-                        <span className="w-1.5 h-1.5 rounded-full bg-[#e62d26] mt-1.5 flex-shrink-0" />
+                        <span className="w-1.5 h-1.5 rounded-full bg-[#1a2a6c] mt-1.5 flex-shrink-0" />
                         {assoc}
                       </li>
                     ))}
@@ -138,7 +139,7 @@ export default function DoctorDetailPage({ doctor }: Props) {
 
                 {/* Additional Info */}
                 {doctor.additionalInfo && (
-                  <div className="bg-[#1a2a6c] rounded-2xl p-6 sm:p-8 text-white relative overflow-hidden">
+                  <div className="bg-[#e62d26] rounded-2xl p-6 sm:p-8 text-white relative overflow-hidden">
                     <div
                       className="absolute inset-0 opacity-[0.05]"
                       style={{
@@ -188,7 +189,7 @@ export default function DoctorDetailPage({ doctor }: Props) {
                     </div>
                     <Link
                       href="/appointment"
-                      className="inline-flex items-center gap-2 bg-[#e62d26] hover:bg-[#c4201a] text-white font-semibold px-6 py-3 rounded-full text-sm transition-colors whitespace-nowrap"
+                      className="inline-flex items-center gap-2 bg-[#1a2a6c] hover:bg-[#243688] text-white font-semibold px-6 py-3 rounded-full text-sm transition-colors whitespace-nowrap"
                       style={{ fontFamily: "'Poppins', sans-serif" }}
                     >
                       <Phone size={15} />
@@ -216,17 +217,18 @@ export default function DoctorDetailPage({ doctor }: Props) {
                           href={`/doctors/${d.slug}`}
                           className="flex items-center gap-3 p-3 rounded-xl hover:bg-[#f5f6fa] transition-colors group"
                         >
-                          <div className="relative w-12 h-12 rounded-xl overflow-hidden bg-[#e8edf7] flex-shrink-0">
+                          <div className="relative w-12 h-12 rounded-xl overflow-hidden bg-[#fdecea] flex-shrink-0">
                             <Image
                               src={d.image}
                               alt={d.name}
                               fill
+                              sizes="48px"
                               className="object-cover"
                             />
                           </div>
                           <div className="min-w-0">
                             <p
-                              className="font-semibold text-[#111827] text-sm group-hover:text-[#1a2a6c] transition-colors truncate"
+                              className="font-semibold text-[#111827] text-sm group-hover:text-[#e62d26] transition-colors truncate"
                               style={{ fontFamily: "'Poppins', sans-serif" }}
                             >
                               {d.name}
@@ -240,7 +242,7 @@ export default function DoctorDetailPage({ doctor }: Props) {
                           </div>
                           <ArrowRight
                             size={14}
-                            className="text-[#9ca3af] group-hover:text-[#1a2a6c] ml-auto flex-shrink-0"
+                            className="text-[#9ca3af] group-hover:text-[#e62d26] ml-auto flex-shrink-0"
                           />
                         </Link>
                       ))}
@@ -248,7 +250,7 @@ export default function DoctorDetailPage({ doctor }: Props) {
                   </div>
 
                   {/* Working Hours */}
-                  <div className="bg-[#1a2a6c] rounded-2xl p-6 text-white">
+                  <div className="bg-[#e62d26] rounded-2xl p-6 text-white">
                     <h4
                       className="font-bold mb-4"
                       style={{ fontFamily: "'Poppins', sans-serif" }}
@@ -269,7 +271,7 @@ export default function DoctorDetailPage({ doctor }: Props) {
                           <span
                             className={
                               h.day === "Sunday"
-                                ? "text-[#e62d26]"
+                                ? "text-[#1a2a6c]"
                                 : "text-white/90"
                             }
                           >
@@ -280,7 +282,7 @@ export default function DoctorDetailPage({ doctor }: Props) {
                     </div>
                     <a
                       href="tel:+255784104300"
-                      className="mt-5 inline-flex items-center gap-2 bg-[#e62d26] hover:bg-[#c4201a] text-white font-semibold px-5 py-2.5 rounded-full text-sm transition-colors w-full justify-center"
+                      className="mt-5 inline-flex items-center gap-2 bg-[#1a2a6c] hover:bg-[#243688] text-white font-semibold px-5 py-2.5 rounded-full text-sm transition-colors w-full justify-center"
                       style={{ fontFamily: "'Poppins', sans-serif" }}
                     >
                       <Phone size={14} /> +255 784 104 300

@@ -78,7 +78,7 @@ export default function ConditionDetailClient({ condition, allConditions }: Prop
         <div className="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between">
           <button
             onClick={toggle}
-            className="inline-flex items-center gap-2 text-[#1a2a6c] font-semibold text-sm hover:text-[#e62d26] transition-colors"
+            className="inline-flex items-center gap-2 text-[#e62d26] font-semibold text-sm hover:text-[#1a2a6c] transition-colors"
             style={{ fontFamily: "'Poppins', sans-serif" }}
           >
             <Languages size={16} />
@@ -100,7 +100,7 @@ export default function ConditionDetailClient({ condition, allConditions }: Prop
                 {/* Mobile toggle */}
                 <button
                   onClick={() => setMobileSidebarOpen(!mobileSidebarOpen)}
-                  className="lg:hidden w-full flex items-center justify-between bg-[#1a2a6c] text-white px-5 py-3.5 rounded-xl text-sm font-semibold mb-3"
+                  className="lg:hidden w-full flex items-center justify-between bg-[#e62d26] text-white px-5 py-3.5 rounded-xl text-sm font-semibold mb-3"
                   style={{ fontFamily: "'Poppins', sans-serif" }}
                 >
                   <span className="flex items-center gap-2">
@@ -114,7 +114,7 @@ export default function ConditionDetailClient({ condition, allConditions }: Prop
                     mobileSidebarOpen ? "block" : "hidden"
                   } lg:block bg-[#f8f9fc] rounded-2xl overflow-hidden border border-gray-100 mb-6`}
                 >
-                  <div className="h-1 bg-[#1a2a6c]" />
+                  <div className="h-1 bg-[#e62d26]" />
                   <div className="p-2">
                     {sections.map((section) => {
                       const Icon = section.icon;
@@ -125,7 +125,7 @@ export default function ConditionDetailClient({ condition, allConditions }: Prop
                           onClick={() => scrollTo(section.id)}
                           className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl text-left text-sm font-medium transition-all ${
                             isActive
-                              ? "bg-[#1a2a6c] text-white shadow-md"
+                              ? "bg-[#e62d26] text-white shadow-md"
                               : "text-[#374151] hover:bg-white hover:shadow-sm"
                           }`}
                           style={{ fontFamily: "'Poppins', sans-serif" }}
@@ -171,10 +171,10 @@ export default function ConditionDetailClient({ condition, allConditions }: Prop
                         <Link
                           key={c.slug}
                           href={`/news/eye-conditions/${c.slug}`}
-                          className="flex items-center gap-2 px-3 py-2 rounded-lg text-sm text-[#6b7280] hover:text-[#1a2a6c] hover:bg-[#f5f6fa] transition-colors"
+                          className="flex items-center gap-2 px-3 py-2 rounded-lg text-sm text-[#6b7280] hover:text-[#e62d26] hover:bg-[#f5f6fa] transition-colors"
                           style={{ fontFamily: "'Poppins', sans-serif" }}
                         >
-                          <ArrowRight size={12} className="text-[#e62d26] flex-shrink-0" />
+                          <ArrowRight size={12} className="text-[#1a2a6c] flex-shrink-0" />
                           {c.name}
                         </Link>
                       ))}
@@ -188,7 +188,7 @@ export default function ConditionDetailClient({ condition, allConditions }: Prop
               {/* Overview */}
               <div id="overview" className="scroll-mt-28 mb-14">
                 <div className="flex items-center gap-3 mb-5">
-                  <div className="w-10 h-10 rounded-xl bg-[#e8edf7] flex items-center justify-center text-[#1a2a6c]">
+                  <div className="w-10 h-10 rounded-xl bg-[#fdecea] flex items-center justify-center text-[#e62d26]">
                     <FileText size={18} />
                   </div>
                   <h2
@@ -211,7 +211,7 @@ export default function ConditionDetailClient({ condition, allConditions }: Prop
               {/* Symptoms */}
               <div id="symptoms" className="scroll-mt-28 mb-14">
                 <div className="flex items-center gap-3 mb-5">
-                  <div className="w-10 h-10 rounded-xl bg-[#fdecea] flex items-center justify-center text-[#e62d26]">
+                  <div className="w-10 h-10 rounded-xl bg-[#e8edf7] flex items-center justify-center text-[#1a2a6c]">
                     <Stethoscope size={18} />
                   </div>
                   <h2
@@ -229,7 +229,7 @@ export default function ConditionDetailClient({ condition, allConditions }: Prop
                         className="flex items-start gap-3 text-[#374151] text-[15px] leading-relaxed"
                         style={{ fontFamily: "'Poppins', sans-serif" }}
                       >
-                        <span className="w-1.5 h-1.5 rounded-full bg-[#e62d26] mt-2 flex-shrink-0" />
+                        <span className="w-1.5 h-1.5 rounded-full bg-[#1a2a6c] mt-2 flex-shrink-0" />
                         {symptom}
                       </li>
                     ))}
@@ -300,7 +300,7 @@ export default function ConditionDetailClient({ condition, allConditions }: Prop
               {/* When to See a Doctor */}
               <div id="when-to-see-doctor" className="scroll-mt-28 mb-14">
                 <div className="flex items-center gap-3 mb-5">
-                  <div className="w-10 h-10 rounded-xl bg-[#1a2a6c]/10 flex items-center justify-center text-[#1a2a6c]">
+                  <div className="w-10 h-10 rounded-xl bg-[#e62d26]/10 flex items-center justify-center text-[#e62d26]">
                     <Activity size={18} />
                   </div>
                   <h2
@@ -310,7 +310,7 @@ export default function ConditionDetailClient({ condition, allConditions }: Prop
                     {isSwahili ? "Lini Kuona Daktari" : "When to See a Doctor"}
                   </h2>
                 </div>
-                <div className="bg-[#1a2a6c] rounded-2xl p-6 sm:p-8 text-white relative overflow-hidden">
+                <div className="bg-[#e62d26] rounded-2xl p-6 sm:p-8 text-white relative overflow-hidden">
                   <div
                     className="absolute inset-0 opacity-[0.05]"
                     style={{
@@ -346,18 +346,18 @@ export default function ConditionDetailClient({ condition, allConditions }: Prop
                       <Link
                         key={c.slug}
                         href={`/news/eye-conditions/${c.slug}`}
-                        className="group bg-white border border-gray-100 rounded-xl p-5 hover:border-[#1a2a6c]/20 hover:shadow-md transition-all"
+                        className="group bg-white border border-gray-100 rounded-xl p-5 hover:border-[#e62d26]/20 hover:shadow-md transition-all"
                       >
                         <div className="flex items-center justify-between mb-2">
                           <span
-                            className="font-semibold text-[#111827] text-sm group-hover:text-[#1a2a6c] transition-colors"
+                            className="font-semibold text-[#111827] text-sm group-hover:text-[#e62d26] transition-colors"
                             style={{ fontFamily: "'Poppins', sans-serif" }}
                           >
                             {c.name}
                           </span>
                           <ArrowRight
                             size={14}
-                            className="text-[#9ca3af] group-hover:text-[#1a2a6c] group-hover:translate-x-1 transition-all"
+                            className="text-[#9ca3af] group-hover:text-[#e62d26] group-hover:translate-x-1 transition-all"
                           />
                         </div>
                         <p
@@ -395,14 +395,14 @@ export default function ConditionDetailClient({ condition, allConditions }: Prop
           <div className="flex flex-wrap justify-center gap-4">
             <Link
               href="/appointment"
-              className="bg-[#e62d26] hover:bg-[#c4201a] text-white font-semibold px-8 py-3.5 rounded-full text-sm transition-colors"
+              className="bg-[#1a2a6c] hover:bg-[#243688] text-white font-semibold px-8 py-3.5 rounded-full text-sm transition-colors"
               style={{ fontFamily: "'Poppins', sans-serif" }}
             >
               {isSwahili ? "Weka Miadi" : "Book Appointment"}
             </Link>
             <a
               href="tel:+255784104300"
-              className="border-2 border-[#1a2a6c]/20 hover:border-[#1a2a6c] text-[#1a2a6c] font-semibold px-8 py-3.5 rounded-full text-sm transition-colors"
+              className="border-2 border-[#e62d26]/20 hover:border-[#e62d26] text-[#e62d26] font-semibold px-8 py-3.5 rounded-full text-sm transition-colors"
               style={{ fontFamily: "'Poppins', sans-serif" }}
             >
               +255 784 104 300

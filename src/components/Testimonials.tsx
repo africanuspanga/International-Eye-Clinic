@@ -10,17 +10,17 @@ const testimonials = [
     procedure: "Cataract Surgery",
     rating: 5,
     initials: "AH",
-    color: "#1a2a6c",
+    color: "#e62d26",
     text: "I had been struggling with cloudy vision for years, too afraid to seek help. International Eye Hospital changed my life completely. The doctors were kind, patient, and incredibly skilled. My vision is now clearer than it has been in decades. I am forever grateful.",
   },
   {
     name: "John Mkwawa",
     location: "Dodoma",
-    procedure: "LASIK Surgery",
+    procedure: "Glaucoma Treatment",
     rating: 5,
     initials: "JM",
-    color: "#e62d26",
-    text: "After wearing glasses for 20 years, LASIK at International Eye Hospital gave me perfect vision. The procedure was quick, painless, and the results are phenomenal. The staff made me feel completely at ease from the moment I walked in. Truly world-class care.",
+    color: "#1a2a6c",
+    text: "After struggling with high eye pressure for years, the glaucoma treatment at International Eye Hospital has preserved my vision. The doctors were thorough, the monitoring is excellent, and the staff made me feel completely at ease from the moment I walked in. Truly world-class care.",
   },
   {
     name: "Fatuma Ali",
@@ -67,7 +67,7 @@ export default function Testimonials() {
   const slice = testimonials.slice(current * perPage, current * perPage + perPage);
 
   return (
-    <section className="py-20 bg-[#1a2a6c]">
+    <section className="py-20 bg-[#e62d26]">
       <div className="max-w-7xl mx-auto px-6">
         {/* Header */}
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-6 mb-12">
@@ -94,7 +94,7 @@ export default function Testimonials() {
           {slice.map((t, i) => (
             <div key={i} className="relative bg-white rounded-2xl p-7 shadow-xl hover-lift">
               {/* Quote */}
-              <Quote size={40} className="absolute top-5 right-6 text-[#1a2a6c]/8 fill-[#1a2a6c]/8" />
+              <Quote size={40} className="absolute top-5 right-6 text-[#e62d26]/8 fill-[#e62d26]/8" />
 
               {/* Stars */}
               <div className="flex gap-0.5 mb-4">
@@ -104,7 +104,7 @@ export default function Testimonials() {
               </div>
 
               {/* Badge */}
-              <span className="inline-block bg-[#e8edf7] text-[#1a2a6c] text-[10px] font-bold tracking-widest uppercase px-3 py-1 rounded-full mb-4" style={{ fontFamily: "'Poppins', sans-serif" }}>
+              <span className="inline-block bg-[#fdecea] text-[#e62d26] text-[10px] font-bold tracking-widest uppercase px-3 py-1 rounded-full mb-4" style={{ fontFamily: "'Poppins', sans-serif" }}>
                 {t.procedure}
               </span>
 
@@ -129,7 +129,7 @@ export default function Testimonials() {
               </div>
 
               {/* Bottom blue accent */}
-              <div className="absolute bottom-0 left-7 right-7 h-0.5 bg-[#1a2a6c] rounded-full opacity-0 group-hover:opacity-100 transition-opacity" />
+              <div className="absolute bottom-0 left-7 right-7 h-0.5 bg-[#e62d26] rounded-full opacity-0 group-hover:opacity-100 transition-opacity" />
             </div>
           ))}
         </div>

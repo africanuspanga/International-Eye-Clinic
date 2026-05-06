@@ -4,14 +4,18 @@ import Link from "next/link";
 const images = [
   { src: "/images/eye.jpg", alt: "Eye close-up", span: "col-span-2 row-span-2" },
   { src: "/images/eye examination 1.jpg", alt: "Eye examination" },
-  { src: "/images/lasik 1.jpg", alt: "LASIK surgery" },
+  { src: "/images/eye examination 3.jpg", alt: "Eye care" },
   { src: "/images/eye 2.jpg", alt: "Eye detail", span: "col-span-2" },
+  { src: "/images/gallery-surgery-equipment.jpg", alt: "Surgical microscope suite", span: "row-span-2" },
   { src: "/images/eye test 1.jpg", alt: "Eye test" },
   { src: "/images/optic 4.jpg", alt: "Optic examination" },
-  { src: "/images/lasik 2.jpg", alt: "LASIK procedure" },
+  { src: "/images/gallery-doctors-team.jpg", alt: "Doctors with diagnostic equipment", span: "col-span-2" },
+  { src: "/images/eye examination 5.jpg", alt: "Advanced examination" },
   { src: "/images/eye examination 6.jpg", alt: "Patient examination" },
   { src: "/images/staff-3.jpg", alt: "Medical staff", span: "row-span-2" },
+  { src: "/images/gallery-patient-glasses.jpg", alt: "Patient trying on glasses" },
   { src: "/images/eye examination 8.jpg", alt: "Advanced eye exam" },
+  { src: "/images/gallery-diagnostic-equipment.jpg", alt: "Diagnostic phoropter station" },
   { src: "/images/eye test 2.jpg", alt: "Vision testing" },
 ];
 
@@ -33,7 +37,7 @@ export default function Gallery() {
           {images.map((img, i) => (
             <div key={i} className={`relative overflow-hidden rounded-xl group ${img.span ?? ""}`}>
               <Image src={img.src} alt={img.alt} fill className="object-cover group-hover:scale-105 transition-transform duration-500" sizes="25vw" />
-              <div className="absolute inset-0 bg-[#1a2a6c]/0 group-hover:bg-[#1a2a6c]/40 transition-all duration-300" />
+              <div className="absolute inset-0 bg-[#e62d26]/0 group-hover:bg-[#e62d26]/40 transition-all duration-300" />
               <div className="absolute bottom-3 left-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <span className="text-white text-xs font-medium bg-black/40 backdrop-blur-sm px-2.5 py-1 rounded-full" style={{ fontFamily: "'Poppins', sans-serif" }}>
                   {img.alt}
@@ -45,7 +49,7 @@ export default function Gallery() {
 
         <div className="text-center mt-8">
           <Link href="/news/gallery"
-            className="inline-flex items-center gap-2 bg-[#1a2a6c] hover:bg-[#243688] text-white font-semibold px-8 py-3.5 rounded-full text-sm transition-colors"
+            className="inline-flex items-center gap-2 bg-[#e62d26] hover:bg-[#c4201a] text-white font-semibold px-8 py-3.5 rounded-full text-sm transition-colors"
             style={{ fontFamily: "'Poppins', sans-serif" }}>
             View Full Gallery
           </Link>

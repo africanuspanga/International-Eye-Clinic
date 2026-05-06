@@ -15,7 +15,7 @@ export default function WhatsApp() {
           <div className="flex items-center justify-between mb-4">
             <div className="flex items-center gap-3">
               <div className="relative w-10 h-10 rounded-full overflow-hidden">
-                <Image src="/International eye clinic logo.png" alt="International Eye Hospital" fill className="object-contain p-1 bg-[#e8edf7]" />
+                <Image src="/International eye clinic logo.png" alt="International Eye Hospital" fill className="object-contain p-1 bg-[#fdecea]" />
               </div>
               <div>
                 <p className="font-semibold text-[#111827] text-sm" style={{ fontFamily: "'Poppins', sans-serif" }}>

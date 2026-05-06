@@ -48,7 +48,7 @@ export default function ServiceDetailPage({ service }: Props) {
                     fill
                     className="object-cover"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#1a2a6c]/60 to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#e62d26]/60 to-transparent" />
                 </div>
 
                 {/* Text */}
@@ -65,7 +65,7 @@ export default function ServiceDetailPage({ service }: Props) {
                 </div>
 
                 {/* CTA Box */}
-                <div className="mt-10 bg-[#1a2a6c] rounded-2xl p-6 sm:p-8 text-white relative overflow-hidden">
+                <div className="mt-10 bg-[#e62d26] rounded-2xl p-6 sm:p-8 text-white relative overflow-hidden">
                   <div
                     className="absolute inset-0 opacity-[0.05]"
                     style={{
@@ -91,7 +91,7 @@ export default function ServiceDetailPage({ service }: Props) {
                     </div>
                     <a
                       href={`tel:${service.phone.replace(/\s/g, "")}`}
-                      className="inline-flex items-center gap-2 bg-[#e62d26] hover:bg-[#c4201a] text-white font-semibold px-6 py-3 rounded-full text-sm transition-colors whitespace-nowrap"
+                      className="inline-flex items-center gap-2 bg-[#1a2a6c] hover:bg-[#243688] text-white font-semibold px-6 py-3 rounded-full text-sm transition-colors whitespace-nowrap"
                       style={{ fontFamily: "'Poppins', sans-serif" }}
                     >
                       <Phone size={15} />
@@ -120,7 +120,7 @@ export default function ServiceDetailPage({ service }: Props) {
                     </p>
                     <Link
                       href="/appointment"
-                      className="inline-flex items-center gap-2 bg-[#e62d26] hover:bg-[#c4201a] text-white font-semibold px-5 py-2.5 rounded-full text-sm transition-colors w-full justify-center"
+                      className="inline-flex items-center gap-2 bg-[#1a2a6c] hover:bg-[#243688] text-white font-semibold px-5 py-2.5 rounded-full text-sm transition-colors w-full justify-center"
                       style={{ fontFamily: "'Poppins', sans-serif" }}
                     >
                       Book Appointment <ArrowRight size={14} />
@@ -140,10 +140,10 @@ export default function ServiceDetailPage({ service }: Props) {
                         <Link
                           key={s.slug}
                           href={`/services/${s.slug}`}
-                          className="flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm text-[#6b7280] hover:text-[#1a2a6c] hover:bg-[#f5f6fa] transition-colors"
+                          className="flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm text-[#6b7280] hover:text-[#e62d26] hover:bg-[#f5f6fa] transition-colors"
                           style={{ fontFamily: "'Poppins', sans-serif" }}
                         >
-                          <BookOpen size={14} className="text-[#e62d26] flex-shrink-0" />
+                          <BookOpen size={14} className="text-[#1a2a6c] flex-shrink-0" />
                           <span className="line-clamp-1">{s.title}</span>
                         </Link>
                       ))}

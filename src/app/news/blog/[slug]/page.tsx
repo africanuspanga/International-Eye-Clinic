@@ -42,7 +42,7 @@ export default async function BlogPostPage({
       <Navbar />
       <main>
         {/* Article header */}
-        <div className="bg-[#1a2a6c] pt-14 pb-0">
+        <div className="bg-[#e62d26] pt-14 pb-0">
           <div className="max-w-3xl mx-auto px-6">
             <Link
               href="/news"
@@ -55,7 +55,7 @@ export default async function BlogPostPage({
 
             <div className="flex flex-wrap gap-3 mb-5">
               <span
-                className="inline-flex items-center gap-1.5 bg-[#e62d26] text-white text-xs font-semibold px-3 py-1 rounded-full"
+                className="inline-flex items-center gap-1.5 bg-[#1a2a6c] text-white text-xs font-semibold px-3 py-1 rounded-full"
                 style={{ fontFamily: "'Poppins', sans-serif" }}
               >
                 <Tag size={10} />
@@ -103,7 +103,7 @@ export default async function BlogPostPage({
         <div className="bg-white">
           <div className="max-w-3xl mx-auto px-6 py-12">
             <p
-              className="text-[#374151] text-base leading-relaxed mb-8 text-lg font-medium border-l-4 border-[#1a2a6c] pl-5"
+              className="text-[#374151] text-base leading-relaxed mb-8 text-lg font-medium border-l-4 border-[#e62d26] pl-5"
               style={{ fontFamily: "'Poppins', sans-serif" }}
             >
               {post.excerpt}
@@ -115,7 +115,7 @@ export default async function BlogPostPage({
                   return (
                     <h2
                       key={i}
-                      className="text-xl font-bold text-[#1a2a6c] mt-8 mb-2"
+                      className="text-xl font-bold text-[#e62d26] mt-8 mb-2"
                       style={{ fontFamily: "'Merriweather', serif" }}
                     >
                       {section.text}
@@ -142,7 +142,7 @@ export default async function BlogPostPage({
                           className="flex items-start gap-3 text-[#374151] text-sm leading-relaxed"
                           style={{ fontFamily: "'Poppins', sans-serif" }}
                         >
-                          <span className="w-1.5 h-1.5 rounded-full bg-[#e62d26] mt-2 flex-shrink-0" />
+                          <span className="w-1.5 h-1.5 rounded-full bg-[#1a2a6c] mt-2 flex-shrink-0" />
                           {item}
                         </li>
                       ))}
@@ -153,10 +153,10 @@ export default async function BlogPostPage({
                   return (
                     <div
                       key={i}
-                      className="bg-[#e8edf7] border-l-4 border-[#1a2a6c] rounded-r-xl p-5 mt-8"
+                      className="bg-[#fdecea] border-l-4 border-[#e62d26] rounded-r-xl p-5 mt-8"
                     >
                       <p
-                        className="text-[#1a2a6c] text-sm leading-relaxed font-medium"
+                        className="text-[#e62d26] text-sm leading-relaxed font-medium"
                         style={{ fontFamily: "'Poppins', sans-serif" }}
                       >
                         💡 {section.text}
@@ -169,7 +169,7 @@ export default async function BlogPostPage({
             </div>
 
             {/* CTA */}
-            <div className="mt-12 bg-[#1a2a6c] rounded-2xl p-7 text-center">
+            <div className="mt-12 bg-[#e62d26] rounded-2xl p-7 text-center">
               <h3
                 className="text-xl font-bold text-white mb-3"
                 style={{ fontFamily: "'Merriweather', serif" }}
@@ -184,7 +184,7 @@ export default async function BlogPostPage({
               </p>
               <Link
                 href="/appointment"
-                className="inline-block bg-[#e62d26] hover:bg-[#c4201a] text-white font-semibold px-7 py-3 rounded-full text-sm transition-colors"
+                className="inline-block bg-[#1a2a6c] hover:bg-[#243688] text-white font-semibold px-7 py-3 rounded-full text-sm transition-colors"
                 style={{ fontFamily: "'Poppins', sans-serif" }}
               >
                 Book an Appointment
@@ -220,13 +220,13 @@ export default async function BlogPostPage({
                     </div>
                     <div className="p-4">
                       <span
-                        className="text-[#e62d26] text-xs font-semibold"
+                        className="text-[#1a2a6c] text-xs font-semibold"
                         style={{ fontFamily: "'Poppins', sans-serif" }}
                       >
                         {p.category}
                       </span>
                       <h3
-                        className="font-bold text-[#111827] text-sm mt-1 leading-snug group-hover:text-[#1a2a6c] transition-colors"
+                        className="font-bold text-[#111827] text-sm mt-1 leading-snug group-hover:text-[#e62d26] transition-colors"
                         style={{ fontFamily: "'Poppins', sans-serif" }}
                       >
                         {p.title}

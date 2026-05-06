@@ -132,58 +132,52 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-    slug: "lasik-is-it-right-for-you",
-    title: "LASIK Surgery: Is It the Right Choice for You?",
+    slug: "protecting-your-vision-with-regular-eye-exams",
+    title: "Protecting Your Vision with Regular Eye Exams",
     excerpt:
-      "Millions of people around the world have ditched their glasses and contact lenses through LASIK. But is it right for everyone? Here is what you need to know before making the decision.",
-    category: "Treatments & Procedures",
+      "Regular comprehensive eye examinations are one of the most important steps you can take to protect your vision and overall health. Here is why you should schedule your check-up today.",
+    category: "Eye Health Tips",
     readTime: "3 min read",
     date: "February 27, 2026",
-    image: "/images/lasik 1.jpg",
+    image: "/images/eye test 1.jpg",
     content: [
       {
         type: "paragraph",
-        text: "LASIK (Laser-Assisted In Situ Keratomileusis) is one of the most performed elective surgical procedures in the world. It uses an excimer laser to precisely reshape the cornea — the clear front surface of the eye — so that light focuses correctly on the retina. The procedure itself typically takes less than 15 minutes per eye, and most patients notice a dramatic improvement in vision within 24 hours.",
+        text: "Many eye conditions develop gradually and without obvious symptoms in their early stages. By the time you notice vision changes, the condition may already be advanced. Regular eye exams allow your ophthalmologist to detect problems early, when they are most treatable, and to monitor changes in your eye health over time.",
       },
       {
         type: "heading",
-        text: "What Conditions Does LASIK Treat?",
+        text: "What Happens During a Comprehensive Eye Exam?",
       },
       {
         type: "list",
         items: [
-          "Myopia (short-sightedness) — difficulty seeing distant objects clearly",
-          "Hyperopia (long-sightedness) — difficulty focusing on close objects",
-          "Astigmatism — blurred or distorted vision caused by an irregular corneal shape",
+          "Visual acuity testing to measure how clearly you see at various distances",
+          "Refraction assessment to determine your exact prescription for glasses or contact lenses",
+          "Tonometry to measure intraocular pressure and screen for glaucoma",
+          "Slit-lamp examination to assess the health of your cornea, iris, and lens",
+          "Dilated retinal examination to evaluate the back of your eye including the retina and optic nerve",
         ],
       },
       {
         type: "heading",
-        text: "Am I a Good Candidate?",
+        text: "How Often Should You Have an Eye Exam?",
       },
       {
         type: "paragraph",
-        text: "LASIK is not suitable for everyone. The ideal candidate is over 21 with a stable prescription, has corneas of sufficient thickness, and has no conditions such as keratoconus, severe dry eye, or autoimmune disease that might compromise healing. A thorough pre-operative assessment — including corneal mapping and topography — is essential before any decision is made.",
+        text: "Adults aged 18 to 60 with no known risk factors should have a comprehensive eye exam at least every two years. Adults over 60, those with diabetes, high blood pressure, a family history of eye disease, or contact lens wearers should be examined annually or as recommended by their eye doctor. Children should have their first eye exam at 6 months, again at age 3, and before starting school.",
       },
       {
         type: "heading",
-        text: "What Should I Expect During Recovery?",
+        text: "Eye Exams Can Detect More Than Vision Problems",
       },
       {
         type: "paragraph",
-        text: "Recovery from LASIK is generally fast. You will be asked to rest on the day of surgery and attend a follow-up examination the next morning. Most patients can return to work and light activities within one to two days. You will need to avoid rubbing your eyes, swimming, and dusty environments for several weeks, and use medicated drops as prescribed.",
-      },
-      {
-        type: "heading",
-        text: "Are the Results Permanent?",
-      },
-      {
-        type: "paragraph",
-        text: "For the vast majority of patients, the vision correction achieved by LASIK is permanent. However, the natural ageing of the lens inside the eye (presbyopia) that begins in the mid-40s may still require reading glasses later in life — this is separate from the refractive error that LASIK corrects.",
+        text: "Your eyes provide a unique window into your overall health. During a comprehensive eye exam, your doctor may detect early signs of systemic conditions such as diabetes, high blood pressure, high cholesterol, autoimmune diseases, and even certain types of cancer. This makes regular eye exams an essential part of your preventive healthcare routine.",
       },
       {
         type: "tip",
-        text: "Our LASIK consultations are thorough and completely honest. If you are not a suitable candidate, we will tell you — and suggest the best alternative for your specific prescription and corneal profile.",
+        text: "Do not wait for symptoms to appear. Schedule your comprehensive eye examination at International Eye Hospital today and take the first step toward protecting your vision for life.",
       },
     ],
   },

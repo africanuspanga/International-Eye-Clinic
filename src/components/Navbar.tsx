@@ -3,7 +3,7 @@
 import { useState, useRef, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { Menu, X, ChevronDown, Phone, Calendar } from "lucide-react"; // Phone used in top bar + mobile
+import { Menu, X, ChevronDown, Phone, Calendar } from "lucide-react";
 
 const eyeTests = [
   { label: "OCT", href: "/services/oct" },
@@ -43,7 +43,6 @@ const navItems = [
       { label: "Eye Tests", href: "/services/eye-tests", sub: eyeTests },
       { label: "Cataract Surgery", href: "/services/cataract" },
       { label: "Glaucoma", href: "/services/glaucoma" },
-      { label: "LASIK – Refractive Surgery", href: "/services/lasik" },
       { label: "Retina – Diabetic Retinopathy", href: "/services/retina" },
       { label: "Keratoconus Crosslinking", href: "/services/keratoconus" },
       { label: "Cornea Transplant", href: "/services/cornea" },
@@ -56,9 +55,9 @@ const navItems = [
     label: "Our Doctors",
     href: "/doctors",
     children: [
-      { label: "Prof. Dr. A. Bulent Guler", href: "/doctors/bulent-guler" },
-      { label: "Assoc. Prof. Aydin Yildirim", href: "/doctors/aydin-yildirim" },
-      { label: "Assoc. Prof. Ugurcan Keskin", href: "/doctors/ugurcan-keskin" },
+      { label: "Dr. Muammer Coskun", href: "/doctors/muammer-coskun" },
+      { label: "Dr. Vangilisasi Msola", href: "/doctors/vangilisasi-msola" },
+      { label: "Harley H. Mkini", href: "/doctors/harley-mkini" },
     ],
   },
   {
@@ -95,7 +94,7 @@ function DropdownItem({ item }: { item: typeof navItems[0] }) {
           >
             <Link
               href={child.href}
-              className="flex items-center justify-between px-5 py-2.5 text-[#374151] hover:bg-[#e8edf7] hover:text-[#1a2a6c] text-sm font-medium transition-colors"
+              className="flex items-center justify-between px-5 py-2.5 text-[#374151] hover:bg-[#fdecea] hover:text-[#e62d26] text-sm font-medium transition-colors"
             >
               {child.label}
               {hasSub && <ChevronDown size={13} className="-rotate-90" />}
@@ -106,7 +105,7 @@ function DropdownItem({ item }: { item: typeof navItems[0] }) {
                   <Link
                     key={s.label}
                     href={s.href}
-                    className="block px-5 py-2.5 text-[#374151] hover:bg-[#e8edf7] hover:text-[#1a2a6c] text-sm transition-colors"
+                    className="block px-5 py-2.5 text-[#374151] hover:bg-[#fdecea] hover:text-[#e62d26] text-sm transition-colors"
                   >
                     {s.label}
                   </Link>
@@ -146,12 +145,26 @@ export default function Navbar() {
   return (
     <>
       {/* Top bar */}
-      <div className="bg-[#1a2a6c] text-white text-xs hidden lg:block">
+      <div className="bg-[#e62d26] text-white text-xs hidden lg:block">
         <div className="max-w-7xl mx-auto px-6 py-2 flex items-center justify-between">
           <span style={{ fontFamily: "'Poppins', sans-serif" }} className="text-white/70">
             Tropical Center, New Bagamoyo Road, Dar es Salaam, Tanzania
           </span>
           <div className="flex items-center gap-6">
+            <div className="flex items-center gap-3">
+              <a href="https://www.instagram.com/internationaleyehospital/" target="_blank" rel="noopener noreferrer" className="hover:text-white/80 transition-colors" title="Instagram">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+              </a>
+              <a href="#" className="hover:text-white/80 transition-colors" title="Facebook">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+              </a>
+              <a href="#" className="hover:text-white/80 transition-colors" title="Twitter">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg>
+              </a>
+              <a href="#" className="hover:text-white/80 transition-colors" title="YouTube">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/><path d="m10 15 5-3-5-3z"/></svg>
+              </a>
+            </div>
             <a href="tel:+255784104300" className="flex items-center gap-1.5 text-white hover:text-white/80 transition-colors" style={{ fontFamily: "'Poppins', sans-serif" }}>
               <Phone size={12} />
               +255 784 104 300
@@ -198,8 +211,8 @@ export default function Navbar() {
                     href={item.href}
                     className={`flex items-center gap-1 px-3.5 py-2 rounded-lg text-sm font-medium transition-colors ${
                       openDropdown === item.label
-                        ? "text-[#1a2a6c] bg-[#e8edf7]"
-                        : "text-[#111827] hover:text-[#1a2a6c] hover:bg-[#e8edf7]"
+                        ? "text-[#e62d26] bg-[#fdecea]"
+                        : "text-[#111827] hover:text-[#e62d26] hover:bg-[#fdecea]"
                     }`}
                     style={{ fontFamily: "'Poppins', sans-serif" }}
                   >
@@ -219,7 +232,7 @@ export default function Navbar() {
                       style={{ transform: "translateY(4px)" }}
                     >
                       {/* Blue top accent */}
-                      <div className="h-0.5 bg-[#1a2a6c]" />
+                      <div className="h-0.5 bg-[#e62d26]" />
                       <DropdownItem item={item} />
                     </div>
                   )}
@@ -231,7 +244,7 @@ export default function Navbar() {
             <div className="hidden xl:flex items-center gap-3">
               <Link
                 href="/appointment"
-                className="flex items-center gap-2 bg-[#e62d26] hover:bg-[#c4201a] text-white text-sm font-semibold px-5 py-2.5 rounded-full transition-all duration-200 hover:shadow-lg hover:shadow-red-500/25"
+                className="flex items-center gap-2 bg-[#1a2a6c] hover:bg-[#243688] text-white text-sm font-semibold px-5 py-2.5 rounded-full transition-all duration-200 hover:shadow-lg hover:shadow-blue-500/25"
                 style={{ fontFamily: "'Poppins', sans-serif" }}
               >
                 <Calendar size={15} />
@@ -242,7 +255,7 @@ export default function Navbar() {
             {/* Mobile toggle */}
             <button
               onClick={() => setMobileOpen(!mobileOpen)}
-              className="xl:hidden p-2 text-[#111827] hover:text-[#1a2a6c]"
+              className="xl:hidden p-2 text-[#111827] hover:text-[#e62d26]"
               aria-label="Toggle menu"
             >
               {mobileOpen ? <X size={24} /> : <Menu size={24} />}
@@ -308,7 +321,7 @@ export default function Navbar() {
                             <Link
                               href={child.href}
                               onClick={() => !hasSub && setMobileOpen(false)}
-                              className="flex-1 py-2 text-[#6b7280] hover:text-[#1a2a6c] text-sm"
+                              className="flex-1 py-2 text-[#6b7280] hover:text-[#e62d26] text-sm"
                               style={{ fontFamily: "'Poppins', sans-serif" }}
                             >
                               {child.label}
@@ -332,7 +345,7 @@ export default function Navbar() {
                                   key={s.label}
                                   href={s.href}
                                   onClick={() => setMobileOpen(false)}
-                                  className="block py-1.5 text-[#6b7280] hover:text-[#1a2a6c] text-xs"
+                                  className="block py-1.5 text-[#6b7280] hover:text-[#e62d26] text-xs"
                                   style={{ fontFamily: "'Poppins', sans-serif" }}
                                 >
                                   {s.label}
@@ -353,7 +366,7 @@ export default function Navbar() {
               <Link
                 href="/appointment"
                 onClick={() => setMobileOpen(false)}
-                className="flex items-center justify-center gap-2 bg-[#e62d26] text-white font-semibold py-3 rounded-full w-full"
+                className="flex items-center justify-center gap-2 bg-[#1a2a6c] text-white font-semibold py-3 rounded-full w-full"
                 style={{ fontFamily: "'Poppins', sans-serif" }}
               >
                 <Calendar size={16} />
@@ -361,7 +374,7 @@ export default function Navbar() {
               </Link>
               <a
                 href="tel:+255784104300"
-                className="flex items-center justify-center gap-2 border-2 border-[#1a2a6c] text-[#1a2a6c] font-medium py-3 rounded-full w-full text-sm"
+                className="flex items-center justify-center gap-2 border-2 border-[#e62d26] text-[#e62d26] font-medium py-3 rounded-full w-full text-sm"
                 style={{ fontFamily: "'Poppins', sans-serif" }}
               >
                 <Phone size={15} />

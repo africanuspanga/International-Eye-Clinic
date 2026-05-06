@@ -41,8 +41,8 @@ export default function EyeTestsPage() {
           <div className="max-w-7xl mx-auto px-6">
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {tests.map((test) => (
-                <div key={test.name} className="bg-[#f8f9fc] rounded-2xl p-6 border border-gray-100 hover:border-[#1a2a6c]/20 hover:shadow-md transition-all">
-                  <div className="w-11 h-11 rounded-xl bg-[#e8edf7] flex items-center justify-center text-[#1a2a6c] mb-4">
+                <div key={test.name} className="bg-[#f8f9fc] rounded-2xl p-6 border border-gray-100 hover:border-[#e62d26]/20 hover:shadow-md transition-all">
+                  <div className="w-11 h-11 rounded-xl bg-[#fdecea] flex items-center justify-center text-[#e62d26] mb-4">
                     <Microscope size={20} />
                   </div>
                   <h3 className="font-bold text-[#111827] text-base mb-2" style={{ fontFamily: "'Poppins', sans-serif" }}>
@@ -58,7 +58,7 @@ export default function EyeTestsPage() {
             <div className="mt-16 text-center">
               <Link
                 href="/appointment"
-                className="inline-flex items-center gap-2 bg-[#e62d26] hover:bg-[#c4201a] text-white font-semibold px-8 py-3.5 rounded-full text-sm transition-colors"
+                className="inline-flex items-center gap-2 bg-[#1a2a6c] hover:bg-[#243688] text-white font-semibold px-8 py-3.5 rounded-full text-sm transition-colors"
                 style={{ fontFamily: "'Poppins', sans-serif" }}
               >
                 Schedule Your Eye Test <ArrowRight size={14} />

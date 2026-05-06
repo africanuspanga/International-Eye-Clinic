@@ -95,10 +95,10 @@ export default function CsrPage() {
                   ].map(([n, l]) => (
                     <div
                       key={l}
-                      className="bg-[#e8edf7] rounded-xl p-4 text-center"
+                      className="bg-[#fdecea] rounded-xl p-4 text-center"
                     >
                       <div
-                        className="text-2xl font-bold text-[#1a2a6c] mb-1"
+                        className="text-2xl font-bold text-[#e62d26] mb-1"
                         style={{ fontFamily: "'Merriweather', serif" }}
                       >
                         {n}
@@ -123,7 +123,7 @@ export default function CsrPage() {
                     className="object-cover"
                   />
                 </div>
-                <div className="absolute -bottom-5 -right-5 bg-[#e62d26] text-white rounded-2xl p-5 shadow-xl">
+                <div className="absolute -bottom-5 -right-5 bg-[#1a2a6c] text-white rounded-2xl p-5 shadow-xl">
                   <div
                     className="text-3xl font-bold"
                     style={{ fontFamily: "'Merriweather', serif" }}
@@ -162,8 +162,8 @@ export default function CsrPage() {
                     key={i.title}
                     className="bg-white rounded-2xl p-6 text-center shadow-sm border border-gray-100 hover-lift"
                   >
-                    <div className="w-12 h-12 bg-[#e8edf7] rounded-xl flex items-center justify-center mx-auto mb-4">
-                      <Icon size={22} className="text-[#1a2a6c]" />
+                    <div className="w-12 h-12 bg-[#fdecea] rounded-xl flex items-center justify-center mx-auto mb-4">
+                      <Icon size={22} className="text-[#e62d26]" />
                     </div>
                     <h3
                       className="font-bold text-[#111827] mb-2 text-sm"
@@ -184,7 +184,7 @@ export default function CsrPage() {
           </div>
         </section>
 
-        <section className="py-16 bg-[#1a2a6c]">
+        <section className="py-16 bg-[#e62d26]">
           <div className="max-w-3xl mx-auto px-6 text-center">
             <h2
               className="text-4xl font-bold text-white mb-4"
@@ -200,7 +200,7 @@ export default function CsrPage() {
             </p>
             <Link
               href="/contact"
-              className="inline-flex items-center gap-2 bg-[#e62d26] hover:bg-[#c4201a] text-white font-semibold px-8 py-3.5 rounded-full transition-colors"
+              className="inline-flex items-center gap-2 bg-[#1a2a6c] hover:bg-[#243688] text-white font-semibold px-8 py-3.5 rounded-full transition-colors"
               style={{ fontFamily: "'Poppins', sans-serif" }}
             >
               Get in Touch <ArrowRight size={16} />

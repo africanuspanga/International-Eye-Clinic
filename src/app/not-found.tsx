@@ -4,11 +4,11 @@ import { Home, Phone } from "lucide-react";
 
 export default function NotFound() {
   return (
-    <div className="min-h-screen bg-[#1a2a6c] flex flex-col items-center justify-center px-6 text-center relative overflow-hidden">
+    <div className="min-h-screen bg-[#e62d26] flex flex-col items-center justify-center px-6 text-center relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full bg-white/[0.03] blur-3xl" />
-        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 rounded-full bg-[#e62d26]/10 blur-3xl" />
+        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 rounded-full bg-[#1a2a6c]/10 blur-3xl" />
       </div>
 
       {/* Logo */}
@@ -56,7 +56,7 @@ export default function NotFound() {
       <div className="flex flex-col sm:flex-row gap-4 mb-12">
         <Link
           href="/"
-          className="flex items-center justify-center gap-2 bg-[#e62d26] hover:bg-[#c4201a] text-white font-semibold px-8 py-3.5 rounded-full text-sm transition-all hover:shadow-lg hover:shadow-red-500/30"
+          className="flex items-center justify-center gap-2 bg-[#1a2a6c] hover:bg-[#243688] text-white font-semibold px-8 py-3.5 rounded-full text-sm transition-all hover:shadow-lg hover:shadow-blue-500/30"
           style={{ fontFamily: "'Poppins', sans-serif" }}
         >
           <Home size={16} />

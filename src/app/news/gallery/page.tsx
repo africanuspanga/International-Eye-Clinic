@@ -22,11 +22,18 @@ const galleryImages = [
   { src: "/images/eye test 2.jpg", alt: "Automated refraction", category: "Eye Tests" },
   { src: "/images/eye 2.jpg", alt: "Anterior segment detail", category: "Clinical" },
   { src: "/images/eye 3.jpg", alt: "Retinal imaging", category: "Clinical" },
-  { src: "/images/lasik 1.jpg", alt: "LASIK laser surgery suite", category: "Surgery" },
-  { src: "/images/lasik 2.jpg", alt: "LASIK procedure", category: "Surgery" },
+  { src: "/images/eye examination 3.jpg", alt: "Advanced eye care", category: "Surgery" },
+  { src: "/images/eye examination 5.jpg", alt: "Diagnostic procedure", category: "Surgery" },
   { src: "/images/optic 4.jpg", alt: "Optic nerve evaluation", category: "Diagnostics" },
   { src: "/images/staff 3.jpg", alt: "Medical team", category: "Our Team" },
   { src: "/images/staff-3.jpg", alt: "Clinical staff", category: "Our Team" },
+  { src: "/images/gallery-patient-glasses.jpg", alt: "Patient trying on prescription glasses", category: "Eye Tests" },
+  { src: "/images/gallery-surgery-equipment.jpg", alt: "Advanced ophthalmic surgical microscope and laser suite", category: "Surgery" },
+  { src: "/images/gallery-diagnostic-equipment.jpg", alt: "TOPCON CV-3000 automated phoropter and diagnostic station", category: "Diagnostics" },
+  { src: "/images/gallery-phaco-machine.jpg", alt: "Bausch & Lomb Stellaris PC phacoemulsification system", category: "Surgery" },
+  { src: "/images/gallery-laser-suite.jpg", alt: "VISX Star S4 laser vision correction suite", category: "Surgery" },
+  { src: "/images/gallery-lensmeter.jpg", alt: "Auto lensmeter measuring prescription eyeglasses", category: "Eye Tests" },
+  { src: "/images/gallery-doctors-team.jpg", alt: "Ophthalmologists with slit-lamp examination equipment", category: "Our Team" },
 ];
 
 const categories = ["All", "Examination", "Eye Tests", "Surgery", "Clinical", "Diagnostics", "Our Team"];
@@ -48,7 +55,7 @@ export default function GalleryPage() {
         />
 
         {/* Stats bar */}
-        <div className="bg-[#e8edf7] py-6">
+        <div className="bg-[#fdecea] py-6">
           <div className="max-w-7xl mx-auto px-6">
             <div className="flex flex-wrap justify-center gap-8 text-center">
               {[
@@ -57,7 +64,7 @@ export default function GalleryPage() {
                 { label: "Years of Care", value: "12+" },
               ].map((s) => (
                 <div key={s.label}>
-                  <div className="text-2xl font-bold text-[#1a2a6c]" style={{ fontFamily: "'Merriweather', serif" }}>{s.value}</div>
+                  <div className="text-2xl font-bold text-[#e62d26]" style={{ fontFamily: "'Merriweather', serif" }}>{s.value}</div>
                   <div className="text-[#6b7280] text-xs uppercase tracking-widest mt-0.5" style={{ fontFamily: "'Poppins', sans-serif" }}>{s.label}</div>
                 </div>
               ))}
@@ -75,8 +82,8 @@ export default function GalleryPage() {
                   key={cat}
                   className={`px-4 py-1.5 rounded-full text-sm font-medium cursor-default ${
                     cat === "All"
-                      ? "bg-[#1a2a6c] text-white"
-                      : "bg-[#e8edf7] text-[#1a2a6c]"
+                      ? "bg-[#e62d26] text-white"
+                      : "bg-[#fdecea] text-[#e62d26]"
                   }`}
                   style={{ fontFamily: "'Poppins', sans-serif" }}
                 >
@@ -99,10 +106,10 @@ export default function GalleryPage() {
                     />
                   </div>
                   {/* Overlay */}
-                  <div className="absolute inset-0 bg-[#1a2a6c]/0 group-hover:bg-[#1a2a6c]/50 transition-all duration-300" />
+                  <div className="absolute inset-0 bg-[#e62d26]/0 group-hover:bg-[#e62d26]/50 transition-all duration-300" />
                   <div className="absolute bottom-0 left-0 right-0 p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 translate-y-2 group-hover:translate-y-0">
                     <span
-                      className="inline-block bg-[#e62d26] text-white text-xs font-semibold px-2.5 py-1 rounded-full mb-1"
+                      className="inline-block bg-[#1a2a6c] text-white text-xs font-semibold px-2.5 py-1 rounded-full mb-1"
                       style={{ fontFamily: "'Poppins', sans-serif" }}
                     >
                       {img.category}
@@ -121,7 +128,7 @@ export default function GalleryPage() {
         </section>
 
         {/* CTA */}
-        <section className="py-16 bg-[#1a2a6c]">
+        <section className="py-16 bg-[#e62d26]">
           <div className="max-w-3xl mx-auto px-6 text-center">
             <h2 className="text-4xl font-bold text-white mb-4" style={{ fontFamily: "'Merriweather', serif" }}>
               Come Visit Us in Person
@@ -132,7 +139,7 @@ export default function GalleryPage() {
             <div className="flex flex-wrap gap-4 justify-center">
               <Link
                 href="/appointment"
-                className="inline-block bg-[#e62d26] hover:bg-[#c4201a] text-white font-semibold px-8 py-3.5 rounded-full text-sm transition-colors"
+                className="inline-block bg-[#1a2a6c] hover:bg-[#243688] text-white font-semibold px-8 py-3.5 rounded-full text-sm transition-colors"
                 style={{ fontFamily: "'Poppins', sans-serif" }}
               >
                 Book an Appointment

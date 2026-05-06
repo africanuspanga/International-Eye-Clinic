@@ -2,14 +2,14 @@
 
 :root {
   /* Brand Colors */
-  --blue: #1a2a6c;
-  --blue-mid: #243688;
-  --blue-light: #2d45a8;
-  --blue-soft: #e8edf7;
-  --blue-pale: #f0f4fc;
-  --red: #e62d26;
-  --red-dark: #c4201a;
-  --red-soft: #fdecea;
+  --blue: #e62d26;
+  --blue-mid: #c4201a;
+  --blue-light: #c4201a;
+  --blue-soft: #fdecea;
+  --blue-pale: #fdecea;
+  --red: #1a2a6c;
+  --red-dark: #243688;
+  --red-soft: #e8edf7;
   --white: #ffffff;
   --off-white: #f8f9fc;
   --gray-50: #f5f6fa;
@@ -101,7 +101,7 @@ h4, h5, h6, button, a, label, input, select, textarea, p {
 }
 .hover-lift:hover {
   transform: translateY(-4px);
-  box-shadow: 0 20px 40px rgba(26, 42, 108, 0.14);
+  box-shadow: 0 20px 40px rgba(230, 45, 38, 0.14);
 }
 
 /* Nav dropdown */
@@ -120,8 +120,8 @@ h4, h5, h6, button, a, label, input, select, textarea, p {
 
 /* Pulse red */
 @keyframes pulseRed {
-  0%, 100% { box-shadow: 0 0 0 0 rgba(230, 45, 38, 0.35); }
-  50% { box-shadow: 0 0 0 10px rgba(230, 45, 38, 0); }
+  0%, 100% { box-shadow: 0 0 0 0 rgba(26, 42, 108, 0.35); }
+  50% { box-shadow: 0 0 0 10px rgba(26, 42, 108, 0); }
 }
 .animate-pulse-red {
   animation: pulseRed 2.5s ease-in-out infinite;

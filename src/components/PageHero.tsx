@@ -20,14 +20,14 @@ export default function PageHero({
   cta,
 }: PageHeroProps) {
   return (
-    <section className="relative bg-[#1a2a6c] py-20 overflow-hidden">
+    <section className="relative bg-[#e62d26] py-20 overflow-hidden">
       {/* Pattern */}
       <div className="absolute inset-0 opacity-[0.05]" style={{
         backgroundImage: "radial-gradient(circle, white 1px, transparent 1px)",
         backgroundSize: "28px 28px",
       }} />
       {/* Red accent line */}
-      <div className="absolute left-0 top-0 bottom-0 w-1 bg-[#e62d26]" />
+      <div className="absolute left-0 top-0 bottom-0 w-1 bg-[#1a2a6c]" />
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         {/* Breadcrumbs */}
@@ -48,7 +48,7 @@ export default function PageHero({
         </div>
         <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mt-3 mb-4 max-w-3xl" style={{ fontFamily: "'Merriweather', serif" }}>
           {title}
-          {highlight && <span className="text-[#e62d26]"> {highlight}</span>}
+          {highlight && <span className="text-[#1a2a6c]"> {highlight}</span>}
         </h1>
         {description && (
           <p className="text-white/70 text-lg leading-relaxed max-w-2xl mb-6" style={{ fontFamily: "'Poppins', sans-serif" }}>
@@ -57,7 +57,7 @@ export default function PageHero({
         )}
         {cta && (
           <Link href={cta.href}
-            className="inline-flex items-center gap-2 bg-[#e62d26] hover:bg-[#c4201a] text-white font-semibold px-7 py-3.5 rounded-full text-sm transition-colors"
+            className="inline-flex items-center gap-2 bg-[#1a2a6c] hover:bg-[#243688] text-white font-semibold px-7 py-3.5 rounded-full text-sm transition-colors"
             style={{ fontFamily: "'Poppins', sans-serif" }}>
             {cta.label}
           </Link>

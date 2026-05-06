@@ -64,10 +64,10 @@ export default function ChairmanPage() {
                   </p>
                 </div>
 
-                <div className="mt-8 bg-[#f5f6fa] rounded-2xl p-6 border-l-4 border-[#e62d26]">
-                  <Quote size={24} className="text-[#e62d26] mb-3" />
+                <div className="mt-8 bg-[#f5f6fa] rounded-2xl p-6 border-l-4 border-[#1a2a6c]">
+                  <Quote size={24} className="text-[#1a2a6c] mb-3" />
                   <p
-                    className="text-[#1a2a6c] font-semibold text-lg italic leading-relaxed"
+                    className="text-[#e62d26] font-semibold text-lg italic leading-relaxed"
                     style={{ fontFamily: "'Merriweather', serif" }}
                   >
                     We Keep an Eye on Your Eyes
@@ -83,7 +83,7 @@ export default function ChairmanPage() {
                 <div className="mt-8">
                   <Link
                     href="/appointment"
-                    className="inline-flex items-center gap-2 bg-[#e62d26] hover:bg-[#c4201a] text-white font-semibold px-7 py-3.5 rounded-full transition-colors"
+                    className="inline-flex items-center gap-2 bg-[#1a2a6c] hover:bg-[#243688] text-white font-semibold px-7 py-3.5 rounded-full transition-colors"
                     style={{ fontFamily: "'Poppins', sans-serif" }}
                   >
                     Book Appointment <ArrowRight size={16} />
@@ -100,7 +100,7 @@ export default function ChairmanPage() {
                     className="object-cover"
                   />
                 </div>
-                <div className="absolute -bottom-5 -left-5 bg-[#1a2a6c] text-white rounded-2xl p-5 shadow-xl">
+                <div className="absolute -bottom-5 -left-5 bg-[#e62d26] text-white rounded-2xl p-5 shadow-xl">
                   <div
                     className="text-3xl font-bold"
                     style={{ fontFamily: "'Merriweather', serif" }}

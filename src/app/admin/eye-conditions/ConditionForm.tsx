@@ -126,7 +126,7 @@ export default function ConditionForm({ initialData, isEdit }: Props) {
   return (
     <form onSubmit={handleSubmit} className="space-y-8">
       {error && (
-        <div className="bg-red-50 text-red-600 text-sm rounded-xl p-4">{error}</div>
+        <div className="bg-blue-50 text-blue-600 text-sm rounded-xl p-4">{error}</div>
       )}
 
       {/* Basic Info */}
@@ -142,7 +142,7 @@ export default function ConditionForm({ initialData, isEdit }: Props) {
               required
               value={form.name}
               onChange={(e) => updateField("name", e.target.value)}
-              className="w-full px-4 py-2.5 rounded-xl border border-gray-200 focus:border-[#1a2a6c] focus:ring-2 focus:ring-[#1a2a6c]/10 outline-none text-sm"
+              className="w-full px-4 py-2.5 rounded-xl border border-gray-200 focus:border-[#e62d26] focus:ring-2 focus:ring-[#e62d26]/10 outline-none text-sm"
             />
           </div>
           <div>
@@ -152,7 +152,7 @@ export default function ConditionForm({ initialData, isEdit }: Props) {
               required
               value={form.slug}
               onChange={(e) => updateField("slug", e.target.value)}
-              className="w-full px-4 py-2.5 rounded-xl border border-gray-200 focus:border-[#1a2a6c] focus:ring-2 focus:ring-[#1a2a6c]/10 outline-none text-sm"
+              className="w-full px-4 py-2.5 rounded-xl border border-gray-200 focus:border-[#e62d26] focus:ring-2 focus:ring-[#e62d26]/10 outline-none text-sm"
               placeholder="e.g. cataract"
             />
           </div>
@@ -163,7 +163,7 @@ export default function ConditionForm({ initialData, isEdit }: Props) {
               required
               value={form.short_desc}
               onChange={(e) => updateField("short_desc", e.target.value)}
-              className="w-full px-4 py-2.5 rounded-xl border border-gray-200 focus:border-[#1a2a6c] focus:ring-2 focus:ring-[#1a2a6c]/10 outline-none text-sm"
+              className="w-full px-4 py-2.5 rounded-xl border border-gray-200 focus:border-[#e62d26] focus:ring-2 focus:ring-[#e62d26]/10 outline-none text-sm"
             />
           </div>
           <div>
@@ -172,7 +172,7 @@ export default function ConditionForm({ initialData, isEdit }: Props) {
               type="number"
               value={form.sort_order}
               onChange={(e) => updateField("sort_order", parseInt(e.target.value) || 0)}
-              className="w-full px-4 py-2.5 rounded-xl border border-gray-200 focus:border-[#1a2a6c] focus:ring-2 focus:ring-[#1a2a6c]/10 outline-none text-sm"
+              className="w-full px-4 py-2.5 rounded-xl border border-gray-200 focus:border-[#e62d26] focus:ring-2 focus:ring-[#e62d26]/10 outline-none text-sm"
             />
           </div>
           <div className="flex items-center gap-3">
@@ -181,7 +181,7 @@ export default function ConditionForm({ initialData, isEdit }: Props) {
               id="is_published"
               checked={form.is_published}
               onChange={(e) => updateField("is_published", e.target.checked)}
-              className="w-5 h-5 rounded border-gray-300 text-[#1a2a6c] focus:ring-[#1a2a6c]"
+              className="w-5 h-5 rounded border-gray-300 text-[#e62d26] focus:ring-[#e62d26]"
             />
             <label htmlFor="is_published" className="text-sm font-medium text-[#374151]">
               Published
@@ -203,7 +203,7 @@ export default function ConditionForm({ initialData, isEdit }: Props) {
               rows={4}
               value={form.overview}
               onChange={(e) => updateField("overview", e.target.value)}
-              className="w-full px-4 py-2.5 rounded-xl border border-gray-200 focus:border-[#1a2a6c] focus:ring-2 focus:ring-[#1a2a6c]/10 outline-none text-sm"
+              className="w-full px-4 py-2.5 rounded-xl border border-gray-200 focus:border-[#e62d26] focus:ring-2 focus:ring-[#e62d26]/10 outline-none text-sm"
             />
           </div>
 
@@ -218,7 +218,7 @@ export default function ConditionForm({ initialData, isEdit }: Props) {
               rows={3}
               value={form.when_to_see_doctor}
               onChange={(e) => updateField("when_to_see_doctor", e.target.value)}
-              className="w-full px-4 py-2.5 rounded-xl border border-gray-200 focus:border-[#1a2a6c] focus:ring-2 focus:ring-[#1a2a6c]/10 outline-none text-sm"
+              className="w-full px-4 py-2.5 rounded-xl border border-gray-200 focus:border-[#e62d26] focus:ring-2 focus:ring-[#e62d26]/10 outline-none text-sm"
             />
           </div>
         </div>
@@ -237,7 +237,7 @@ export default function ConditionForm({ initialData, isEdit }: Props) {
               rows={4}
               value={form.swahili_overview}
               onChange={(e) => updateField("swahili_overview", e.target.value)}
-              className="w-full px-4 py-2.5 rounded-xl border border-gray-200 focus:border-[#1a2a6c] focus:ring-2 focus:ring-[#1a2a6c]/10 outline-none text-sm"
+              className="w-full px-4 py-2.5 rounded-xl border border-gray-200 focus:border-[#e62d26] focus:ring-2 focus:ring-[#e62d26]/10 outline-none text-sm"
             />
           </div>
 
@@ -252,7 +252,7 @@ export default function ConditionForm({ initialData, isEdit }: Props) {
               rows={3}
               value={form.swahili_when_to_see_doctor}
               onChange={(e) => updateField("swahili_when_to_see_doctor", e.target.value)}
-              className="w-full px-4 py-2.5 rounded-xl border border-gray-200 focus:border-[#1a2a6c] focus:ring-2 focus:ring-[#1a2a6c]/10 outline-none text-sm"
+              className="w-full px-4 py-2.5 rounded-xl border border-gray-200 focus:border-[#e62d26] focus:ring-2 focus:ring-[#e62d26]/10 outline-none text-sm"
             />
           </div>
         </div>
@@ -266,7 +266,7 @@ export default function ConditionForm({ initialData, isEdit }: Props) {
               type="button"
               onClick={handleDelete}
               disabled={loading}
-              className="inline-flex items-center gap-2 bg-red-50 hover:bg-red-100 text-red-600 font-semibold px-5 py-2.5 rounded-xl text-sm transition-colors"
+              className="inline-flex items-center gap-2 bg-blue-50 hover:bg-red-100 text-blue-600 font-semibold px-5 py-2.5 rounded-xl text-sm transition-colors"
             >
               <Trash2 size={15} /> {loading ? "Deleting..." : "Delete"}
             </button>
@@ -276,14 +276,14 @@ export default function ConditionForm({ initialData, isEdit }: Props) {
           <button
             type="button"
             onClick={() => router.push("/admin/eye-conditions")}
-            className="px-5 py-2.5 rounded-xl border border-gray-200 text-[#374151] font-semibold text-sm hover:border-[#1a2a6c] hover:text-[#1a2a6c] transition-colors"
+            className="px-5 py-2.5 rounded-xl border border-gray-200 text-[#374151] font-semibold text-sm hover:border-[#e62d26] hover:text-[#e62d26] transition-colors"
           >
             Cancel
           </button>
           <button
             type="submit"
             disabled={saving}
-            className="inline-flex items-center gap-2 bg-[#1a2a6c] hover:bg-[#243688] text-white font-semibold px-6 py-2.5 rounded-xl text-sm transition-colors disabled:opacity-50"
+            className="inline-flex items-center gap-2 bg-[#e62d26] hover:bg-[#c4201a] text-white font-semibold px-6 py-2.5 rounded-xl text-sm transition-colors disabled:opacity-50"
           >
             {saving && <Loader2 size={15} className="animate-spin" />}
             {isEdit ? "Update Condition" : "Create Condition"}
@@ -317,13 +317,13 @@ function ArrayField({
               type="text"
               value={value}
               onChange={(e) => onChange(i, e.target.value)}
-              className="flex-1 px-4 py-2.5 rounded-xl border border-gray-200 focus:border-[#1a2a6c] focus:ring-2 focus:ring-[#1a2a6c]/10 outline-none text-sm"
+              className="flex-1 px-4 py-2.5 rounded-xl border border-gray-200 focus:border-[#e62d26] focus:ring-2 focus:ring-[#e62d26]/10 outline-none text-sm"
               placeholder={`${label} ${i + 1}`}
             />
             <button
               type="button"
               onClick={() => onRemove(i)}
-              className="w-9 h-9 rounded-xl bg-gray-100 text-gray-500 hover:bg-red-50 hover:text-red-500 flex items-center justify-center transition-colors"
+              className="w-9 h-9 rounded-xl bg-gray-100 text-gray-500 hover:bg-blue-50 hover:text-blue-500 flex items-center justify-center transition-colors"
             >
               <X size={14} />
             </button>
@@ -333,7 +333,7 @@ function ArrayField({
       <button
         type="button"
         onClick={onAdd}
-        className="mt-2 inline-flex items-center gap-1.5 text-[#1a2a6c] text-xs font-semibold hover:text-[#e62d26] transition-colors"
+        className="mt-2 inline-flex items-center gap-1.5 text-[#e62d26] text-xs font-semibold hover:text-[#1a2a6c] transition-colors"
       >
         <Plus size={13} /> Add {label}
       </button>

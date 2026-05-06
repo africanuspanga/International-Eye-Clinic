@@ -9,7 +9,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Our Services | International Eye Hospital",
-  description: "Comprehensive eye care services at International Eye Hospital — cataract surgery, LASIK, retina care, glaucoma, cornea transplant, and advanced diagnostics.",
+  description: "Comprehensive eye care services at International Eye Hospital — cataract surgery, retina care, glaucoma, cornea transplant, and advanced diagnostics.",
 };
 
 const servicesList = [
@@ -20,13 +20,7 @@ const servicesList = [
     desc: "Modern surgical techniques to remove clouded lenses and restore clear vision using premium intraocular lenses.",
     category: "Surgery",
   },
-  {
-    title: "LASIK – Refractive Surgery",
-    href: "/services/lasik",
-    image: "/images/lasik 1.jpg",
-    desc: "Advanced laser correction for myopia, hyperopia, and astigmatism — free yourself from glasses.",
-    category: "Laser",
-  },
+
   {
     title: "Glaucoma",
     href: "/services/glaucoma",
@@ -44,7 +38,7 @@ const servicesList = [
   {
     title: "Keratoconus Crosslinking",
     href: "/services/keratoconus",
-    image: "/images/lasik 2.jpg",
+    image: "/images/eye examination 5.jpg",
     desc: "Corneal crosslinking and specialty contact lens management for keratoconus patients.",
     category: "Specialist",
   },
@@ -97,22 +91,22 @@ export default function ServicesPage() {
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-7">
               {servicesList.map((s) => (
                 <Link key={s.title} href={s.href}
-                  className="group bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-xl hover:shadow-black/10 hover:border-[#1a2a6c]/20 transition-all hover-lift">
+                  className="group bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-xl hover:shadow-black/10 hover:border-[#e62d26]/20 transition-all hover-lift">
                   <div className="relative h-52 overflow-hidden">
                     <Image src={s.image} alt={s.title} fill className="object-cover group-hover:scale-105 transition-transform duration-500" />
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#1a2a6c]/70 to-transparent" />
-                    <span className="absolute top-3 left-3 bg-[#e62d26] text-white text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded-full" style={{ fontFamily: "'Poppins', sans-serif" }}>
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#e62d26]/70 to-transparent" />
+                    <span className="absolute top-3 left-3 bg-[#1a2a6c] text-white text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded-full" style={{ fontFamily: "'Poppins', sans-serif" }}>
                       {s.category}
                     </span>
                   </div>
                   <div className="p-6">
-                    <h3 className="font-bold text-[#111827] text-base mb-2 group-hover:text-[#1a2a6c] transition-colors" style={{ fontFamily: "'Poppins', sans-serif" }}>
+                    <h3 className="font-bold text-[#111827] text-base mb-2 group-hover:text-[#e62d26] transition-colors" style={{ fontFamily: "'Poppins', sans-serif" }}>
                       {s.title}
                     </h3>
                     <p className="text-[#6b7280] text-sm leading-relaxed mb-4" style={{ fontFamily: "'Poppins', sans-serif" }}>
                       {s.desc}
                     </p>
-                    <div className="flex items-center gap-1.5 text-[#1a2a6c] text-sm font-semibold" style={{ fontFamily: "'Poppins', sans-serif" }}>
+                    <div className="flex items-center gap-1.5 text-[#e62d26] text-sm font-semibold" style={{ fontFamily: "'Poppins', sans-serif" }}>
                       Learn more <ArrowRight size={14} />
                     </div>
                   </div>
@@ -123,7 +117,7 @@ export default function ServicesPage() {
         </section>
 
         {/* CTA */}
-        <section className="py-16 bg-[#1a2a6c]">
+        <section className="py-16 bg-[#e62d26]">
           <div className="max-w-3xl mx-auto px-6 text-center">
             <h2 className="text-4xl font-bold text-white mb-4" style={{ fontFamily: "'Merriweather', serif" }}>
               Not Sure Which Service You Need?
@@ -133,7 +127,7 @@ export default function ServicesPage() {
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Link href="/appointment"
-                className="bg-[#e62d26] hover:bg-[#c4201a] text-white font-semibold px-8 py-3.5 rounded-full text-sm transition-colors"
+                className="bg-[#1a2a6c] hover:bg-[#243688] text-white font-semibold px-8 py-3.5 rounded-full text-sm transition-colors"
                 style={{ fontFamily: "'Poppins', sans-serif" }}>
                 Book Appointment
               </Link>

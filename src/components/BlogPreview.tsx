@@ -16,12 +16,12 @@ export default function BlogPreview() {
               style={{ fontFamily: "'Merriweather', serif" }}
             >
               Tips & Insights from<br />
-              <span className="text-[#1a2a6c]">Our Specialists</span>
+              <span className="text-[#e62d26]">Our Specialists</span>
             </h2>
           </div>
           <Link
             href="/news/blog"
-            className="inline-flex items-center gap-2 border-2 border-[#1a2a6c] text-[#1a2a6c] hover:bg-[#1a2a6c] hover:text-white font-semibold px-7 py-3 rounded-full text-sm transition-all self-start lg:self-auto flex-shrink-0"
+            className="inline-flex items-center gap-2 border-2 border-[#e62d26] text-[#e62d26] hover:bg-[#e62d26] hover:text-white font-semibold px-7 py-3 rounded-full text-sm transition-all self-start lg:self-auto flex-shrink-0"
             style={{ fontFamily: "'Poppins', sans-serif" }}
           >
             View All Articles <ArrowRight size={14} />
@@ -34,7 +34,7 @@ export default function BlogPreview() {
             <Link
               key={post.slug}
               href={`/news/blog/${post.slug}`}
-              className="group bg-white rounded-2xl border border-gray-100 shadow-sm shadow-black/5 hover:shadow-xl hover:shadow-black/10 hover:border-[#1a2a6c]/20 transition-all duration-300 overflow-hidden hover-lift"
+              className="group bg-white rounded-2xl border border-gray-100 shadow-sm shadow-black/5 hover:shadow-xl hover:shadow-black/10 hover:border-[#e62d26]/20 transition-all duration-300 overflow-hidden hover-lift"
             >
               {/* Image */}
               <div className="relative h-52 overflow-hidden">
@@ -48,7 +48,7 @@ export default function BlogPreview() {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
                 <div className="absolute top-3 left-3">
                   <span
-                    className="bg-[#e62d26] text-white text-xs font-semibold px-3 py-1 rounded-full"
+                    className="bg-[#1a2a6c] text-white text-xs font-semibold px-3 py-1 rounded-full"
                     style={{ fontFamily: "'Poppins', sans-serif" }}
                   >
                     {post.category}
@@ -69,7 +69,7 @@ export default function BlogPreview() {
                 </div>
 
                 <h3
-                  className="font-bold text-[#111827] text-base leading-snug mb-3 group-hover:text-[#1a2a6c] transition-colors"
+                  className="font-bold text-[#111827] text-base leading-snug mb-3 group-hover:text-[#e62d26] transition-colors"
                   style={{ fontFamily: "'Poppins', sans-serif" }}
                 >
                   {post.title}
@@ -83,7 +83,7 @@ export default function BlogPreview() {
                 </p>
 
                 <div
-                  className="flex items-center gap-1.5 text-[#1a2a6c] text-sm font-semibold group-hover:gap-2.5 transition-all"
+                  className="flex items-center gap-1.5 text-[#e62d26] text-sm font-semibold group-hover:gap-2.5 transition-all"
                   style={{ fontFamily: "'Poppins', sans-serif" }}
                 >
                   Read Article <ArrowRight size={14} />

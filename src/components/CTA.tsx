@@ -3,7 +3,7 @@ import { Calendar, Phone } from "lucide-react";
 
 export default function CTA() {
   return (
-    <section className="py-20 bg-[#e62d26] relative overflow-hidden">
+    <section className="py-20 bg-[#1a2a6c] relative overflow-hidden">
       {/* Subtle pattern */}
       <div className="absolute inset-0 opacity-[0.06]" style={{
         backgroundImage: "radial-gradient(circle, white 1px, transparent 1px)",
@@ -20,7 +20,7 @@ export default function CTA() {
 
         <div className="flex flex-wrap justify-center gap-4 mb-8">
           <Link href="/appointment"
-            className="inline-flex items-center gap-2.5 bg-white text-[#e62d26] hover:bg-gray-50 font-bold px-9 py-4 rounded-full text-base transition-all hover:shadow-xl hover:-translate-y-0.5"
+            className="inline-flex items-center gap-2.5 bg-white text-[#1a2a6c] hover:bg-gray-50 font-bold px-9 py-4 rounded-full text-base transition-all hover:shadow-xl hover:-translate-y-0.5"
             style={{ fontFamily: "'Poppins', sans-serif" }}>
             <Calendar size={18} />
             Book Appointment

@@ -3,7 +3,7 @@ import { NextResponse } from "next/server";
 export async function GET() {
   const llms = `# International Eye Hospital
 
-> International Eye Hospital is Tanzania's premier specialized eye hospital, delivering world-class ophthalmic care since 2014. Located in Dar es Salaam, we offer advanced eye care services including cataract surgery, LASIK, retina treatment, glaucoma management, and more.
+> International Eye Hospital is Tanzania's premier specialized eye hospital, delivering world-class ophthalmic care since 2014. Located in Dar es Salaam, we offer advanced eye care services including cataract surgery, retina treatment, glaucoma management, and more.
 
 ## Overview
 
@@ -23,7 +23,6 @@ International Eye Hospital (IFG Hospitals Group) is a specialized eye care facil
 ## Services
 
 - Cataract Surgery (phacoemulsification)
-- LASIK – Refractive Surgery
 - Glaucoma Treatment & Surgery
 - Retina – Diabetic Retinopathy Care
 - Keratoconus Crosslinking
@@ -34,26 +33,26 @@ International Eye Hospital (IFG Hospitals Group) is a specialized eye care facil
 
 ## Doctors
 
-### Prof. Dr. A. Bulent Guler
-- Professor of Ophthalmology
-- Specialties: Retina, Cataract, Glaucoma, Keratoconus
-- Training: Istanbul University, Faculty of Medicine
-- Experience: Over 25 years
-- Member: American Academy of Ophthalmology, Turkish Ophthalmology Society
+### Dr. Muammer Coskun
+- Consultant Ophthalmologist / Eye Surgeon
+- Specialties: Cataract Surgery, Glaucoma Surgery, Laser Eye Procedures, Medical Retina, Pterygium Surgery
+- Training: Ege University Faculty of Medicine; Ophthalmology Residency at Istanbul Kartal Training and Research Hospital
+- Experience: Over 20 years
+- Member: Turkish Ophthalmology Society
 
-### Assoc. Prof. Aydin Yildirim
-- Associate Professor of Ophthalmology
-- Specialties: LASIK surgery, Cataract, Glaucoma, Corneal disorders, Pediatric eye care
-- Training: University of Istanbul, Faculty of Medicine
-- Experience: Over 25 years
-- Member: ASCRS, American Academy of Ophthalmology, ESCRS
+### Dr. Vangilisasi Msola
+- Ophthalmologist, Epidemiologist & Data Scientist
+- Specialties: General Ophthalmology, Public Health Eye Care, Clinical Research, Health Data, Medical Teaching
+- Training: Muhimbili University of Health and Allied Sciences (MD); Kilimanjaro Christian Medical University College (MMed); University of the Witwatersrand (MSc); Mzumbe University (MBA)
+- Languages: English, Swahili
+- Member: Tanzania Ophthalmologist Society, Public Health Association of South Africa (Associate)
 
-### Assoc. Prof. Ugurcan Keskin
-- Associate Professor of Ophthalmology
-- Specialties: Glaucoma, Cataract, Anterior segment surgeries
-- Training: Hacettepe University, Faculty of Medicine
-- Languages: Fluent in English
-- Member: Turkish Medical Association
+### Harley H. Mkini
+- Optometrist
+- Specialties: Refraction, Contact Lenses, Low Vision, Pediatric Optometry, Diabetic Eye Clinic, Glaucoma Clinic
+- Training: Kilimanjaro Christian Medical University College (BSc Optometry)
+- Languages: English, Swahili
+- Member: IACLE, Myopia Society
 
 ## Eye Conditions Treated
 

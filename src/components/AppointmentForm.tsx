@@ -7,16 +7,15 @@ type Step = 1 | 2 | 3 | 4;
 
 const doctorOptions = [
   "Any Available Doctor",
-  "Prof. Dr. A. Bulent Guler",
-  "Assoc. Prof. Aydin Yildirim",
-  "Assoc. Prof. Ugurcan Keskin",
+  "Dr. Muammer Coskun",
+  "Dr. Vangilisasi Msola",
+  "Harley H. Mkini",
 ];
 
 const serviceOptions = [
   "General Eye Examination",
   "Cataract Surgery",
   "Glaucoma",
-  "LASIK – Refractive Surgery",
   "Retina Treatment",
   "Keratoconus Crosslinking",
   "Cornea Transplant",
@@ -83,14 +82,14 @@ export default function AppointmentForm({ compact = false }: { compact?: boolean
   const minDateStr = minDate.toISOString().split("T")[0];
 
   const inputClass = (field: string) =>
-    `w-full border rounded-lg px-4 py-3 text-sm text-[#111827] focus:outline-none focus:ring-2 focus:ring-[#1a2a6c] transition-all ${
-      errors[field] ? "border-red-400 bg-red-50" : "border-gray-200 bg-white focus:border-[#1a2a6c]"
+    `w-full border rounded-lg px-4 py-3 text-sm text-[#111827] focus:outline-none focus:ring-2 focus:ring-[#e62d26] transition-all ${
+      errors[field] ? "border-blue-400 bg-blue-50" : "border-gray-200 bg-white focus:border-[#e62d26]"
     }`;
 
   return (
     <div className={`bg-white rounded-2xl shadow-xl shadow-black/8 border border-gray-100 overflow-hidden ${compact ? "" : "max-w-2xl mx-auto"}`}>
       {/* Header */}
-      <div className="bg-[#1a2a6c] px-7 py-5">
+      <div className="bg-[#e62d26] px-7 py-5">
         <h3 className="text-white font-bold text-xl" style={{ fontFamily: "'Merriweather', Georgia, serif" }}>
           Request an Appointment
         </h3>
@@ -124,7 +123,7 @@ export default function AppointmentForm({ compact = false }: { compact?: boolean
                   step > s
                     ? "bg-green-500 border-green-500 text-white"
                     : step === s
-                    ? "bg-[#1a2a6c] border-[#1a2a6c] text-white"
+                    ? "bg-[#e62d26] border-[#e62d26] text-white"
                     : "bg-white border-gray-200 text-gray-400"
                 }`} style={{ fontFamily: "'Poppins', sans-serif" }}>
                   {step > s ? <CheckCircle2 size={14} /> : s}
@@ -141,17 +140,17 @@ export default function AppointmentForm({ compact = false }: { compact?: boolean
                 <p className="font-semibold text-[#111827] mb-4" style={{ fontFamily: "'Poppins', sans-serif" }}>Select a Doctor</p>
                 {doctorOptions.map((d) => (
                   <label key={d} className={`flex items-center gap-3 p-3.5 rounded-xl border cursor-pointer transition-all ${
-                    form.doctor === d ? "border-[#1a2a6c] bg-[#e8edf7]" : "border-gray-200 hover:border-gray-300"
+                    form.doctor === d ? "border-[#e62d26] bg-[#fdecea]" : "border-gray-200 hover:border-gray-300"
                   }`}>
-                    <input type="radio" name="doctor" value={d} checked={form.doctor === d} onChange={(e) => set("doctor", e.target.value)} className="accent-[#1a2a6c]" />
-                    <div className="w-7 h-7 bg-[#e8edf7] rounded-full flex items-center justify-center flex-shrink-0">
-                      <User size={13} className="text-[#1a2a6c]" />
+                    <input type="radio" name="doctor" value={d} checked={form.doctor === d} onChange={(e) => set("doctor", e.target.value)} className="accent-[#e62d26]" />
+                    <div className="w-7 h-7 bg-[#fdecea] rounded-full flex items-center justify-center flex-shrink-0">
+                      <User size={13} className="text-[#e62d26]" />
                     </div>
                     <span className="text-sm text-[#111827] font-medium" style={{ fontFamily: "'Poppins', sans-serif" }}>{d}</span>
                   </label>
                 ))}
                 <button type="button" disabled={!form.doctor} onClick={() => setStep(2)}
-                  className="w-full flex items-center justify-center gap-2 bg-[#1a2a6c] disabled:opacity-40 disabled:cursor-not-allowed text-white font-semibold py-3.5 rounded-xl mt-2 hover:bg-[#243688] transition-colors"
+                  className="w-full flex items-center justify-center gap-2 bg-[#e62d26] disabled:opacity-40 disabled:cursor-not-allowed text-white font-semibold py-3.5 rounded-xl mt-2 hover:bg-[#c4201a] transition-colors"
                   style={{ fontFamily: "'Poppins', sans-serif" }}>
                   Continue <ChevronRight size={16} />
                 </button>
@@ -163,7 +162,7 @@ export default function AppointmentForm({ compact = false }: { compact?: boolean
               <div className="space-y-4">
                 <p className="font-semibold text-[#111827] mb-4" style={{ fontFamily: "'Poppins', sans-serif" }}>Select Service</p>
                 <select value={form.service} onChange={(e) => set("service", e.target.value)}
-                  className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm text-[#111827] focus:outline-none focus:ring-2 focus:ring-[#1a2a6c] bg-white"
+                  className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm text-[#111827] focus:outline-none focus:ring-2 focus:ring-[#e62d26] bg-white"
                   style={{ fontFamily: "'Poppins', sans-serif" }}>
                   <option value="">Choose a service...</option>
                   {serviceOptions.map((s) => <option key={s} value={s}>{s}</option>)}
@@ -171,7 +170,7 @@ export default function AppointmentForm({ compact = false }: { compact?: boolean
                 <div className="flex gap-3">
                   <button type="button" onClick={() => setStep(1)} className="flex-1 border border-gray-200 text-[#6b7280] py-3 rounded-xl hover:bg-gray-50 text-sm font-medium" style={{ fontFamily: "'Poppins', sans-serif" }}>Back</button>
                   <button type="button" disabled={!form.service} onClick={() => setStep(3)}
-                    className="flex-1 flex items-center justify-center gap-2 bg-[#1a2a6c] disabled:opacity-40 text-white font-semibold py-3 rounded-xl hover:bg-[#243688] transition-colors text-sm"
+                    className="flex-1 flex items-center justify-center gap-2 bg-[#e62d26] disabled:opacity-40 text-white font-semibold py-3 rounded-xl hover:bg-[#c4201a] transition-colors text-sm"
                     style={{ fontFamily: "'Poppins', sans-serif" }}>
                     Continue <ChevronRight size={16} />
                   </button>
@@ -193,10 +192,10 @@ export default function AppointmentForm({ compact = false }: { compact?: boolean
                         set("date", e.target.value);
                       }
                     }}
-                    className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm text-[#111827] focus:outline-none focus:ring-2 focus:ring-[#1a2a6c] [color-scheme:light]"
+                    className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm text-[#111827] focus:outline-none focus:ring-2 focus:ring-[#e62d26] [color-scheme:light]"
                     style={{ fontFamily: "'Poppins', sans-serif" }} />
                   {errors.date && (
-                    <p className="text-red-500 text-xs mt-1 flex items-center gap-1" style={{ fontFamily: "'Poppins', sans-serif" }}>
+                    <p className="text-blue-500 text-xs mt-1 flex items-center gap-1" style={{ fontFamily: "'Poppins', sans-serif" }}>
                       <AlertCircle size={11} /> {errors.date}
                     </p>
                   )}
@@ -207,7 +206,7 @@ export default function AppointmentForm({ compact = false }: { compact?: boolean
                     {timeSlots.map((t) => (
                       <button key={t} type="button" onClick={() => set("time", t)}
                         className={`py-2.5 rounded-lg text-xs font-semibold border transition-all ${
-                          form.time === t ? "bg-[#1a2a6c] text-white border-[#1a2a6c]" : "bg-white border-gray-200 text-[#374151] hover:border-[#1a2a6c] hover:text-[#1a2a6c]"
+                          form.time === t ? "bg-[#e62d26] text-white border-[#e62d26]" : "bg-white border-gray-200 text-[#374151] hover:border-[#e62d26] hover:text-[#e62d26]"
                         }`} style={{ fontFamily: "'Poppins', sans-serif" }}>
                         {t}
                       </button>
@@ -217,7 +216,7 @@ export default function AppointmentForm({ compact = false }: { compact?: boolean
                 <div className="flex gap-3">
                   <button type="button" onClick={() => setStep(2)} className="flex-1 border border-gray-200 text-[#6b7280] py-3 rounded-xl hover:bg-gray-50 text-sm font-medium" style={{ fontFamily: "'Poppins', sans-serif" }}>Back</button>
                   <button type="button" disabled={!form.date || !form.time || !!errors.date} onClick={() => setStep(4)}
-                    className="flex-1 flex items-center justify-center gap-2 bg-[#1a2a6c] disabled:opacity-40 text-white font-semibold py-3 rounded-xl hover:bg-[#243688] transition-colors text-sm"
+                    className="flex-1 flex items-center justify-center gap-2 bg-[#e62d26] disabled:opacity-40 text-white font-semibold py-3 rounded-xl hover:bg-[#c4201a] transition-colors text-sm"
                     style={{ fontFamily: "'Poppins', sans-serif" }}>
                     Continue <ChevronRight size={16} />
                   </button>
@@ -235,12 +234,12 @@ export default function AppointmentForm({ compact = false }: { compact?: boolean
                   <div>
                     <label className="text-xs font-semibold text-[#6b7280] uppercase tracking-wide mb-1.5 block" style={{ fontFamily: "'Poppins', sans-serif" }}>First Name *</label>
                     <input type="text" placeholder="First name" value={form.firstName} onChange={(e) => set("firstName", e.target.value)} className={inputClass("firstName")} style={{ fontFamily: "'Poppins', sans-serif" }} />
-                    {errors.firstName && <p className="text-red-500 text-[10px] mt-1" style={{ fontFamily: "'Poppins', sans-serif" }}>{errors.firstName}</p>}
+                    {errors.firstName && <p className="text-blue-500 text-[10px] mt-1" style={{ fontFamily: "'Poppins', sans-serif" }}>{errors.firstName}</p>}
                   </div>
                   <div>
                     <label className="text-xs font-semibold text-[#6b7280] uppercase tracking-wide mb-1.5 block" style={{ fontFamily: "'Poppins', sans-serif" }}>Last Name *</label>
                     <input type="text" placeholder="Last name" value={form.lastName} onChange={(e) => set("lastName", e.target.value)} className={inputClass("lastName")} style={{ fontFamily: "'Poppins', sans-serif" }} />
-                    {errors.lastName && <p className="text-red-500 text-[10px] mt-1" style={{ fontFamily: "'Poppins', sans-serif" }}>{errors.lastName}</p>}
+                    {errors.lastName && <p className="text-blue-500 text-[10px] mt-1" style={{ fontFamily: "'Poppins', sans-serif" }}>{errors.lastName}</p>}
                   </div>
                 </div>
 
@@ -249,7 +248,7 @@ export default function AppointmentForm({ compact = false }: { compact?: boolean
                     <span className="flex items-center gap-1.5"><Phone size={11} /> Phone Number *</span>
                   </label>
                   <input type="tel" placeholder="+255 7XX XXX XXX" value={form.phone} onChange={(e) => set("phone", e.target.value)} className={inputClass("phone")} style={{ fontFamily: "'Poppins', sans-serif" }} />
-                  {errors.phone && <p className="text-red-500 text-[10px] mt-1" style={{ fontFamily: "'Poppins', sans-serif" }}>{errors.phone}</p>}
+                  {errors.phone && <p className="text-blue-500 text-[10px] mt-1" style={{ fontFamily: "'Poppins', sans-serif" }}>{errors.phone}</p>}
                 </div>
 
                 <div>
@@ -257,7 +256,7 @@ export default function AppointmentForm({ compact = false }: { compact?: boolean
                     <span className="flex items-center gap-1.5"><Mail size={11} /> Email *</span>
                   </label>
                   <input type="email" placeholder="your@email.com" value={form.email} onChange={(e) => set("email", e.target.value)} className={inputClass("email")} style={{ fontFamily: "'Poppins', sans-serif" }} />
-                  {errors.email && <p className="text-red-500 text-[10px] mt-1" style={{ fontFamily: "'Poppins', sans-serif" }}>{errors.email}</p>}
+                  {errors.email && <p className="text-blue-500 text-[10px] mt-1" style={{ fontFamily: "'Poppins', sans-serif" }}>{errors.email}</p>}
                 </div>
 
                 {/* Optional fields */}
@@ -289,12 +288,12 @@ export default function AppointmentForm({ compact = false }: { compact?: boolean
                 <div>
                   <label className="text-xs font-semibold text-[#6b7280] uppercase tracking-wide mb-1.5 block" style={{ fontFamily: "'Poppins', sans-serif" }}>Reason for Visit</label>
                   <textarea rows={2} placeholder="Describe your symptoms or reason for visit..." value={form.reason} onChange={(e) => set("reason", e.target.value)}
-                    className="w-full border border-gray-200 rounded-lg px-4 py-3 text-sm text-[#111827] focus:outline-none focus:ring-2 focus:ring-[#1a2a6c] resize-none"
+                    className="w-full border border-gray-200 rounded-lg px-4 py-3 text-sm text-[#111827] focus:outline-none focus:ring-2 focus:ring-[#e62d26] resize-none"
                     style={{ fontFamily: "'Poppins', sans-serif" }} />
                 </div>
 
                 {/* File upload placeholder */}
-                <div className="border-2 border-dashed border-gray-200 rounded-xl p-4 flex items-center gap-3 hover:border-[#1a2a6c]/40 transition-colors cursor-pointer">
+                <div className="border-2 border-dashed border-gray-200 rounded-xl p-4 flex items-center gap-3 hover:border-[#e62d26]/40 transition-colors cursor-pointer">
                   <Upload size={18} className="text-gray-400" />
                   <div>
                     <p className="text-sm font-medium text-[#374151]" style={{ fontFamily: "'Poppins', sans-serif" }}>Upload Medical Files</p>
@@ -303,8 +302,8 @@ export default function AppointmentForm({ compact = false }: { compact?: boolean
                 </div>
 
                 {/* Summary */}
-                <div className="bg-[#e8edf7] rounded-xl p-4 text-xs space-y-1" style={{ fontFamily: "'Poppins', sans-serif" }}>
-                  <p className="text-[#1a2a6c] font-semibold uppercase tracking-wide mb-2">Appointment Summary</p>
+                <div className="bg-[#fdecea] rounded-xl p-4 text-xs space-y-1" style={{ fontFamily: "'Poppins', sans-serif" }}>
+                  <p className="text-[#e62d26] font-semibold uppercase tracking-wide mb-2">Appointment Summary</p>
                   <p className="text-[#374151]"><span className="text-[#6b7280]">Doctor: </span>{form.doctor}</p>
                   <p className="text-[#374151]"><span className="text-[#6b7280]">Service: </span>{form.service}</p>
                   <p className="text-[#374151]"><span className="text-[#6b7280]">Date & Time: </span>{form.date} at {form.time}</p>
@@ -313,7 +312,7 @@ export default function AppointmentForm({ compact = false }: { compact?: boolean
                 <div className="flex gap-3">
                   <button type="button" onClick={() => setStep(3)} className="flex-1 border border-gray-200 text-[#6b7280] py-3 rounded-xl hover:bg-gray-50 text-sm font-medium" style={{ fontFamily: "'Poppins', sans-serif" }}>Back</button>
                   <button type="submit"
-                    className="flex-1 flex items-center justify-center gap-2 bg-[#e62d26] hover:bg-[#c4201a] text-white font-bold py-3.5 rounded-xl transition-colors text-sm"
+                    className="flex-1 flex items-center justify-center gap-2 bg-[#1a2a6c] hover:bg-[#243688] text-white font-bold py-3.5 rounded-xl transition-colors text-sm"
                     style={{ fontFamily: "'Poppins', sans-serif" }}>
                     <Calendar size={15} />
                     Request Appointment

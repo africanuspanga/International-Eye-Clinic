@@ -15,14 +15,6 @@ const services = [
     image: "/images/eye examination 8.jpg",
   },
   {
-    icon: Zap,
-    title: "LASIK Surgery",
-    category: "Laser",
-    href: "/services/lasik",
-    desc: "State-of-the-art laser vision correction to eliminate dependency on glasses or contact lenses with precision and safety.",
-    image: "/images/lasik 1.jpg",
-  },
-  {
     icon: Activity,
     title: "Glaucoma Treatment",
     category: "Medical",
@@ -60,7 +52,7 @@ const services = [
     category: "Specialist",
     href: "/services/keratoconus",
     desc: "Expert management of keratoconus including corneal cross-linking and specialty contact lenses.",
-    image: "/images/lasik 2.jpg",
+    image: "/images/eye examination 5.jpg",
   },
   {
     icon: Stethoscope,
@@ -72,7 +64,7 @@ const services = [
   },
 ];
 
-const categories = ["All", "Surgery", "Laser", "Medical", "Specialist", "Diagnostics", "General"];
+const categories = ["All", "Surgery", "Medical", "Specialist", "Diagnostics", "General"];
 
 export default function Services() {
   const [active, setActive] = useState("All");
@@ -98,8 +90,8 @@ export default function Services() {
             <button key={cat} onClick={() => setActive(cat)}
               className={`px-5 py-2 rounded-full text-sm font-medium transition-all border ${
                 active === cat
-                  ? "bg-[#1a2a6c] text-white border-[#1a2a6c]"
-                  : "bg-white text-[#6b7280] border-gray-200 hover:border-[#1a2a6c] hover:text-[#1a2a6c]"
+                  ? "bg-[#e62d26] text-white border-[#e62d26]"
+                  : "bg-white text-[#6b7280] border-gray-200 hover:border-[#e62d26] hover:text-[#e62d26]"
               }`} style={{ fontFamily: "'Poppins', sans-serif" }}>
               {cat}
             </button>
@@ -112,24 +104,24 @@ export default function Services() {
             const Icon = s.icon;
             return (
               <Link key={s.title} href={s.href}
-                className="group bg-white rounded-2xl overflow-hidden shadow-sm shadow-black/5 hover:shadow-lg hover:shadow-black/10 border border-gray-100 hover:border-[#1a2a6c]/20 transition-all duration-300 hover-lift">
+                className="group bg-white rounded-2xl overflow-hidden shadow-sm shadow-black/5 hover:shadow-lg hover:shadow-black/10 border border-gray-100 hover:border-[#e62d26]/20 transition-all duration-300 hover-lift">
                 {/* Image */}
                 <div className="relative h-40 overflow-hidden">
                   <Image src={s.image} alt={s.title} fill className="object-cover group-hover:scale-105 transition-transform duration-500" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#1a2a6c]/70 via-transparent to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#e62d26]/70 via-transparent to-transparent" />
                   <div className="absolute bottom-3 left-3 w-8 h-8 bg-white/90 rounded-lg flex items-center justify-center">
-                    <Icon size={15} className="text-[#1a2a6c]" />
+                    <Icon size={15} className="text-[#e62d26]" />
                   </div>
                 </div>
                 {/* Content */}
                 <div className="p-5">
-                  <h3 className="font-semibold text-[#111827] text-base mb-1.5 group-hover:text-[#1a2a6c] transition-colors" style={{ fontFamily: "'Poppins', sans-serif" }}>
+                  <h3 className="font-semibold text-[#111827] text-base mb-1.5 group-hover:text-[#e62d26] transition-colors" style={{ fontFamily: "'Poppins', sans-serif" }}>
                     {s.title}
                   </h3>
                   <p className="text-[#6b7280] text-xs leading-relaxed mb-4" style={{ fontFamily: "'Poppins', sans-serif" }}>
                     {s.desc}
                   </p>
-                  <div className="flex items-center gap-1 text-[#1a2a6c] text-xs font-semibold group-hover:gap-2 transition-all" style={{ fontFamily: "'Poppins', sans-serif" }}>
+                  <div className="flex items-center gap-1 text-[#e62d26] text-xs font-semibold group-hover:gap-2 transition-all" style={{ fontFamily: "'Poppins', sans-serif" }}>
                     Learn more <ArrowRight size={12} />
                   </div>
                 </div>
@@ -140,7 +132,7 @@ export default function Services() {
 
         <div className="text-center mt-10">
           <Link href="/services"
-            className="inline-flex items-center gap-2 bg-[#1a2a6c] hover:bg-[#243688] text-white font-semibold px-8 py-3.5 rounded-full text-sm transition-colors"
+            className="inline-flex items-center gap-2 bg-[#e62d26] hover:bg-[#c4201a] text-white font-semibold px-8 py-3.5 rounded-full text-sm transition-colors"
             style={{ fontFamily: "'Poppins', sans-serif" }}>
             View All Services <ArrowRight size={15} />
           </Link>

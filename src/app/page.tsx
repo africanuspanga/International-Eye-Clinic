@@ -1,5 +1,6 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
+import SearchBar from "@/components/SearchBar";
 import QuickBook from "@/components/QuickBook";
 import TrustStrip from "@/components/TrustStrip";
 import About from "@/components/About";
@@ -19,6 +20,7 @@ export default function Home() {
       <Navbar />
       <main>
         <Hero />
+        <SearchBar />
         <QuickBook />
         <AppointmentSection />
         <TrustStrip />

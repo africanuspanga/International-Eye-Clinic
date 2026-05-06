@@ -14,7 +14,7 @@ export default async function DoctorsAdminPage() {
         <h1 className="text-3xl font-bold text-[#111827]" style={{ fontFamily: "'Merriweather', serif" }}>
           Doctors
         </h1>
-        <button className="inline-flex items-center gap-2 bg-[#e62d26] hover:bg-[#c4201a] text-white font-semibold px-5 py-2.5 rounded-xl text-sm transition-colors opacity-50 cursor-not-allowed">
+        <button className="inline-flex items-center gap-2 bg-[#1a2a6c] hover:bg-[#243688] text-white font-semibold px-5 py-2.5 rounded-xl text-sm transition-colors opacity-50 cursor-not-allowed">
           <Plus size={16} /> Coming Soon
         </button>
       </div>

@@ -67,14 +67,14 @@ export default function ContactPage() {
                   const Icon = c.icon;
                   return (
                     <div key={c.title} className="flex gap-4">
-                      <div className="w-11 h-11 bg-[#1a2a6c] rounded-xl flex items-center justify-center flex-shrink-0">
+                      <div className="w-11 h-11 bg-[#e62d26] rounded-xl flex items-center justify-center flex-shrink-0">
                         <Icon size={18} className="text-white" />
                       </div>
                       <div>
                         <p className="font-semibold text-[#111827] text-sm mb-1" style={{ fontFamily: "'Poppins', sans-serif" }}>{c.title}</p>
                         {c.lines.map((line) => (
                           c.href ? (
-                            <a key={line} href={c.href} className="block text-[#1a2a6c] text-sm hover:underline" style={{ fontFamily: "'Poppins', sans-serif" }}>{line}</a>
+                            <a key={line} href={c.href} className="block text-[#e62d26] text-sm hover:underline" style={{ fontFamily: "'Poppins', sans-serif" }}>{line}</a>
                           ) : (
                             <p key={line} className="text-[#6b7280] text-sm" style={{ fontFamily: "'Poppins', sans-serif" }}>{line}</p>
                           )
@@ -86,7 +86,7 @@ export default function ContactPage() {
 
                 {/* Hours */}
                 <div className="flex gap-4 mt-2">
-                  <div className="w-11 h-11 bg-[#1a2a6c] rounded-xl flex items-center justify-center flex-shrink-0">
+                  <div className="w-11 h-11 bg-[#e62d26] rounded-xl flex items-center justify-center flex-shrink-0">
                     <Clock size={18} className="text-white" />
                   </div>
                   <div>
@@ -94,7 +94,7 @@ export default function ContactPage() {
                     {hours.map((h) => (
                       <div key={h.day} className="flex justify-between gap-6 text-sm mb-1" style={{ fontFamily: "'Poppins', sans-serif" }}>
                         <span className="text-[#6b7280]">{h.day}</span>
-                        <span className={h.day === "Sunday" ? "text-[#e62d26] font-medium" : "text-[#111827] font-medium"}>{h.time}</span>
+                        <span className={h.day === "Sunday" ? "text-[#1a2a6c] font-medium" : "text-[#111827] font-medium"}>{h.time}</span>
                       </div>
                     ))}
                   </div>
@@ -112,7 +112,7 @@ export default function ContactPage() {
                       <div key={f}>
                         <label className="block text-xs font-semibold text-[#6b7280] uppercase tracking-wide mb-1.5" style={{ fontFamily: "'Poppins', sans-serif" }}>{f}</label>
                         <input type="text" placeholder={f}
-                          className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#1a2a6c] focus:border-transparent transition-all"
+                          className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#e62d26] focus:border-transparent transition-all"
                           style={{ fontFamily: "'Poppins', sans-serif" }} />
                       </div>
                     ))}
@@ -121,30 +121,30 @@ export default function ContactPage() {
                     <div>
                       <label className="block text-xs font-semibold text-[#6b7280] uppercase tracking-wide mb-1.5" style={{ fontFamily: "'Poppins', sans-serif" }}>Phone</label>
                       <input type="tel" placeholder="+255 7XX XXX XXX"
-                        className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#1a2a6c] transition-all"
+                        className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#e62d26] transition-all"
                         style={{ fontFamily: "'Poppins', sans-serif" }} />
                     </div>
                     <div>
                       <label className="block text-xs font-semibold text-[#6b7280] uppercase tracking-wide mb-1.5" style={{ fontFamily: "'Poppins', sans-serif" }}>Email</label>
                       <input type="email" placeholder="your@email.com"
-                        className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#1a2a6c] transition-all"
+                        className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#e62d26] transition-all"
                         style={{ fontFamily: "'Poppins', sans-serif" }} />
                     </div>
                   </div>
                   <div>
                     <label className="block text-xs font-semibold text-[#6b7280] uppercase tracking-wide mb-1.5" style={{ fontFamily: "'Poppins', sans-serif" }}>Subject</label>
                     <input type="text" placeholder="How can we help?"
-                      className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#1a2a6c] transition-all"
+                      className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#e62d26] transition-all"
                       style={{ fontFamily: "'Poppins', sans-serif" }} />
                   </div>
                   <div>
                     <label className="block text-xs font-semibold text-[#6b7280] uppercase tracking-wide mb-1.5" style={{ fontFamily: "'Poppins', sans-serif" }}>Message</label>
                     <textarea rows={5} placeholder="Tell us more..."
-                      className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#1a2a6c] transition-all resize-none"
+                      className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#e62d26] transition-all resize-none"
                       style={{ fontFamily: "'Poppins', sans-serif" }} />
                   </div>
                   <button type="submit"
-                    className="bg-[#1a2a6c] hover:bg-[#243688] text-white font-semibold px-8 py-3.5 rounded-full text-sm transition-colors"
+                    className="bg-[#e62d26] hover:bg-[#c4201a] text-white font-semibold px-8 py-3.5 rounded-full text-sm transition-colors"
                     style={{ fontFamily: "'Poppins', sans-serif" }}>
                     Send Message
                   </button>
@@ -156,10 +156,20 @@ export default function ContactPage() {
 
         {/* Google Map */}
         <section className="bg-[#f5f6fa]">
-          <div className="max-w-7xl mx-auto px-6 py-6">
-            <h2 className="text-xl font-bold text-[#111827] mb-4" style={{ fontFamily: "'Merriweather', serif" }}>
+          <div className="max-w-7xl mx-auto px-6 py-6 flex items-center justify-between">
+            <h2 className="text-xl font-bold text-[#111827]" style={{ fontFamily: "'Merriweather', serif" }}>
               Find Us on the Map
             </h2>
+            <a
+              href="https://www.google.com/maps/dir/?api=1&destination=International+Eye+Hospital+Dar+es+Salaam+Tropical+Center+New+Bagamoyo+Road"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 bg-[#e62d26] hover:bg-[#c4201a] text-white text-sm font-semibold px-5 py-2.5 rounded-full transition-colors"
+              style={{ fontFamily: "'Poppins', sans-serif" }}
+            >
+              <MapPin size={15} />
+              Get Directions
+            </a>
           </div>
           <div className="w-full h-96">
             <iframe

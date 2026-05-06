@@ -25,11 +25,10 @@ export const metadata: Metadata = {
     template: "%s | International Eye Hospital",
   },
   description:
-    "International Eye Hospital in Dar es Salaam offers advanced eye care — cataract surgery, LASIK, retina treatment, glaucoma, and more. Internationally trained ophthalmologists since 2014.",
+    "International Eye Hospital in Dar es Salaam offers advanced eye care — cataract surgery, retina treatment, glaucoma, and more. Internationally trained ophthalmologists since 2014.",
   keywords: [
     "eye hospital Tanzania",
     "eye specialist Dar es Salaam",
-    "LASIK Tanzania",
     "cataract surgery Tanzania",
     "retina specialist Tanzania",
     "International Eye Hospital",

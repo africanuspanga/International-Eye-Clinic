@@ -10,7 +10,7 @@ export default async function EyeConditionsAdminPage() {
     .order("sort_order", { ascending: true });
 
   if (error) {
-    return <div className="text-red-500">Error: {error.message}</div>;
+    return <div className="text-blue-500">Error: {error.message}</div>;
   }
 
   return (
@@ -24,7 +24,7 @@ export default async function EyeConditionsAdminPage() {
         </h1>
         <Link
           href="/admin/eye-conditions/new"
-          className="inline-flex items-center gap-2 bg-[#e62d26] hover:bg-[#c4201a] text-white font-semibold px-5 py-2.5 rounded-xl text-sm transition-colors"
+          className="inline-flex items-center gap-2 bg-[#1a2a6c] hover:bg-[#243688] text-white font-semibold px-5 py-2.5 rounded-xl text-sm transition-colors"
         >
           <Plus size={16} /> Add New
         </Link>
@@ -66,14 +66,14 @@ export default async function EyeConditionsAdminPage() {
                     <div className="flex items-center justify-end gap-2">
                       <Link
                         href={`/admin/eye-conditions/${c.id}`}
-                        className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#e8edf7] text-[#1a2a6c] hover:bg-[#1a2a6c] hover:text-white transition-colors text-xs font-semibold"
+                        className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#fdecea] text-[#e62d26] hover:bg-[#e62d26] hover:text-white transition-colors text-xs font-semibold"
                       >
                         <Pencil size={12} /> Edit
                       </Link>
                       <Link
                         href={`/news/eye-conditions/${c.slug}`}
                         target="_blank"
-                        className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-gray-200 text-[#6b7280] hover:border-[#1a2a6c] hover:text-[#1a2a6c] transition-colors text-xs font-semibold"
+                        className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-gray-200 text-[#6b7280] hover:border-[#e62d26] hover:text-[#e62d26] transition-colors text-xs font-semibold"
                       >
                         <ArrowRight size={12} /> View
                       </Link>

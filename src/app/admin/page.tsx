@@ -21,7 +21,7 @@ export default async function AdminDashboard() {
       count: conditionsCount || 0,
       href: "/admin/eye-conditions",
       icon: Eye,
-      color: "bg-blue-50 text-[#1a2a6c]",
+      color: "bg-red-50 text-[#e62d26]",
     },
     {
       label: "Blog Posts",
@@ -55,13 +55,13 @@ export default async function AdminDashboard() {
             <Link
               key={card.label}
               href={card.href}
-              className="bg-white rounded-2xl border border-gray-100 p-6 hover:shadow-lg hover:border-[#1a2a6c]/20 transition-all group"
+              className="bg-white rounded-2xl border border-gray-100 p-6 hover:shadow-lg hover:border-[#e62d26]/20 transition-all group"
             >
               <div className="flex items-start justify-between mb-4">
                 <div className={`w-12 h-12 rounded-xl flex items-center justify-center ${card.color}`}>
                   <Icon size={22} />
                 </div>
-                <span className="text-3xl font-bold text-[#111827] group-hover:text-[#1a2a6c] transition-colors" style={{ fontFamily: "'Merriweather', serif" }}>
+                <span className="text-3xl font-bold text-[#111827] group-hover:text-[#e62d26] transition-colors" style={{ fontFamily: "'Merriweather', serif" }}>
                   {card.count}
                 </span>
               </div>
@@ -80,14 +80,14 @@ export default async function AdminDashboard() {
         <div className="flex flex-wrap gap-3">
           <Link
             href="/admin/eye-conditions/new"
-            className="inline-flex items-center gap-2 bg-[#1a2a6c] hover:bg-[#243688] text-white text-sm font-semibold px-5 py-2.5 rounded-xl transition-colors"
+            className="inline-flex items-center gap-2 bg-[#e62d26] hover:bg-[#c4201a] text-white text-sm font-semibold px-5 py-2.5 rounded-xl transition-colors"
           >
             <Eye size={15} /> Add Eye Condition
           </Link>
           <Link
             href="/"
             target="_blank"
-            className="inline-flex items-center gap-2 border border-gray-200 hover:border-[#1a2a6c] text-[#374151] hover:text-[#1a2a6c] text-sm font-semibold px-5 py-2.5 rounded-xl transition-colors"
+            className="inline-flex items-center gap-2 border border-gray-200 hover:border-[#e62d26] text-[#374151] hover:text-[#e62d26] text-sm font-semibold px-5 py-2.5 rounded-xl transition-colors"
           >
             <Settings size={15} /> View Website
           </Link>

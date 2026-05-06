@@ -68,21 +68,21 @@ export default async function EyeConditionsPage() {
                 <Link
                   key={condition.slug}
                   href={`/news/eye-conditions/${condition.slug}`}
-                  className="group relative bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-xl hover:shadow-black/8 hover:border-[#1a2a6c]/20 transition-all hover-lift flex flex-col"
+                  className="group relative bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-xl hover:shadow-black/8 hover:border-[#e62d26]/20 transition-all hover-lift flex flex-col"
                 >
                   {/* Top accent */}
-                  <div className="h-1 bg-[#1a2a6c] w-0 group-hover:w-full transition-all duration-500" />
+                  <div className="h-1 bg-[#e62d26] w-0 group-hover:w-full transition-all duration-500" />
                   <div className="p-6 flex-1 flex flex-col">
                     <div className="flex items-start justify-between mb-4">
-                      <div className="w-11 h-11 rounded-xl bg-[#e8edf7] flex items-center justify-center text-[#1a2a6c] group-hover:bg-[#1a2a6c] group-hover:text-white transition-colors">
+                      <div className="w-11 h-11 rounded-xl bg-[#fdecea] flex items-center justify-center text-[#e62d26] group-hover:bg-[#e62d26] group-hover:text-white transition-colors">
                         <Eye size={20} />
                       </div>
-                      <div className="w-8 h-8 rounded-full bg-[#f5f6fa] flex items-center justify-center text-[#1a2a6c] group-hover:bg-[#e62d26] group-hover:text-white transition-colors">
+                      <div className="w-8 h-8 rounded-full bg-[#f5f6fa] flex items-center justify-center text-[#e62d26] group-hover:bg-[#1a2a6c] group-hover:text-white transition-colors">
                         <ArrowRight size={14} />
                       </div>
                     </div>
                     <h3
-                      className="font-bold text-[#111827] text-lg mb-2 group-hover:text-[#1a2a6c] transition-colors"
+                      className="font-bold text-[#111827] text-lg mb-2 group-hover:text-[#e62d26] transition-colors"
                       style={{ fontFamily: "'Poppins', sans-serif" }}
                     >
                       {condition.name}
@@ -95,9 +95,9 @@ export default async function EyeConditionsPage() {
                     </p>
                   </div>
                   {/* Bottom bar */}
-                  <div className="h-10 bg-[#f8f9fc] flex items-center px-6 group-hover:bg-[#1a2a6c] transition-colors">
+                  <div className="h-10 bg-[#f8f9fc] flex items-center px-6 group-hover:bg-[#e62d26] transition-colors">
                     <span
-                      className="text-xs font-semibold text-[#1a2a6c] group-hover:text-white transition-colors"
+                      className="text-xs font-semibold text-[#e62d26] group-hover:text-white transition-colors"
                       style={{ fontFamily: "'Poppins', sans-serif" }}
                     >
                       Learn more
@@ -139,23 +139,23 @@ export default async function EyeConditionsPage() {
                       className="flex items-center gap-3 text-[#374151] text-sm"
                       style={{ fontFamily: "'Poppins', sans-serif" }}
                     >
-                      <span className="w-1.5 h-1.5 rounded-full bg-[#e62d26] flex-shrink-0" />
+                      <span className="w-1.5 h-1.5 rounded-full bg-[#1a2a6c] flex-shrink-0" />
                       {item}
                     </li>
                   ))}
                 </ul>
                 <Link
                   href="/appointment"
-                  className="inline-flex items-center gap-2 bg-[#e62d26] hover:bg-[#c4201a] text-white font-semibold px-7 py-3.5 rounded-full text-sm transition-colors"
+                  className="inline-flex items-center gap-2 bg-[#1a2a6c] hover:bg-[#243688] text-white font-semibold px-7 py-3.5 rounded-full text-sm transition-colors"
                   style={{ fontFamily: "'Poppins', sans-serif" }}
                 >
                   Book an Appointment <ArrowRight size={14} />
                 </Link>
               </div>
               <div className="relative">
-                <div className="absolute -top-4 -left-4 w-24 h-24 bg-[#e8edf7] rounded-2xl -z-10" />
-                <div className="absolute -bottom-4 -right-4 w-32 h-32 bg-[#fdecea] rounded-2xl -z-10" />
-                <div className="bg-[#1a2a6c] rounded-2xl p-8 sm:p-10 text-white relative overflow-hidden">
+                <div className="absolute -top-4 -left-4 w-24 h-24 bg-[#fdecea] rounded-2xl -z-10" />
+                <div className="absolute -bottom-4 -right-4 w-32 h-32 bg-[#e8edf7] rounded-2xl -z-10" />
+                <div className="bg-[#e62d26] rounded-2xl p-8 sm:p-10 text-white relative overflow-hidden">
                   <div
                     className="absolute inset-0 opacity-[0.05]"
                     style={{
@@ -208,7 +208,7 @@ export default async function EyeConditionsPage() {
         </section>
 
         {/* CTA */}
-        <section className="py-16 bg-[#1a2a6c]">
+        <section className="py-16 bg-[#e62d26]">
           <div className="max-w-3xl mx-auto px-6 text-center">
             <h2
               className="text-3xl sm:text-4xl font-bold text-white mb-4"
@@ -225,7 +225,7 @@ export default async function EyeConditionsPage() {
             <div className="flex flex-wrap justify-center gap-4">
               <Link
                 href="/appointment"
-                className="bg-[#e62d26] hover:bg-[#c4201a] text-white font-semibold px-8 py-3.5 rounded-full text-sm transition-colors"
+                className="bg-[#1a2a6c] hover:bg-[#243688] text-white font-semibold px-8 py-3.5 rounded-full text-sm transition-colors"
                 style={{ fontFamily: "'Poppins', sans-serif" }}
               >
                 Book Appointment

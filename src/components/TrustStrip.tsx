@@ -39,20 +39,20 @@ function Counter({ target, suffix }: { target: number; suffix: string }) {
 
 export default function TrustStrip() {
   return (
-    <section className="bg-[#1a2a6c] py-16">
+    <section className="bg-[#e62d26] py-16">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-px bg-white/10">
           {stats.map((stat) => {
             const Icon = stat.icon;
             return (
-              <div key={stat.label} className="bg-[#1a2a6c] p-8 text-center">
+              <div key={stat.label} className="bg-[#e62d26] p-8 text-center">
                 <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center mx-auto mb-4">
                   <Icon size={22} className="text-white" />
                 </div>
                 <div className="text-4xl font-bold text-white mb-1" style={{ fontFamily: "'Merriweather', serif" }}>
                   <Counter target={stat.number} suffix={stat.suffix} />
                 </div>
-                <p className="text-[#e62d26] text-xs font-semibold tracking-widest uppercase mb-1" style={{ fontFamily: "'Poppins', sans-serif" }}>
+                <p className="text-[#1a2a6c] text-xs font-semibold tracking-widest uppercase mb-1" style={{ fontFamily: "'Poppins', sans-serif" }}>
                   {stat.label}
                 </p>
                 <p className="text-white/50 text-xs" style={{ fontFamily: "'Poppins', sans-serif" }}>

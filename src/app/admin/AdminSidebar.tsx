@@ -41,7 +41,7 @@ export default function AdminSidebar({ userEmail }: { userEmail: string }) {
       {/* Mobile toggle */}
       <button
         onClick={() => setMobileOpen(!mobileOpen)}
-        className="lg:hidden fixed top-4 left-4 z-50 w-10 h-10 bg-[#1a2a6c] text-white rounded-xl flex items-center justify-center shadow-lg"
+        className="lg:hidden fixed top-4 left-4 z-50 w-10 h-10 bg-[#e62d26] text-white rounded-xl flex items-center justify-center shadow-lg"
       >
         {mobileOpen ? <X size={18} /> : <Menu size={18} />}
       </button>
@@ -50,7 +50,7 @@ export default function AdminSidebar({ userEmail }: { userEmail: string }) {
       <aside
         className={`${
           mobileOpen ? "translate-x-0" : "-translate-x-full"
-        } lg:translate-x-0 fixed lg:static inset-y-0 left-0 z-40 w-72 bg-[#1a2a6c] text-white flex flex-col transition-transform duration-300`}
+        } lg:translate-x-0 fixed lg:static inset-y-0 left-0 z-40 w-72 bg-[#e62d26] text-white flex flex-col transition-transform duration-300`}
       >
         <div className="p-6 border-b border-white/10">
           <h1

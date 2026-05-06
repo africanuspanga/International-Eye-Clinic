@@ -81,7 +81,7 @@ export default function MissionPage() {
                 </div>
 
                 <div className="mt-8 space-y-4">
-                  <div className="bg-[#1a2a6c] rounded-2xl p-6 text-white">
+                  <div className="bg-[#e62d26] rounded-2xl p-6 text-white">
                     <h3
                       className="text-lg font-bold mb-2"
                       style={{ fontFamily: "'Merriweather', serif" }}
@@ -98,7 +98,7 @@ export default function MissionPage() {
 
                   <div className="bg-[#f5f6fa] rounded-2xl p-6 border border-gray-100">
                     <h3
-                      className="text-lg font-bold text-[#1a2a6c] mb-2"
+                      className="text-lg font-bold text-[#e62d26] mb-2"
                       style={{ fontFamily: "'Merriweather', serif" }}
                     >
                       Our Vision
@@ -122,7 +122,7 @@ export default function MissionPage() {
                     className="object-cover"
                   />
                 </div>
-                <div className="absolute -bottom-5 -right-5 bg-[#e62d26] text-white rounded-2xl p-5 shadow-xl">
+                <div className="absolute -bottom-5 -right-5 bg-[#1a2a6c] text-white rounded-2xl p-5 shadow-xl">
                   <div
                     className="text-3xl font-bold"
                     style={{ fontFamily: "'Merriweather', serif" }}
@@ -161,8 +161,8 @@ export default function MissionPage() {
                     key={p.title}
                     className="bg-white rounded-2xl p-6 text-center shadow-sm border border-gray-100 hover-lift"
                   >
-                    <div className="w-12 h-12 bg-[#e8edf7] rounded-xl flex items-center justify-center mx-auto mb-4">
-                      <Icon size={22} className="text-[#1a2a6c]" />
+                    <div className="w-12 h-12 bg-[#fdecea] rounded-xl flex items-center justify-center mx-auto mb-4">
+                      <Icon size={22} className="text-[#e62d26]" />
                     </div>
                     <h3
                       className="font-bold text-[#111827] mb-2 text-sm"
@@ -183,7 +183,7 @@ export default function MissionPage() {
           </div>
         </section>
 
-        <section className="py-16 bg-[#1a2a6c]">
+        <section className="py-16 bg-[#e62d26]">
           <div className="max-w-3xl mx-auto px-6 text-center">
             <h2
               className="text-4xl font-bold text-white mb-4"
@@ -199,7 +199,7 @@ export default function MissionPage() {
             </p>
             <Link
               href="/appointment"
-              className="inline-flex items-center gap-2 bg-[#e62d26] hover:bg-[#c4201a] text-white font-semibold px-8 py-3.5 rounded-full transition-colors"
+              className="inline-flex items-center gap-2 bg-[#1a2a6c] hover:bg-[#243688] text-white font-semibold px-8 py-3.5 rounded-full transition-colors"
               style={{ fontFamily: "'Poppins', sans-serif" }}
             >
               Book Appointment <ArrowRight size={16} />

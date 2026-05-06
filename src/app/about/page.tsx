@@ -67,8 +67,8 @@ export default function AboutPage() {
 
                 <div className="grid grid-cols-3 gap-4 mb-8">
                   {[["12+", "Years Experience"], ["1000+", "Patients Treated"], ["20+", "Insurance Partners"]].map(([n, l]) => (
-                    <div key={l} className="bg-[#e8edf7] rounded-xl p-4 text-center">
-                      <div className="text-2xl font-bold text-[#1a2a6c] mb-1" style={{ fontFamily: "'Merriweather', serif" }}>{n}</div>
+                    <div key={l} className="bg-[#fdecea] rounded-xl p-4 text-center">
+                      <div className="text-2xl font-bold text-[#e62d26] mb-1" style={{ fontFamily: "'Merriweather', serif" }}>{n}</div>
                       <div className="text-xs text-[#6b7280]" style={{ fontFamily: "'Poppins', sans-serif" }}>{l}</div>
                     </div>
                   ))}
@@ -80,8 +80,8 @@ export default function AboutPage() {
                     { title: "Mission", text: "To provide comprehensive, high-quality eye care services using advanced technology and continuous improvement." },
                     { title: "Vision", text: "To become the leading eye hospital in Tanzania, East Africa, and across Africa." },
                   ].map((mv) => (
-                    <div key={mv.title} className="border-l-4 border-[#e62d26] pl-5">
-                      <h4 className="font-bold text-[#1a2a6c] mb-1 text-sm" style={{ fontFamily: "'Poppins', sans-serif" }}>Our {mv.title}</h4>
+                    <div key={mv.title} className="border-l-4 border-[#1a2a6c] pl-5">
+                      <h4 className="font-bold text-[#e62d26] mb-1 text-sm" style={{ fontFamily: "'Poppins', sans-serif" }}>Our {mv.title}</h4>
                       <p className="text-[#6b7280] text-sm" style={{ fontFamily: "'Poppins', sans-serif" }}>{mv.text}</p>
                     </div>
                   ))}
@@ -92,7 +92,7 @@ export default function AboutPage() {
                 <div className="relative rounded-2xl overflow-hidden shadow-xl aspect-[4/5]">
                   <Image src="/images/eye examination 1.jpg" alt="International Eye Hospital" fill className="object-cover" />
                 </div>
-                <div className="absolute -bottom-5 -left-5 bg-[#1a2a6c] text-white rounded-2xl p-5 shadow-xl">
+                <div className="absolute -bottom-5 -left-5 bg-[#e62d26] text-white rounded-2xl p-5 shadow-xl">
                   <div className="text-3xl font-bold" style={{ fontFamily: "'Merriweather', serif" }}>12+</div>
                   <div className="text-xs text-white/70 uppercase tracking-widest mt-1" style={{ fontFamily: "'Poppins', sans-serif" }}>Years of Excellence</div>
                 </div>
@@ -115,8 +115,8 @@ export default function AboutPage() {
                 const Icon = v.icon;
                 return (
                   <div key={v.label} className="bg-white rounded-2xl p-6 text-center shadow-sm border border-gray-100 hover-lift">
-                    <div className="w-12 h-12 bg-[#e8edf7] rounded-xl flex items-center justify-center mx-auto mb-4">
-                      <Icon size={22} className="text-[#1a2a6c]" />
+                    <div className="w-12 h-12 bg-[#fdecea] rounded-xl flex items-center justify-center mx-auto mb-4">
+                      <Icon size={22} className="text-[#e62d26]" />
                     </div>
                     <h3 className="font-bold text-[#111827] mb-2 text-sm" style={{ fontFamily: "'Poppins', sans-serif" }}>{v.label}</h3>
                     <p className="text-[#6b7280] text-xs leading-relaxed" style={{ fontFamily: "'Poppins', sans-serif" }}>{v.desc}</p>
@@ -139,9 +139,9 @@ export default function AboutPage() {
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
               {subPages.map((p) => (
                 <Link key={p.label} href={p.href}
-                  className="group bg-white border border-gray-100 hover:border-[#1a2a6c]/30 rounded-2xl p-6 shadow-sm hover:shadow-lg transition-all hover-lift">
-                  <div className="w-2 h-2 rounded-full bg-[#e62d26] mb-4" />
-                  <h3 className="font-bold text-[#111827] group-hover:text-[#1a2a6c] mb-2 transition-colors" style={{ fontFamily: "'Poppins', sans-serif" }}>
+                  className="group bg-white border border-gray-100 hover:border-[#e62d26]/30 rounded-2xl p-6 shadow-sm hover:shadow-lg transition-all hover-lift">
+                  <div className="w-2 h-2 rounded-full bg-[#1a2a6c] mb-4" />
+                  <h3 className="font-bold text-[#111827] group-hover:text-[#e62d26] mb-2 transition-colors" style={{ fontFamily: "'Poppins', sans-serif" }}>
                     {p.label}
                   </h3>
                   <p className="text-[#6b7280] text-sm" style={{ fontFamily: "'Poppins', sans-serif" }}>{p.desc}</p>
@@ -152,7 +152,7 @@ export default function AboutPage() {
         </section>
 
         {/* CTA */}
-        <section className="py-16 bg-[#1a2a6c]">
+        <section className="py-16 bg-[#e62d26]">
           <div className="max-w-3xl mx-auto px-6 text-center">
             <h2 className="text-4xl font-bold text-white mb-4" style={{ fontFamily: "'Merriweather', serif" }}>
               Ready to Experience Our Care?
@@ -161,7 +161,7 @@ export default function AboutPage() {
               Book your appointment today and experience world-class eye care in Tanzania.
             </p>
             <Link href="/appointment"
-              className="inline-flex items-center gap-2 bg-[#e62d26] hover:bg-[#c4201a] text-white font-semibold px-8 py-3.5 rounded-full transition-colors"
+              className="inline-flex items-center gap-2 bg-[#1a2a6c] hover:bg-[#243688] text-white font-semibold px-8 py-3.5 rounded-full transition-colors"
               style={{ fontFamily: "'Poppins', sans-serif" }}>
               Book Appointment
             </Link>

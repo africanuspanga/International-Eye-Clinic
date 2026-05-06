@@ -37,7 +37,7 @@ export default function BlogListPage() {
                 <Link
                   key={post.slug}
                   href={`/news/blog/${post.slug}`}
-                  className="group bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl hover:shadow-black/8 hover:border-[#1a2a6c]/20 transition-all overflow-hidden hover-lift"
+                  className="group bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl hover:shadow-black/8 hover:border-[#e62d26]/20 transition-all overflow-hidden hover-lift"
                 >
                   <div className="relative h-52 overflow-hidden">
                     <Image
@@ -48,7 +48,7 @@ export default function BlogListPage() {
                     />
                     <div className="absolute top-3 left-3">
                       <span
-                        className="bg-[#e62d26] text-white text-xs font-semibold px-3 py-1 rounded-full"
+                        className="bg-[#1a2a6c] text-white text-xs font-semibold px-3 py-1 rounded-full"
                         style={{ fontFamily: "'Poppins', sans-serif" }}
                       >
                         {post.category}
@@ -68,7 +68,7 @@ export default function BlogListPage() {
                       <span>{post.date}</span>
                     </div>
                     <h2
-                      className="font-bold text-[#111827] text-base leading-snug mb-2 group-hover:text-[#1a2a6c] transition-colors"
+                      className="font-bold text-[#111827] text-base leading-snug mb-2 group-hover:text-[#e62d26] transition-colors"
                       style={{ fontFamily: "'Poppins', sans-serif" }}
                     >
                       {post.title}
@@ -80,7 +80,7 @@ export default function BlogListPage() {
                       {post.excerpt}
                     </p>
                     <div
-                      className="mt-4 flex items-center gap-1.5 text-[#1a2a6c] text-sm font-semibold group-hover:gap-2.5 transition-all"
+                      className="mt-4 flex items-center gap-1.5 text-[#e62d26] text-sm font-semibold group-hover:gap-2.5 transition-all"
                       style={{ fontFamily: "'Poppins', sans-serif" }}
                     >
                       Read Article <ArrowRight size={14} />
@@ -92,7 +92,7 @@ export default function BlogListPage() {
           </div>
         </section>
 
-        <section className="py-16 bg-[#1a2a6c]">
+        <section className="py-16 bg-[#e62d26]">
           <div className="max-w-3xl mx-auto px-6 text-center">
             <h2
               className="text-4xl font-bold text-white mb-4"
@@ -108,7 +108,7 @@ export default function BlogListPage() {
             </p>
             <Link
               href="/appointment"
-              className="inline-block bg-[#e62d26] hover:bg-[#c4201a] text-white font-semibold px-8 py-3.5 rounded-full text-sm transition-colors"
+              className="inline-block bg-[#1a2a6c] hover:bg-[#243688] text-white font-semibold px-8 py-3.5 rounded-full text-sm transition-colors"
               style={{ fontFamily: "'Poppins', sans-serif" }}
             >
               Book Consultation
