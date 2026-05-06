@@ -55,8 +55,8 @@ export default function Hero() {
       ))}
 
       {/* Dark overlay */}
-      <div className="absolute inset-0 bg-gradient-to-r from-[#e62d26]/90 via-[#e62d26]/70 to-[#e62d26]/30 z-[2]" />
-      <div className="absolute inset-0 bg-gradient-to-t from-[#e62d26]/60 via-transparent to-transparent z-[2]" />
+      <div className="absolute inset-0 bg-gradient-to-r from-[#e62d26]/80 via-[#e62d26]/60 to-[#e62d26]/20 z-[2]" />
+      <div className="absolute inset-0 bg-gradient-to-t from-[#e62d26]/40 via-transparent to-transparent z-[2]" />
 
       {/* Content */}
       <div className="relative z-10 h-full flex items-center">
@@ -85,11 +85,11 @@ export default function Hero() {
 
             {/* Sub */}
             <p className="text-white/80 text-lg sm:text-xl leading-relaxed mb-8 max-w-xl" style={{ fontFamily: "'Poppins', sans-serif" }}>
-              At International Eye Hospital, we combine advanced medical technology with experienced specialists to deliver comprehensive eye care services you can trust.
+              We combine advanced medical technology with experienced specialists to deliver comprehensive eye care services.
             </p>
 
             {/* CTAs */}
-            <div className="flex flex-wrap gap-3">
+            <div className="flex flex-wrap gap-3 justify-center">
               <Link
                 href="/appointment"
                 className="bg-[#1a2a6c] hover:bg-[#243688] text-white font-semibold px-8 py-3.5 rounded-full transition-all duration-200 hover:shadow-xl hover:shadow-blue-600/30 text-sm"
