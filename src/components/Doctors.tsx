@@ -37,7 +37,7 @@ const doctors = [
     bio: "A compassionate ophthalmologist focused on improving vision through preventive, corrective, medical, and surgical eye care.",
   },
   {
-    name: "Harley H. Mkini",
+    name: "Dr. Harley H. Mkini",
     title: "Optometrist",
     specialty: ["Refraction", "Contact Lenses", "Low Vision", "Pediatric Optometry", "Diabetic Eye Clinic", "Glaucoma Clinic"],
     experience: "4+",
@@ -48,7 +48,7 @@ const doctors = [
     bio: "Optometrist and primary eye care provider experienced in refraction, contact lenses, low vision rehabilitation, glaucoma clinic support, and diabetic eye clinic support.",
   },
   {
-    name: "Michael Machimu",
+    name: "Dr. Michael Machimu",
     title: "Optometrist",
     specialty: ["Vision Testing", "Corrective Lenses", "Eye Condition Assessment", "Patient Eye Care", "Preventive Vision Care"],
     experience: "3+",
@@ -89,7 +89,7 @@ export default function Doctors() {
                   alt={doc.name}
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                  className={`object-cover group-hover:scale-105 transition-transform duration-500 ${doc.name === "Harley H. Mkini" ? "object-center" : "object-top"}`}
+                  className={`object-cover group-hover:scale-105 transition-transform duration-500 ${doc.name === "Dr. Harley H. Mkini" ? "object-center" : "object-top"}`}
                 />
                 {/* Overlay at bottom */}
                 <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-[#e62d26] to-transparent" />

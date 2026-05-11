@@ -2,20 +2,20 @@ import Image from "next/image";
 import Link from "next/link";
 
 const images = [
-  { src: "/images/eye.jpg", alt: "Eye close-up", span: "col-span-2 row-span-2" },
+  { src: "/images/new images/eye.jpg", alt: "Eye close-up", span: "col-span-2 row-span-2" },
   { src: "/images/eye examination 1.jpg", alt: "Eye examination" },
   { src: "/images/lasik 1.jpg", alt: "LASIK vision correction" },
   { src: "/images/eye 2.jpg", alt: "Eye detail", span: "col-span-2" },
-  { src: "/images/gallery-surgery-equipment.jpg", alt: "Surgical microscope suite", span: "row-span-2" },
+  { src: "/images/new images/gallery-surgery-equipment.jpg", alt: "Surgical microscope suite", span: "row-span-2" },
   { src: "/images/eye test 1.jpg", alt: "Eye test" },
   { src: "/images/optic 4.jpg", alt: "Optic examination" },
-  { src: "/images/gallery-doctors-team.jpg", alt: "Doctors with diagnostic equipment", span: "col-span-2" },
+  { src: "/images/new images/gallery-doctors-team.jpg", alt: "Doctors with diagnostic equipment", span: "col-span-2" },
   { src: "/images/lasik 2.jpg", alt: "Advanced laser surgery" },
   { src: "/images/eye examination 6.jpg", alt: "Patient examination" },
   { src: "/images/staff-3.jpg", alt: "Medical staff", span: "row-span-2" },
-  { src: "/images/gallery-patient-glasses.jpg", alt: "Patient trying on glasses" },
+  { src: "/images/new images/gallery-patient-glasses.jpg", alt: "Patient trying on glasses" },
   { src: "/images/eye examination 8.jpg", alt: "Advanced eye exam" },
-  { src: "/images/gallery-diagnostic-equipment.jpg", alt: "Diagnostic phoropter station" },
+  { src: "/images/new images/gallery-diagnostic-equipment.jpg", alt: "Diagnostic phoropter station" },
   { src: "/images/eye test 2.jpg", alt: "Vision testing" },
 ];
 

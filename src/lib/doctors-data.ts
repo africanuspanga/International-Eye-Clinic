@@ -53,7 +53,7 @@ export const doctors: Doctor[] = [
   },
   {
     slug: "harley-mkini",
-    name: "Harley H. Mkini",
+    name: "Dr. Harley H. Mkini",
     title: "Optometrist",
     image: "/doctors/harley-mkini.jpeg",
     birthPlace: "Tanzania",
@@ -87,7 +87,7 @@ export const doctors: Doctor[] = [
   },
   {
     slug: "michael-machimu",
-    name: "Michael Machimu",
+    name: "Dr. Michael Machimu",
     title: "Optometrist",
     image: "/doctors/michael-machimu.jpeg",
     birthPlace: "Tanzania",

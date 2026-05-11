@@ -55,8 +55,8 @@ export default function Hero() {
       ))}
 
       {/* Dark overlay */}
-      <div className="absolute inset-0 bg-gradient-to-r from-[#e62d26]/80 via-[#e62d26]/60 to-[#e62d26]/20 z-[2]" />
-      <div className="absolute inset-0 bg-gradient-to-t from-[#e62d26]/40 via-transparent to-transparent z-[2]" />
+      <div className="absolute inset-0 bg-gradient-to-r from-[#e62d26]/50 via-[#e62d26]/35 to-[#e62d26]/10 z-[2]" />
+      <div className="absolute inset-0 bg-gradient-to-t from-[#e62d26]/20 via-transparent to-transparent z-[2]" />
 
       {/* Content */}
       <div className="relative z-10 h-full flex items-center">

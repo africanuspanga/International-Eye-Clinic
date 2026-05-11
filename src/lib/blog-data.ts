@@ -24,7 +24,7 @@ export const blogPosts: BlogPost[] = [
     category: "Eye Health Tips",
     readTime: "3 min read",
     date: "March 28, 2026",
-    image: "/images/eye examination 1.jpg",
+    image: "/images/new images/IMG_0376.jpg.jpeg",
     content: [
       {
         type: "paragraph",
@@ -84,7 +84,7 @@ export const blogPosts: BlogPost[] = [
     category: "Eye Conditions",
     readTime: "3 min read",
     date: "March 14, 2026",
-    image: "/images/optic 4.jpg",
+    image: "/images/new images/gallery-diagnostic-equipment.jpg",
     content: [
       {
         type: "paragraph",
@@ -139,7 +139,7 @@ export const blogPosts: BlogPost[] = [
     category: "Eye Health Tips",
     readTime: "3 min read",
     date: "February 27, 2026",
-    image: "/images/eye test 1.jpg",
+    image: "/images/new images/IMG_2913.jpg.jpeg",
     content: [
       {
         type: "paragraph",

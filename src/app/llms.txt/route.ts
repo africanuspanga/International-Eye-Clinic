@@ -47,12 +47,18 @@ International Eye Hospital (IFG Hospitals Group) is a specialized eye care facil
 - Languages: English, Swahili
 - Member: Tanzania Ophthalmologist Society, Public Health Association of South Africa (Associate)
 
-### Harley H. Mkini
+### Dr. Harley H. Mkini
 - Optometrist
 - Specialties: Refraction, Contact Lenses, Low Vision, Pediatric Optometry, Diabetic Eye Clinic, Glaucoma Clinic
 - Training: Kilimanjaro Christian Medical University College (BSc Optometry)
 - Languages: English, Swahili
 - Member: IACLE, Myopia Society
+
+### Dr. Michael Machimu
+- Optometrist
+- Specialties: Vision Testing, Corrective Lenses, Eye Condition Assessment, Patient Eye Care, Preventive Vision Care
+- Training: Kilimanjaro Christian Medical University College (BSc Optometry, 2016–2020); Master of Science in Applied Epidemiology and Biostatistics, James Lind Institute, Switzerland (in progress)
+- Languages: English, Swahili
 
 ## Eye Conditions Treated
 

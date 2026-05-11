@@ -9,7 +9,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Our Doctors | International Eye Hospital",
-  description: "Meet our eye care specialists at International Eye Hospital, Dar es Salaam — Dr. Muammer Coskun, Dr. Vangilisasi Msola, Dr. Zayd Mohamed Sangey, Harley H. Mkini, and Michael Machimu.",
+  description: "Meet our eye care specialists at International Eye Hospital, Dar es Salaam — Dr. Muammer Coskun, Dr. Vangilisasi Msola, Dr. Zayd Mohamed Sangey, Dr. Harley H. Mkini, and Dr. Michael Machimu.",
 };
 
 const doctors = [
@@ -47,7 +47,7 @@ const doctors = [
     bio: "A compassionate ophthalmologist focused on improving vision through preventive, corrective, medical, and surgical eye care. Trained at Muhimbili, he provides specialist care with special interests in cornea, refractive and external eye diseases, cataract, glaucoma, medical retina, uveitis, and pediatric ophthalmology.",
   },
   {
-    name: "Harley H. Mkini",
+    name: "Dr. Harley H. Mkini",
     title: "Optometrist",
     specialty: ["Refraction", "Contact Lenses", "Low Vision", "Pediatric Optometry", "Diabetic Eye Clinic", "Glaucoma Clinic"],
     experience: "4+",
@@ -58,7 +58,7 @@ const doctors = [
     bio: "Optometrist and primary eye care provider with experience in refraction, ophthalmic dispensing, low vision rehabilitation, binocular vision assessment, pediatric and geriatric optometry, contact lenses, glaucoma clinic support, diabetic eye clinic support, and ocular disease management. He has served at International Eye Hospital since August 2021.",
   },
   {
-    name: "Michael Machimu",
+    name: "Dr. Michael Machimu",
     title: "Optometrist",
     specialty: ["Vision Testing", "Corrective Lenses", "Eye Condition Assessment", "Patient Eye Care", "Preventive Vision Care"],
     experience: "3+",
@@ -91,7 +91,7 @@ export default function DoctorsPage() {
                 <div key={doc.name} className="group bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl hover:shadow-black/10 hover:border-[#e62d26]/20 transition-all overflow-hidden hover-lift">
                   {/* Photo */}
                   <div className="relative h-80 bg-[#fdecea]">
-                    <Image src={doc.image} alt={doc.name} fill sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw" className={`object-cover ${doc.name === "Harley H. Mkini" ? "object-center" : "object-top"}`} />
+                    <Image src={doc.image} alt={doc.name} fill sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw" className={`object-cover ${doc.name === "Dr. Harley H. Mkini" ? "object-center" : "object-top"}`} />
                     <div className="absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-[#e62d26] to-transparent" />
                     <div className="absolute top-4 right-4 bg-[#1a2a6c] text-white rounded-xl px-3 py-1.5 text-center">
                       <div className="text-lg font-bold leading-none" style={{ fontFamily: "'Merriweather', serif" }}>{doc.experience}</div>

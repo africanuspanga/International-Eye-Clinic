@@ -12,7 +12,7 @@ const services = [
     category: "Surgery",
     href: "/services/cataract",
     desc: "Advanced surgical procedures to restore clear vision using modern intraocular lens technology, performed by internationally trained surgeons.",
-    image: "/images/eye examination 8.jpg",
+    image: "/images/new images/gallery-phaco-machine.jpg",
   },
   {
     icon: Activity,
@@ -20,7 +20,7 @@ const services = [
     category: "Medical",
     href: "/services/glaucoma",
     desc: "Early diagnosis and comprehensive treatment to protect your optic nerve and preserve your long-term vision.",
-    image: "/images/eye test 1.jpg",
+    image: "/images/new images/gallery-diagnostic-equipment.jpg",
   },
   {
     icon: ScanEye,
@@ -28,7 +28,7 @@ const services = [
     category: "Specialist",
     href: "/services/retina",
     desc: "Full-time retina subspecialists offering diagnosis and treatment for diabetic retinopathy, macular degeneration and more.",
-    image: "/images/optic 4.jpg",
+    image: "/images/new images/IMG_0336.JPG.jpeg",
   },
   {
     icon: Eye,
@@ -36,7 +36,7 @@ const services = [
     category: "Surgery",
     href: "/services/cornea",
     desc: "Surgical replacement and treatment of damaged corneal tissue using the latest techniques for optimal visual outcomes.",
-    image: "/images/eye examination 9.jpg",
+    image: "/images/new images/gallery-surgery-equipment.jpg",
   },
   {
     icon: FlaskConical,
@@ -44,7 +44,7 @@ const services = [
     category: "Diagnostics",
     href: "/services/eye-tests",
     desc: "Full diagnostic testing suite including OCT, FFA, Corneal Topography, Tonometry, Visual Field and more.",
-    image: "/images/eye test 2.jpg",
+    image: "/images/new images/gallery-lensmeter.jpg",
   },
   {
     icon: HeartPulse,
@@ -52,7 +52,7 @@ const services = [
     category: "Specialist",
     href: "/services/keratoconus",
     desc: "Expert management of keratoconus including corneal cross-linking and specialty contact lenses.",
-    image: "/images/eye examination 5.jpg",
+    image: "/images/new images/gallery-laser-suite.jpg",
   },
   {
     icon: Stethoscope,
@@ -60,7 +60,7 @@ const services = [
     category: "General",
     href: "/services/general-exam",
     desc: "Comprehensive eye health assessments with automated refraction, tonometry, visual field testing and more.",
-    image: "/images/eye examination 1.jpg",
+    image: "/images/new images/gallery-patient-glasses.jpg",
   },
 ];
 

@@ -10,8 +10,8 @@ const doctorOptions = [
   "Dr. Muammer Coskun",
   "Dr. Vangilisasi Msola",
   "Dr. Zayd Mohamed Sangey",
-  "Harley H. Mkini",
-  "Michael Machimu",
+  "Dr. Harley H. Mkini",
+  "Dr. Michael Machimu",
 ];
 
 const serviceOptions = [

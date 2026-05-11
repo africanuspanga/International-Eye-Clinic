@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { Calendar, User, Phone, Mail, ChevronRight, CheckCircle2 } from "lucide-react";
 
-const doctors = ["Dr. Muammer Coskun", "Dr. Vangilisasi Msola", "Dr. Zayd Mohamed Sangey", "Harley H. Mkini", "Michael Machimu"];
+const doctors = ["Dr. Muammer Coskun", "Dr. Vangilisasi Msola", "Dr. Zayd Mohamed Sangey", "Dr. Harley H. Mkini", "Dr. Michael Machimu"];
 const services = [
   "Cataract Surgery Consultation",
   "Glaucoma Check",
