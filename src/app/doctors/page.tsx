@@ -10,6 +10,21 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Our Doctors | International Eye Hospital",
   description: "Meet our eye care specialists at International Eye Hospital, Dar es Salaam — Dr. Muammer Coskun, Dr. Vangilisasi Msola, Dr. Zayd Mohamed Sangey, Dr. Harley H. Mkini, and Dr. Michael Machimu.",
+  alternates: {
+    canonical: "https://www.internationaleyehospital.com/doctors",
+  },
+  openGraph: {
+    title: "Our Doctors | International Eye Hospital",
+    description: "Meet our eye care specialists at International Eye Hospital, Dar es Salaam.",
+    images: [
+      {
+        url: "/images/hero/slide-1.jpeg",
+        width: 1200,
+        height: 630,
+        alt: "International Eye Hospital - Our Doctors",
+      },
+    ],
+  },
 };
 
 const doctors = [

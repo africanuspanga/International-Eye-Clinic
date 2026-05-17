@@ -12,6 +12,22 @@ export const metadata: Metadata = {
   title: "Eye Health Blog | International Eye Hospital",
   description:
     "Expert eye health articles, tips, and insights from the specialists at International Eye Hospital in Dar es Salaam.",
+  alternates: {
+    canonical: "https://www.internationaleyehospital.com/news/blog",
+  },
+  openGraph: {
+    title: "Eye Health Blog | International Eye Hospital",
+    description:
+      "Expert eye health articles, tips, and insights from the specialists at International Eye Hospital in Dar es Salaam.",
+    images: [
+      {
+        url: "/images/hero/slide-1.jpeg",
+        width: 1200,
+        height: 630,
+        alt: "International Eye Hospital - Eye Health Blog",
+      },
+    ],
+  },
 };
 
 export default function BlogListPage() {

@@ -6,6 +6,19 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Retina – Diabetic Retinopathy | International Eye Hospital",
   description: "Expert retina care including OCT, FFA, visual field, and biometry. Early detection and treatment of diabetic retinopathy and other retina diseases.",
+  openGraph: {
+    images: [
+      {
+        url: "/images/hero/slide-1.jpeg",
+        width: 1200,
+        height: 630,
+        alt: "International Eye Hospital",
+      },
+    ],
+  },
+  alternates: {
+    canonical: "https://www.internationaleyehospital.com/services/retina",
+  },
 };
 
 export default function RetinaPage() {

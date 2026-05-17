@@ -10,6 +10,19 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Chairman of Board of Directors | International Eye Hospital",
   description: "A message from the Chairman of International Eye Hospital on our vision for world-class eye care in Tanzania since 2014.",
+  openGraph: {
+    images: [
+      {
+        url: "/images/hero/slide-1.jpeg",
+        width: 1200,
+        height: 630,
+        alt: "International Eye Hospital",
+      },
+    ],
+  },
+  alternates: {
+    canonical: "https://www.internationaleyehospital.com/about/chairman",
+  },
 };
 
 export default function ChairmanPage() {

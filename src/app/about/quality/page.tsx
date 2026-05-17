@@ -10,6 +10,19 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Quality Policy | International Eye Hospital",
   description: "Our commitment to continuous improvement, patient safety, confidentiality, and international standards of eye care in Tanzania.",
+  openGraph: {
+    images: [
+      {
+        url: "/images/hero/slide-1.jpeg",
+        width: 1200,
+        height: 630,
+        alt: "International Eye Hospital",
+      },
+    ],
+  },
+  alternates: {
+    canonical: "https://www.internationaleyehospital.com/about/quality",
+  },
 };
 
 const commitments = [

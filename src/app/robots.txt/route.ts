@@ -6,6 +6,7 @@ Allow: /
 Disallow: /admin
 Disallow: /login
 Disallow: /api/
+Disallow: /*?*
 
 Sitemap: https://www.internationaleyehospital.com/sitemap.xml
 

@@ -10,6 +10,19 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Corporate Social Responsibility | International Eye Hospital",
   description: "International Eye Hospital's CSR initiatives — eye screenings, community outreach, and free medical assistance across Tanzania.",
+  openGraph: {
+    images: [
+      {
+        url: "/images/hero/slide-1.jpeg",
+        width: 1200,
+        height: 630,
+        alt: "International Eye Hospital",
+      },
+    ],
+  },
+  alternates: {
+    canonical: "https://www.internationaleyehospital.com/about/csr",
+  },
 };
 
 const initiatives = [

@@ -10,6 +10,19 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Why International Eye Hospital | About Us",
   description: "Discover why patients choose International Eye Hospital — experienced specialists, modern infrastructure, advanced laser equipment, and trusted insurance partnerships.",
+  openGraph: {
+    images: [
+      {
+        url: "/images/hero/slide-1.jpeg",
+        width: 1200,
+        height: 630,
+        alt: "International Eye Hospital",
+      },
+    ],
+  },
+  alternates: {
+    canonical: "https://www.internationaleyehospital.com/about/why-us",
+  },
 };
 
 const reasons = [

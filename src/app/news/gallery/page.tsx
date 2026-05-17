@@ -10,6 +10,19 @@ export const metadata: Metadata = {
   title: "Gallery | International Eye Hospital",
   description:
     "Photos from International Eye Hospital — our facilities, equipment, medical staff, and community outreach in Dar es Salaam, Tanzania.",
+  openGraph: {
+    images: [
+      {
+        url: "/images/hero/slide-1.jpeg",
+        width: 1200,
+        height: 630,
+        alt: "International Eye Hospital",
+      },
+    ],
+  },
+  alternates: {
+    canonical: "https://www.internationaleyehospital.com/news/gallery",
+  },
 };
 
 const galleryImages = [

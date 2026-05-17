@@ -6,6 +6,7 @@ import Footer from "@/components/Footer";
 import WhatsApp from "@/components/WhatsApp";
 import { blogPosts, getBlogPost } from "@/lib/blog-data";
 import { ArrowLeft, Clock, Tag, Calendar } from "lucide-react";
+import { BreadcrumbJsonLd, BlogPostingJsonLd } from "@/components/StructuredData";
 import type { Metadata } from "next";
 
 export async function generateStaticParams() {
@@ -23,6 +24,29 @@ export async function generateMetadata({
   return {
     title: `${post.title} | International Eye Hospital`,
     description: post.excerpt,
+    alternates: {
+      canonical: `https://www.internationaleyehospital.com/news/blog/${slug}`,
+    },
+    openGraph: {
+      title: `${post.title} | International Eye Hospital`,
+      description: post.excerpt,
+      url: `https://www.internationaleyehospital.com/news/blog/${slug}`,
+      type: "article",
+      images: [
+        {
+          url: post.image,
+          width: 1200,
+          height: 630,
+          alt: post.title,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${post.title} | International Eye Hospital`,
+      description: post.excerpt,
+      images: [post.image],
+    },
   };
 }
 
@@ -39,6 +63,22 @@ export default async function BlogPostPage({
 
   return (
     <>
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Home", url: "https://www.internationaleyehospital.com/" },
+          { name: "News", url: "https://www.internationaleyehospital.com/news" },
+          { name: "Blog", url: "https://www.internationaleyehospital.com/news/blog" },
+          { name: post.title, url: `https://www.internationaleyehospital.com/news/blog/${slug}` },
+        ]}
+      />
+      <BlogPostingJsonLd
+        title={post.title}
+        description={post.excerpt}
+        url={`/news/blog/${slug}`}
+        image={post.image}
+        datePublished={new Date(post.date).toISOString()}
+        authorName="International Eye Hospital"
+      />
       <Navbar />
       <main>
         {/* Article header */}

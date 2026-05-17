@@ -5,6 +5,7 @@ import PageHero from "@/components/PageHero";
 import Image from "next/image";
 import Link from "next/link";
 import { CheckCircle2, Heart, Lightbulb, Shield, Star, Users } from "lucide-react";
+import { BreadcrumbJsonLd } from "@/components/StructuredData";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -13,6 +14,17 @@ export const metadata: Metadata = {
   openGraph: {
     title: "About Us | International Eye Hospital",
     description: "Our mission, values, quality policy, and commitment to world-class eye care in Tanzania.",
+    images: [
+      {
+        url: "/images/hero/slide-1.jpeg",
+        width: 1200,
+        height: 630,
+        alt: "International Eye Hospital - About Us",
+      },
+    ],
+  },
+  alternates: {
+    canonical: "https://www.internationaleyehospital.com/about",
   },
 };
 
@@ -35,6 +47,12 @@ const subPages = [
 export default function AboutPage() {
   return (
     <>
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Home", url: "https://www.internationaleyehospital.com/" },
+          { name: "About Us", url: "https://www.internationaleyehospital.com/about" },
+        ]}
+      />
       <Navbar />
       <main>
         <PageHero

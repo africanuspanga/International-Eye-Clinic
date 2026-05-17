@@ -10,6 +10,21 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Our Services | International Eye Hospital",
   description: "Comprehensive eye care services at International Eye Hospital — cataract surgery, retina care, glaucoma, cornea transplant, and advanced diagnostics.",
+  alternates: {
+    canonical: "https://www.internationaleyehospital.com/services",
+  },
+  openGraph: {
+    title: "Our Services | International Eye Hospital",
+    description: "Comprehensive eye care services at International Eye Hospital — cataract surgery, retina care, glaucoma, cornea transplant, and advanced diagnostics.",
+    images: [
+      {
+        url: "/images/hero/slide-1.jpeg",
+        width: 1200,
+        height: 630,
+        alt: "International Eye Hospital - Our Services",
+      },
+    ],
+  },
 };
 
 const servicesList = [

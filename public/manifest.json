@@ -1,0 +1,16 @@
+{
+  "name": "International Eye Hospital",
+  "short_name": "IEH",
+  "description": "World-class eye care in Dar es Salaam, Tanzania. Cataract surgery, retina care, glaucoma treatment, and advanced diagnostics.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#e62d26",
+  "icons": [
+    {
+      "src": "/icon.png",
+      "sizes": "any",
+      "type": "image/png"
+    }
+  ]
+}

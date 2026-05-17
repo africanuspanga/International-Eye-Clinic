@@ -10,6 +10,19 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Mission, Vision & Values | International Eye Hospital",
   description: "Discover what drives International Eye Hospital — our mission to deliver exceptional eye care and our vision for Tanzania as a center of health tourism.",
+  openGraph: {
+    images: [
+      {
+        url: "/images/hero/slide-1.jpeg",
+        width: 1200,
+        height: 630,
+        alt: "International Eye Hospital",
+      },
+    ],
+  },
+  alternates: {
+    canonical: "https://www.internationaleyehospital.com/about/mission",
+  },
 };
 
 const pillars = [

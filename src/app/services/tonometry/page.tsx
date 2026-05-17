@@ -6,6 +6,19 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Tonometry | International Eye Hospital",
   description: "Intraocular pressure measurement for glaucoma detection and monitoring using Goldmann, air puff, and iCare tonometry.",
+  openGraph: {
+    images: [
+      {
+        url: "/images/hero/slide-1.jpeg",
+        width: 1200,
+        height: 630,
+        alt: "International Eye Hospital",
+      },
+    ],
+  },
+  alternates: {
+    canonical: "https://www.internationaleyehospital.com/services/tonometry",
+  },
 };
 
 export default function TonometryPage() {

@@ -12,6 +12,22 @@ export const metadata: Metadata = {
   title: "Eye Conditions | International Eye Hospital",
   description:
     "Learn about common eye conditions including cataract, glaucoma, diabetic retinopathy, strabismus, dry eye, uveitis, and more. Expert care at International Eye Hospital.",
+  alternates: {
+    canonical: "https://www.internationaleyehospital.com/news/eye-conditions",
+  },
+  openGraph: {
+    title: "Eye Conditions | International Eye Hospital",
+    description:
+      "Learn about common eye conditions including cataract, glaucoma, diabetic retinopathy, strabismus, dry eye, uveitis, and more. Expert care at International Eye Hospital.",
+    images: [
+      {
+        url: "/images/hero/slide-1.jpeg",
+        width: 1200,
+        height: 630,
+        alt: "International Eye Hospital - Eye Conditions",
+      },
+    ],
+  },
 };
 
 export const dynamic = "force-dynamic";

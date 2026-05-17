@@ -6,6 +6,19 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Glaucoma Treatment | International Eye Hospital",
   description: "Complete glaucoma testing and treatment including OCT, visual field machines, medicine drops, laser and surgical options.",
+  openGraph: {
+    images: [
+      {
+        url: "/images/hero/slide-1.jpeg",
+        width: 1200,
+        height: 630,
+        alt: "International Eye Hospital",
+      },
+    ],
+  },
+  alternates: {
+    canonical: "https://www.internationaleyehospital.com/services/glaucoma",
+  },
 };
 
 export default function GlaucomaPage() {

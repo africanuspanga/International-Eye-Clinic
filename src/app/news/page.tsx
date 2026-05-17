@@ -11,6 +11,21 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "News & Resources | International Eye Hospital",
   description: "Eye health news, publications, gallery, videos, testimonials, and patient brochures from International Eye Hospital.",
+  alternates: {
+    canonical: "https://www.internationaleyehospital.com/news",
+  },
+  openGraph: {
+    title: "News & Resources | International Eye Hospital",
+    description: "Eye health news, publications, gallery, videos, testimonials, and patient brochures from International Eye Hospital.",
+    images: [
+      {
+        url: "/images/hero/slide-1.jpeg",
+        width: 1200,
+        height: 630,
+        alt: "International Eye Hospital - News & Resources",
+      },
+    ],
+  },
 };
 
 const categories = [

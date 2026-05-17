@@ -8,6 +8,7 @@ import { createClient } from "@/lib/supabase/server";
 import { getConditionBySlug, eyeConditions as fallbackConditions } from "@/lib/eye-conditions-data";
 import { TranslationProvider } from "@/lib/translation-context";
 import ConditionDetailClient from "./ConditionDetailClient";
+import { BreadcrumbJsonLd, MedicalWebPageJsonLd } from "@/components/StructuredData";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -36,6 +37,23 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: `${condition.name} | Eye Conditions | International Eye Hospital`,
     description: dbCondition ? dbCondition.short_desc : fallback?.shortDesc || "",
+    alternates: {
+      canonical: `https://www.internationaleyehospital.com/news/eye-conditions/${slug}`,
+    },
+    openGraph: {
+      title: `${condition.name} | Eye Conditions | International Eye Hospital`,
+      description: dbCondition ? dbCondition.short_desc : fallback?.shortDesc || "",
+      url: `https://www.internationaleyehospital.com/news/eye-conditions/${slug}`,
+      type: "article",
+      images: [
+        {
+          url: "/images/hero/slide-1.jpeg",
+          width: 1200,
+          height: 630,
+          alt: `${condition.name} - International Eye Hospital`,
+        },
+      ],
+    },
   };
 }
 
@@ -91,6 +109,19 @@ export default async function EyeConditionDetailPage({ params }: Props) {
 
   return (
     <TranslationProvider>
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Home", url: "https://www.internationaleyehospital.com/" },
+          { name: "News", url: "https://www.internationaleyehospital.com/news" },
+          { name: "Eye Conditions", url: "https://www.internationaleyehospital.com/news/eye-conditions" },
+          { name: condition.name, url: `https://www.internationaleyehospital.com/news/eye-conditions/${condition.slug}` },
+        ]}
+      />
+      <MedicalWebPageJsonLd
+        title={condition.name}
+        description={condition.shortDesc}
+        url={`/news/eye-conditions/${condition.slug}`}
+      />
       <Navbar />
       <main>
         <PageHero
