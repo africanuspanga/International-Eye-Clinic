@@ -74,9 +74,9 @@ export default function Footer() {
             </ul>
 
             <div className="flex gap-2.5">
-              <a href="https://www.instagram.com/internationaleyehospital/" target="_blank" rel="noopener noreferrer"
+              <a href="https://www.instagram.com/ieh_tz?igsh=MTF3aHZya3Q0bnVoZA%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer"
                 className="w-8 h-8 rounded-full bg-white/10 hover:bg-[#1a2a6c] flex items-center justify-center text-white/50 hover:text-white transition-all"
-                title="@internationaleyehospital">
+                title="@ieh_tz">
                 <InstagramIcon size={14} />
               </a>
               <a href="#" className="w-8 h-8 rounded-full bg-white/10 hover:bg-[#1a2a6c] flex items-center justify-center text-white/50 hover:text-white transition-all">

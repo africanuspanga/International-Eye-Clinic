@@ -35,6 +35,8 @@ export default function AppointmentForm({ compact = false }: { compact?: boolean
   const [step, setStep] = useState<Step>(1);
   const [submitted, setSubmitted] = useState(false);
   const [errors, setErrors] = useState<Record<string, string>>({});
+  const [sending, setSending] = useState(false);
+  const [sendError, setSendError] = useState("");
 
   const [form, setForm] = useState({
     doctor: "",
@@ -66,10 +68,31 @@ export default function AppointmentForm({ compact = false }: { compact?: boolean
     return Object.keys(e).length === 0;
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!validateStep4()) return;
+    setSending(true);
+    setSendError("");
+
+    try {
+      const res = await fetch("/api/appointment", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
+      const data = await res.json();
+      if (!res.ok) {
+        throw new Error(data.error || "Failed to send appointment request");
+      }
+    } catch (err: any) {
+      setSendError(err.message || "Something went wrong. Please try again.");
+      setSending(false);
+      return;
+    }
+
     setSubmitted(true);
+    setSending(false);
+
     // WhatsApp trigger
     const msg = encodeURIComponent(
       `Hello, I have booked an appointment.\nName: ${form.firstName} ${form.lastName}\nDoctor: ${form.doctor}\nService: ${form.service}\nDate: ${form.date} at ${form.time}\nPhone: ${form.phone}`
@@ -311,13 +334,27 @@ export default function AppointmentForm({ compact = false }: { compact?: boolean
                   <p className="text-[#374151]"><span className="text-[#6b7280]">Date & Time: </span>{form.date} at {form.time}</p>
                 </div>
 
+                {sendError && (
+                  <p className="text-center text-xs text-red-600 bg-red-50 rounded-lg py-2 px-3" style={{ fontFamily: "'Poppins', sans-serif" }}>
+                    {sendError}
+                  </p>
+                )}
                 <div className="flex gap-3">
-                  <button type="button" onClick={() => setStep(3)} className="flex-1 border border-gray-200 text-[#6b7280] py-3 rounded-xl hover:bg-gray-50 text-sm font-medium" style={{ fontFamily: "'Poppins', sans-serif" }}>Back</button>
-                  <button type="submit"
-                    className="flex-1 flex items-center justify-center gap-2 bg-[#1a2a6c] hover:bg-[#243688] text-white font-bold py-3.5 rounded-xl transition-colors text-sm"
+                  <button type="button" onClick={() => setStep(3)} disabled={sending} className="flex-1 border border-gray-200 text-[#6b7280] py-3 rounded-xl hover:bg-gray-50 text-sm font-medium disabled:opacity-50" style={{ fontFamily: "'Poppins', sans-serif" }}>Back</button>
+                  <button type="submit" disabled={sending}
+                    className="flex-1 flex items-center justify-center gap-2 bg-[#1a2a6c] hover:bg-[#243688] disabled:opacity-60 disabled:cursor-not-allowed text-white font-bold py-3.5 rounded-xl transition-colors text-sm"
                     style={{ fontFamily: "'Poppins', sans-serif" }}>
-                    <Calendar size={15} />
-                    Request Appointment
+                    {sending ? (
+                      <>
+                        <span className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
+                        Sending...
+                      </>
+                    ) : (
+                      <>
+                        <Calendar size={15} />
+                        Request Appointment
+                      </>
+                    )}
                   </button>
                 </div>
                 <p className="text-center text-xs text-[#6b7280]" style={{ fontFamily: "'Poppins', sans-serif" }}>

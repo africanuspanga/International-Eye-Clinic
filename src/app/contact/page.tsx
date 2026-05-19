@@ -75,8 +75,8 @@ export default function ContactPage() {
                   {
                     icon: InstagramIcon,
                     title: "Instagram",
-                    lines: ["@internationaleyehospital"],
-                    href: "https://www.instagram.com/internationaleyehospital/",
+                    lines: ["@ieh_tz"],
+                    href: "https://www.instagram.com/ieh_tz?igsh=MTF3aHZya3Q0bnVoZA%3D%3D&utm_source=qr",
                   },
                 ].map((c) => {
                   const Icon = c.icon;
