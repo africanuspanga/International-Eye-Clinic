@@ -87,6 +87,21 @@ const nextConfig: NextConfig = {
         destination: "/news",
         permanent: false,
       },
+      {
+        source: "/contact.cfm",
+        destination: "/contact",
+        permanent: true,
+      },
+      {
+        source: "/appointment.cfm",
+        destination: "/appointment",
+        permanent: true,
+      },
+      {
+        source: "/why.cfm",
+        destination: "/services",
+        permanent: true,
+      },
     ];
   },
 };

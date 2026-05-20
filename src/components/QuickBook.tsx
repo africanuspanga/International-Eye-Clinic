@@ -36,7 +36,7 @@ export default function QuickBook() {
 
           {/* WhatsApp */}
           <a
-            href="https://wa.me/255784104300?text=Hello%2C%20I%20would%20like%20to%20book%20an%20appointment."
+            href="https://wa.me/255695586632?text=Hello%2C%20I%20would%20like%20to%20book%20an%20appointment."
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-4 px-6 py-6 hover:bg-[#fdecea] transition-colors group"

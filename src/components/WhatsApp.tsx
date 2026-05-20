@@ -36,7 +36,7 @@ export default function WhatsApp() {
             </p>
           </div>
           <a
-            href="https://wa.me/255784104300?text=Hello%2C%20I%20would%20like%20to%20inquire%20about%20your%20eye%20care%20services."
+            href="https://wa.me/255695586632?text=Hello%2C%20I%20would%20like%20to%20inquire%20about%20your%20eye%20care%20services."
             target="_blank"
             rel="noopener noreferrer"
             className="block w-full bg-[#25D366] hover:bg-[#1da851] text-white text-center text-sm font-semibold py-2.5 rounded-xl transition-colors"

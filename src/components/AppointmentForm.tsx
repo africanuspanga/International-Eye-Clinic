@@ -98,7 +98,7 @@ export default function AppointmentForm({ compact = false }: { compact?: boolean
       `Hello, I have booked an appointment.\nName: ${form.firstName} ${form.lastName}\nDoctor: ${form.doctor}\nService: ${form.service}\nDate: ${form.date} at ${form.time}\nPhone: ${form.phone}`
     );
     setTimeout(() => {
-      window.open(`https://wa.me/255784104300?text=${msg}`, "_blank");
+      window.open(`https://wa.me/255695586632?text=${msg}`, "_blank");
     }, 1500);
   };
 

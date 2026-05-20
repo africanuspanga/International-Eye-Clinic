@@ -98,7 +98,7 @@ export default function Hero() {
                 Book Appointment
               </Link>
               <a
-                href="https://wa.me/255784104300?text=Hello%2C%20I%20would%20like%20to%20inquire%20about%20your%20services."
+                href="https://wa.me/255695586632?text=Hello%2C%20I%20would%20like%20to%20inquire%20about%20your%20services."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-white/15 hover:bg-white/25 border border-white/30 text-white font-semibold px-8 py-3.5 rounded-full transition-all duration-200 backdrop-blur-sm text-sm"

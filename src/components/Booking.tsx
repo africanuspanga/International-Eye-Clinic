@@ -130,7 +130,7 @@ export default function Booking() {
                   We&apos;ll contact you within 2 hours to confirm your appointment.
                 </p>
                 <a
-                  href="https://wa.me/255XXXXXXXXX"
+                  href="https://wa.me/255695586632"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="bg-[#25D366] text-white font-[family-name:var(--font-dm-sans)] font-semibold px-8 py-3 rounded-full hover:bg-[#1da851] transition-colors"
