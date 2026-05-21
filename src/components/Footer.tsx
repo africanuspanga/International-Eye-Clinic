@@ -28,7 +28,7 @@ const hours = [
   { day: "Wednesday", time: "8:30 AM – 5:30 PM" },
   { day: "Thursday", time: "8:30 AM – 5:30 PM" },
   { day: "Friday", time: "8:30 AM – 5:30 PM" },
-  { day: "Saturday", time: "8:30 AM – 5:30 PM" },
+  { day: "Saturday", time: "8:30 AM – 2:00 PM" },
   { day: "Sunday", time: "Closed" },
 ];
 
