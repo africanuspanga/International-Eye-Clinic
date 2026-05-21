@@ -1,7 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
-import { MapPin, Phone, Mail, Clock, Share2, Camera, Send, PlayCircle } from "lucide-react";
+import { MapPin, Phone, Mail, Clock, Share2, Camera, PlayCircle } from "lucide-react";
 import InstagramIcon from "./InstagramIcon";
+import XIcon from "./XIcon";
 
 const quickLinks = [
   { label: "Home", href: "/" },
@@ -46,27 +47,27 @@ export default function Footer() {
                 <Image src="/International eye clinic logo.png" alt="International Eye Hospital" fill
                   className="object-contain object-left brightness-0 invert" />
               </div>
-              <p className="text-white/50 text-xs" style={{ fontFamily: "'Poppins', sans-serif" }}>IFG Hospitals Group</p>
+              <p className="text-white/60 text-xs font-bold" style={{ fontFamily: "'Poppins', sans-serif" }}>AN AMERICAN HEALTHCARE INSTITUTE</p>
             </div>
-            <p className="text-white/60 text-sm leading-relaxed mb-6 max-w-xs" style={{ fontFamily: "'Poppins', sans-serif" }}>
+            <p className="text-white/80 text-sm leading-relaxed mb-6 max-w-xs font-bold" style={{ fontFamily: "'Poppins', sans-serif" }}>
               Tanzania&apos;s premier specialized eye hospital, delivering world-class ophthalmic care since 2014.
             </p>
 
             <ul className="space-y-3 mb-7">
               <li>
-                <span className="flex items-start gap-2.5 text-white/60 text-sm" style={{ fontFamily: "'Poppins', sans-serif" }}>
+                <span className="flex items-start gap-2.5 text-white/80 text-sm font-bold" style={{ fontFamily: "'Poppins', sans-serif" }}>
                   <MapPin size={15} className="text-[#1a2a6c] mt-0.5 flex-shrink-0" />
                   Tropical Center, New Bagamoyo Road,<br />P.O. Box 2083, Dar es Salaam, Tanzania
                 </span>
               </li>
               <li>
-                <a href="tel:+255784104300" className="flex items-center gap-2.5 text-white/60 hover:text-white text-sm transition-colors" style={{ fontFamily: "'Poppins', sans-serif" }}>
+                <a href="tel:+255784104300" className="flex items-center gap-2.5 text-white/80 hover:text-white text-sm transition-colors font-bold" style={{ fontFamily: "'Poppins', sans-serif" }}>
                   <Phone size={14} className="text-[#1a2a6c] flex-shrink-0" />
                   +255 784 104 300
                 </a>
               </li>
               <li>
-                <a href="mailto:info@eye.co.tz" className="flex items-center gap-2.5 text-white/60 hover:text-white text-sm transition-colors" style={{ fontFamily: "'Poppins', sans-serif" }}>
+                <a href="mailto:info@eye.co.tz" className="flex items-center gap-2.5 text-white/80 hover:text-white text-sm transition-colors font-bold" style={{ fontFamily: "'Poppins', sans-serif" }}>
                   <Mail size={14} className="text-[#1a2a6c] flex-shrink-0" />
                   info@eye.co.tz
                 </a>
@@ -79,11 +80,11 @@ export default function Footer() {
                 title="@ieh_tz">
                 <InstagramIcon size={14} />
               </a>
-              <a href="#" className="w-8 h-8 rounded-full bg-white/10 hover:bg-[#1a2a6c] flex items-center justify-center text-white/50 hover:text-white transition-all">
+              <a href="https://www.facebook.com/IEH.TZ/" target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full bg-white/10 hover:bg-[#1a2a6c] flex items-center justify-center text-white/50 hover:text-white transition-all" title="Facebook">
                 <Camera size={14} />
               </a>
-              <a href="#" className="w-8 h-8 rounded-full bg-white/10 hover:bg-[#1a2a6c] flex items-center justify-center text-white/50 hover:text-white transition-all">
-                <Send size={14} />
+              <a href="https://x.com/IEH_tz" target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full bg-white/10 hover:bg-[#1a2a6c] flex items-center justify-center text-white/50 hover:text-white transition-all" title="X">
+                <XIcon size={14} />
               </a>
               <a href="#" className="w-8 h-8 rounded-full bg-white/10 hover:bg-[#1a2a6c] flex items-center justify-center text-white/50 hover:text-white transition-all">
                 <PlayCircle size={14} />
@@ -93,11 +94,11 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-white font-semibold mb-5 text-sm" style={{ fontFamily: "'Poppins', sans-serif" }}>Quick Links</h4>
+            <h4 className="text-white font-bold mb-5 text-sm" style={{ fontFamily: "'Poppins', sans-serif" }}>Quick Links</h4>
             <ul className="space-y-2.5">
               {quickLinks.map((l) => (
                 <li key={l.label}>
-                  <Link href={l.href} className="text-white/50 hover:text-white text-sm transition-colors flex items-center gap-2 group" style={{ fontFamily: "'Poppins', sans-serif" }}>
+                  <Link href={l.href} className="text-white/80 hover:text-white text-sm transition-colors flex items-center gap-2 group font-bold" style={{ fontFamily: "'Poppins', sans-serif" }}>
                     <span className="w-0 h-px bg-[#1a2a6c] group-hover:w-3 transition-all" />
                     {l.label}
                   </Link>
@@ -108,11 +109,11 @@ export default function Footer() {
 
           {/* Services */}
           <div>
-            <h4 className="text-white font-semibold mb-5 text-sm" style={{ fontFamily: "'Poppins', sans-serif" }}>Services</h4>
+            <h4 className="text-white font-bold mb-5 text-sm" style={{ fontFamily: "'Poppins', sans-serif" }}>Services</h4>
             <ul className="space-y-2.5">
               {services.map((s) => (
                 <li key={s.label}>
-                  <Link href={s.href} className="text-white/50 hover:text-white text-sm transition-colors flex items-center gap-2 group" style={{ fontFamily: "'Poppins', sans-serif" }}>
+                  <Link href={s.href} className="text-white/80 hover:text-white text-sm transition-colors flex items-center gap-2 group font-bold" style={{ fontFamily: "'Poppins', sans-serif" }}>
                     <span className="w-0 h-px bg-[#1a2a6c] group-hover:w-3 transition-all" />
                     {s.label}
                   </Link>
@@ -123,19 +124,19 @@ export default function Footer() {
 
           {/* Hours */}
           <div>
-            <h4 className="text-white font-semibold mb-5 text-sm" style={{ fontFamily: "'Poppins', sans-serif" }}>Working Hours</h4>
+            <h4 className="text-white font-bold mb-5 text-sm" style={{ fontFamily: "'Poppins', sans-serif" }}>Working Hours</h4>
             <div className="space-y-2">
               {hours.map((h) => (
                 <div key={h.day} className="flex justify-between text-xs" style={{ fontFamily: "'Poppins', sans-serif" }}>
-                  <span className="text-white/50">{h.day}</span>
-                  <span className={h.day === "Sunday" ? "text-[#1a2a6c]" : "text-white/80"}>{h.time}</span>
+                  <span className="text-white/80 font-bold">{h.day}</span>
+                  <span className={h.day === "Sunday" ? "text-[#1a2a6c] font-bold" : "text-white/80 font-bold"}>{h.time}</span>
                 </div>
               ))}
             </div>
 
             <div className="mt-5 bg-[#1a2a6c]/20 border border-[#1a2a6c]/30 rounded-xl p-4">
-              <p className="text-[#1a2a6c] text-xs font-semibold mb-1" style={{ fontFamily: "'Poppins', sans-serif" }}>Emergency?</p>
-              <a href="tel:+255784104300" className="text-white font-medium text-sm hover:text-white/80 transition-colors" style={{ fontFamily: "'Poppins', sans-serif" }}>
+              <p className="text-[#1a2a6c] text-xs font-bold mb-1" style={{ fontFamily: "'Poppins', sans-serif" }}>Emergency?</p>
+              <a href="tel:+255784104300" className="text-white font-bold text-sm hover:text-white/80 transition-colors" style={{ fontFamily: "'Poppins', sans-serif" }}>
                 +255 784 104 300
               </a>
             </div>
@@ -144,12 +145,12 @@ export default function Footer() {
 
         {/* Bottom */}
         <div className="border-t border-white/10 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-white/30 text-xs text-center sm:text-left" style={{ fontFamily: "'Poppins', sans-serif" }}>
-            © {new Date().getFullYear()} International Eye Hospital (IFG Hospitals Group). All rights reserved.
+          <p className="text-white/50 text-xs text-center sm:text-left font-bold" style={{ fontFamily: "'Poppins', sans-serif" }}>
+            © {new Date().getFullYear()} International Eye Hospital (AN AMERICAN HEALTHCARE INSTITUTE). All rights reserved.
           </p>
           <div className="flex gap-5">
             {["Privacy Policy", "Terms of Service"].map((l) => (
-              <Link key={l} href="#" className="text-white/30 hover:text-white/60 text-xs transition-colors" style={{ fontFamily: "'Poppins', sans-serif" }}>
+              <Link key={l} href="#" className="text-white/50 hover:text-white/80 text-xs transition-colors font-bold" style={{ fontFamily: "'Poppins', sans-serif" }}>
                 {l}
               </Link>
             ))}

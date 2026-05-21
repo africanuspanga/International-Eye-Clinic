@@ -20,9 +20,9 @@ export const siteConfig = {
     longitude: "39.2695",
   },
   social: {
-    facebook: "https://www.facebook.com/IEH.TZ",
+    facebook: "https://www.facebook.com/IEH.TZ/",
     instagram: "https://www.instagram.com/internationaleyehospital/",
-    twitter: "https://twitter.com/IEH_tz",
+    twitter: "https://x.com/IEH_tz",
   },
   founded: "2014",
   defaultOgImage: "/images/hero/slide-1.jpeg",

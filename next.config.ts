@@ -94,12 +94,22 @@ const nextConfig: NextConfig = {
       },
       {
         source: "/appointment.cfm",
-        destination: "/appointment",
+        destination: "/",
         permanent: true,
       },
       {
         source: "/why.cfm",
         destination: "/services",
+        permanent: true,
+      },
+      {
+        source: "/doctor-detail.cfm",
+        destination: "/",
+        permanent: true,
+      },
+      {
+        source: "/videos.cfm",
+        destination: "/",
         permanent: true,
       },
     ];

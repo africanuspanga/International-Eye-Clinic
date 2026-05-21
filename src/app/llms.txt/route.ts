@@ -7,7 +7,7 @@ export async function GET() {
 
 ## Overview
 
-International Eye Hospital (IFG Hospitals Group) is a specialized eye care facility in Dar es Salaam, Tanzania. Our hospital combines advanced medical technology with internationally trained specialists to deliver comprehensive eye care services.
+International Eye Hospital (AN AMERICAN HEALTHCARE INSTITUTE) is a specialized eye care facility in Dar es Salaam, Tanzania. Our hospital combines advanced medical technology with internationally trained specialists to deliver comprehensive eye care services.
 
 ## Key Information
 

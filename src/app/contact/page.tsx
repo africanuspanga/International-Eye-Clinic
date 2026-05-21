@@ -2,6 +2,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsApp from "@/components/WhatsApp";
 import PageHero from "@/components/PageHero";
+import ContactForm from "@/components/ContactForm";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
 import InstagramIcon from "@/components/InstagramIcon";
 import type { Metadata } from "next";
@@ -121,49 +122,7 @@ export default function ContactPage() {
                 <h2 className="text-2xl font-bold text-[#111827] mb-6" style={{ fontFamily: "'Merriweather', serif" }}>
                   Send Us a Message
                 </h2>
-                <form className="space-y-5">
-                  <div className="grid sm:grid-cols-2 gap-5">
-                    {["First Name", "Last Name"].map((f) => (
-                      <div key={f}>
-                        <label className="block text-xs font-semibold text-[#6b7280] uppercase tracking-wide mb-1.5" style={{ fontFamily: "'Poppins', sans-serif" }}>{f}</label>
-                        <input type="text" placeholder={f}
-                          className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#e62d26] focus:border-transparent transition-all"
-                          style={{ fontFamily: "'Poppins', sans-serif" }} />
-                      </div>
-                    ))}
-                  </div>
-                  <div className="grid sm:grid-cols-2 gap-5">
-                    <div>
-                      <label className="block text-xs font-semibold text-[#6b7280] uppercase tracking-wide mb-1.5" style={{ fontFamily: "'Poppins', sans-serif" }}>Phone</label>
-                      <input type="tel" placeholder="+255 7XX XXX XXX"
-                        className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#e62d26] transition-all"
-                        style={{ fontFamily: "'Poppins', sans-serif" }} />
-                    </div>
-                    <div>
-                      <label className="block text-xs font-semibold text-[#6b7280] uppercase tracking-wide mb-1.5" style={{ fontFamily: "'Poppins', sans-serif" }}>Email</label>
-                      <input type="email" placeholder="your@email.com"
-                        className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#e62d26] transition-all"
-                        style={{ fontFamily: "'Poppins', sans-serif" }} />
-                    </div>
-                  </div>
-                  <div>
-                    <label className="block text-xs font-semibold text-[#6b7280] uppercase tracking-wide mb-1.5" style={{ fontFamily: "'Poppins', sans-serif" }}>Subject</label>
-                    <input type="text" placeholder="How can we help?"
-                      className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#e62d26] transition-all"
-                      style={{ fontFamily: "'Poppins', sans-serif" }} />
-                  </div>
-                  <div>
-                    <label className="block text-xs font-semibold text-[#6b7280] uppercase tracking-wide mb-1.5" style={{ fontFamily: "'Poppins', sans-serif" }}>Message</label>
-                    <textarea rows={5} placeholder="Tell us more..."
-                      className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#e62d26] transition-all resize-none"
-                      style={{ fontFamily: "'Poppins', sans-serif" }} />
-                  </div>
-                  <button type="submit"
-                    className="bg-[#e62d26] hover:bg-[#c4201a] text-white font-semibold px-8 py-3.5 rounded-full text-sm transition-colors"
-                    style={{ fontFamily: "'Poppins', sans-serif" }}>
-                    Send Message
-                  </button>
-                </form>
+                <ContactForm />
               </div>
             </div>
           </div>

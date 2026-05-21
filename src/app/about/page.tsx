@@ -77,7 +77,7 @@ export default function AboutPage() {
                   International Eye Hospital was established with one clear goal: to provide the people of Tanzania with access to the same standard of eye care available at leading international hospitals.
                 </p>
                 <p className="text-[#6b7280] text-sm leading-relaxed mb-4" style={{ fontFamily: "'Poppins', sans-serif" }}>
-                  We are part of the IFG Hospitals Group and are equipped with state-of-the-art diagnostic and surgical equipment, including advanced laser systems, OCT machines, and surgical suites designed to international standards.
+                  We are an American Healthcare Institute and are equipped with state-of-the-art diagnostic and surgical equipment, including advanced laser systems, OCT machines, and surgical suites designed to international standards.
                 </p>
                 <p className="text-[#6b7280] text-sm leading-relaxed mb-8" style={{ fontFamily: "'Poppins', sans-serif" }}>
                   Our team of internationally trained ophthalmologists regularly participates in global medical congresses and training programs, ensuring our patients benefit from the most current knowledge and techniques in the field.
