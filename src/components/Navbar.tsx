@@ -42,6 +42,7 @@ const navItems = [
     children: [
       { label: "Eye Tests", href: "/services/eye-tests", sub: eyeTests },
       { label: "Cataract Surgery", href: "/services/cataract" },
+      { label: "Multifocal Cataract Surgery", href: "/services/multifocal-cataract" },
       { label: "Glaucoma", href: "/services/glaucoma" },
       { label: "Retina – Diabetic Retinopathy", href: "/services/retina" },
       { label: "Keratoconus Crosslinking", href: "/services/keratoconus" },

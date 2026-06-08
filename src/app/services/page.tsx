@@ -35,6 +35,13 @@ const servicesList = [
     desc: "Modern surgical techniques to remove clouded lenses and restore clear vision using premium intraocular lenses.",
     category: "Surgery",
   },
+  {
+    title: "Multifocal Cataract Surgery",
+    href: "/services/multifocal-cataract",
+    image: "/images/eye examination 8.jpg",
+    desc: "Advanced cataract treatment with premium multifocal lenses for clear vision at all distances with reduced dependence on glasses.",
+    category: "Surgery",
+  },
 
   {
     title: "Glaucoma",

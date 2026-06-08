@@ -5,6 +5,7 @@ import QuickBook from "@/components/QuickBook";
 import TrustStrip from "@/components/TrustStrip";
 import About from "@/components/About";
 import Services from "@/components/Services";
+import PromoSection from "@/components/PromoSection";
 import Doctors from "@/components/Doctors";
 import Gallery from "@/components/Gallery";
 import Testimonials from "@/components/Testimonials";
@@ -54,6 +55,7 @@ export default function Home() {
         <TrustStrip />
         <About />
         <Services />
+        <PromoSection />
         <Doctors />
         <Gallery />
         <Testimonials />

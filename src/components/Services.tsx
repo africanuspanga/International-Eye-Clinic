@@ -15,6 +15,14 @@ const services = [
     image: "/images/new images/gallery-phaco-machine.jpg",
   },
   {
+    icon: Microscope,
+    title: "Multifocal Cataract Surgery",
+    category: "Surgery",
+    href: "/services/multifocal-cataract",
+    desc: "Premium multifocal intraocular lenses for clear near, intermediate, and distance vision with reduced dependence on glasses after surgery.",
+    image: "/images/new images/gallery-phaco-machine.jpg",
+  },
+  {
     icon: Activity,
     title: "Glaucoma Treatment",
     category: "Medical",

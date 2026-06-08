@@ -25,6 +25,27 @@ We use advanced cataract surgery technique called phacoemulsification or "Phaco"
     phone: "+255 787 888 130",
   },
   {
+    slug: "multifocal-cataract",
+    title: "Multifocal Cataract Surgery",
+    subtitle: "Advanced cataract treatment with reduced dependence on glasses",
+    image: "/services images/cataract.jpg",
+    content: `Multifocal Cataract Surgery is an advanced cataract treatment that not only removes the cloudy cataract lens but also reduces dependence on glasses after surgery.
+
+During the procedure, the cataract is removed and replaced with a premium multifocal intraocular lens (IOL). This specialized lens is designed to provide clear vision at multiple distances, helping patients see near, intermediate, and far objects more comfortably.
+
+Multifocal cataract surgery is an excellent option for individuals who wish to maintain an active lifestyle with greater visual freedom after cataract treatment.
+
+Benefits of Multifocal Cataract Surgery include:
+
+* Improved vision at near, intermediate, and far distances
+* Reduced dependence on reading glasses and bifocals
+* Enhanced quality of life and daily activities
+* Safe and effective treatment using advanced surgical techniques
+
+Our experienced eye surgeons use modern phacoemulsification technology to ensure precise cataract removal and optimal lens implantation for the best possible visual outcomes.`,
+    phone: "+255 787 888 130",
+  },
+  {
     slug: "glaucoma",
     title: "Glaucoma",
     subtitle: "Early detection and treatment to protect your optic nerve",
