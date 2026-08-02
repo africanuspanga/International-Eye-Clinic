@@ -8,7 +8,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Book Appointment | International Eye Hospital",
-  description: "Book an appointment online with our specialist ophthalmologists at International Eye Hospital, Dar es Salaam. Call +255 784 104 300.",
+  description: "Book an appointment online with our specialist ophthalmologists at International Eye Hospital, Dar es Salaam. Call +255 725 829 595.",
   alternates: {
     canonical: "https://www.internationaleyehospital.com/appointment",
   },
@@ -52,7 +52,7 @@ export default function AppointmentPage() {
                 </p>
 
                 {[
-                  { icon: Phone, title: "Call Us", value: "+255 784 104 300", href: "tel:+255784104300" },
+                  { icon: Phone, title: "Call Us", value: "+255 725 829 595", href: "tel:+255725829595" },
                   { icon: Mail, title: "Email Us", value: "info@eye.co.tz", href: "mailto:info@eye.co.tz" },
                   { icon: MapPin, title: "Visit Us", value: "Tropical Center, New Bagamoyo Road, Dar es Salaam", href: null },
                 ].map((c) => {
@@ -79,7 +79,7 @@ export default function AppointmentPage() {
                   <div>
                     <p className="font-semibold text-[#1a2a6c] text-sm mb-1" style={{ fontFamily: "'Poppins', sans-serif" }}>Eye Emergency?</p>
                     <p className="text-[#374151] text-sm" style={{ fontFamily: "'Poppins', sans-serif" }}>
-                      Call immediately: <a href="tel:+255784104300" className="font-bold text-[#1a2a6c]">+255 784 104 300</a>
+                      Call immediately: <a href="tel:+255725829595" className="font-bold text-[#1a2a6c]">+255 725 829 595</a>
                     </p>
                   </div>
                 </div>

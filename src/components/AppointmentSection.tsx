@@ -19,14 +19,14 @@ export default function AppointmentSection() {
 
             {/* Contact Cards */}
             <div className="space-y-3 mb-8">
-              <a href="tel:+255784104300"
+              <a href="tel:+255725829595"
                 className="flex items-center gap-4 bg-white rounded-xl p-4 shadow-sm hover:shadow-md border border-gray-100 hover:border-[#e62d26]/20 transition-all group">
                 <div className="w-11 h-11 bg-[#e62d26] rounded-xl flex items-center justify-center flex-shrink-0">
                   <Phone size={18} className="text-white" />
                 </div>
                 <div>
                   <p className="text-xs text-[#6b7280] mb-0.5" style={{ fontFamily: "'Poppins', sans-serif" }}>Call us directly</p>
-                  <p className="font-semibold text-[#e62d26] text-sm" style={{ fontFamily: "'Poppins', sans-serif" }}>+255 784 104 300</p>
+                  <p className="font-semibold text-[#e62d26] text-sm" style={{ fontFamily: "'Poppins', sans-serif" }}>+255 725 829 595</p>
                 </div>
               </a>
               <a href="mailto:info@eye.co.tz"
@@ -58,7 +58,7 @@ export default function AppointmentSection() {
               <div>
                 <p className="font-semibold text-[#1a2a6c] text-sm mb-0.5" style={{ fontFamily: "'Poppins', sans-serif" }}>Eye Emergency?</p>
                 <p className="text-[#374151] text-sm" style={{ fontFamily: "'Poppins', sans-serif" }}>
-                  Call us immediately: <a href="tel:+255784104300" className="font-bold text-[#1a2a6c]">+255 784 104 300</a>
+                  Call us immediately: <a href="tel:+255725829595" className="font-bold text-[#1a2a6c]">+255 725 829 595</a>
                 </p>
               </div>
             </div>

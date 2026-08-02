@@ -22,7 +22,7 @@ Cataract might cause clouded, blurry or dim vision, sensitivity to light and col
 Cataracts can be easily treated with a simple surgery normally under local anesthesia where clouded lens will be replaced with new man-made lens.
 
 We use advanced cataract surgery technique called phacoemulsification or "Phaco" where a new lens is placed through a small incision in the cornea.`,
-    phone: "+255 787 888 130",
+    phone: "+255 725 829 595",
   },
   {
     slug: "multifocal-cataract",
@@ -43,7 +43,7 @@ Benefits of Multifocal Cataract Surgery include:
 * Safe and effective treatment using advanced surgical techniques
 
 Our experienced eye surgeons use modern phacoemulsification technology to ensure precise cataract removal and optimal lens implantation for the best possible visual outcomes.`,
-    phone: "+255 787 888 130",
+    phone: "+255 725 829 595",
   },
   {
     slug: "glaucoma",
@@ -59,7 +59,7 @@ Angle-closure glaucoma patients might experience blurred vision, halos, mild hea
 Glaucoma can be surely diagnosed through a complete eye examination. A glaucoma screening that only checks eye pressure is not enough to find out about glaucoma. The glaucoma examination include measuring eye pressure, checking eye's drainage system, examining optic nerve for damage and test peripheral (side) vision and measuring thickness of your corneal.
 
 Glaucoma damage cannot be reversed, it's permanent. Medicine drops, Laser or Surgical treatment help to stop further damage. International eye hospital have full range of equipment to conduct complete test on glaucoma such as high tech microscopes OCT and visual field machines to provide more accuracy results about glaucoma. We also perform surgery to lower intra ocular pressure in case drops couldn't provide good results.`,
-    phone: "+255 787 888 130",
+    phone: "+255 725 829 595",
   },
 
   {
@@ -76,7 +76,7 @@ People with diabetes can have an eye condition called diabetic retinopathy. This
 Depending on the type of retinal disorder, medical treatment, laser therapy or surgical treatment may be required. Early detection is the first step of treatment, on top of standard eye examination additional detailed fundus examinations may be recommended. Such Fundus Examinations are as follows: Ocular Coherent Tomography (OCT), Eye angiography (FFA), Visual field, and Biometry.
 
 Retina diseases are very dangerous as can cause permanent blindness if left untreated.`,
-    phone: "+255 787 888 130",
+    phone: "+255 725 829 595",
   },
   {
     slug: "keratoconus",
@@ -94,7 +94,7 @@ Keratoconus might be also treated through Intacs, where a small curved device is
 Cross-linking treatment is when ophthalmologist uses special UV light and eye drops to strengthen the cornea. This help to flatten or stiffen a cornea hence keeping it from bulging further.
 
 When symptoms are much severe, cornea transplant might be preferred to replace a damaged cornea with a healthy donor cornea tissue.`,
-    phone: "+255 787 888 130",
+    phone: "+255 725 829 595",
   },
   {
     slug: "cornea",
@@ -108,7 +108,7 @@ The cornea should be of good shape and clear for proper vision. One of the reaso
 Cornea transplant can be carried out under either general or local anesthetic. Surgery usually takes less than an hour and patient can be released on the same day.
 
 We do perform cornea transplant at our facility upon availability of cornea.`,
-    phone: "+255 787 888 130",
+    phone: "+255 725 829 595",
   },
   {
     slug: "optic",
@@ -118,7 +118,7 @@ We do perform cornea transplant at our facility upon availability of cornea.`,
     content: `Our optic department has different types of frames, lens of different material and high tech machines for fine and precise preparation of glasses. We tried our best to quick deliver glasses thus if the lens are in stock, patient will have their glasses ready within the same day.
 
 We have frames of well-known brands such as Vague, Adidas, Polo and others.`,
-    phone: "+255 787 888 130",
+    phone: "+255 725 829 595",
   },
   {
     slug: "general-exam",
@@ -128,7 +128,7 @@ We have frames of well-known brands such as Vague, Adidas, Polo and others.`,
     content: `An Eye is one of the five sense organ and most importance one for cognitive ability and stimulate learning. Eye examination on regular basis is extremely important to lead a healthy and happy life to all people with or without glasses.
 
 We use the latest technological devices to carry out eye examination carefully and in great details. You are advised to check your eyes regularly once per 6 months. During eye examination many diseases can be detected such as diabetes, brain tumors, hypertension and others.`,
-    phone: "+255 787 888 130",
+    phone: "+255 725 829 595",
   },
   {
     slug: "oct",
@@ -144,7 +144,7 @@ During the OCT exam, you will sit at the machine and rest your head on a chin su
 OCT is crucial for diagnosing and managing several eye conditions including age-related macular degeneration (AMD), glaucoma and optic nerve diseases, diabetic retinopathy, retinal detachment, macular edema, macular holes, and vitreous traction. Regular scans let our team compare new images with past results, so they can see progression or improvement and act before vision loss occurs.
 
 At International Eye Hospital, our advanced OCT technology delivers immediate results during your visit, enabling our specialists to create personalized treatment strategies and confirm their effectiveness over time.`,
-    phone: "+255 784 104 300",
+    phone: "+255 725 829 595",
   },
   {
     slug: "ffa",
@@ -160,7 +160,7 @@ The procedure typically takes 20 to 30 minutes, though you should plan to be at 
 After the procedure, your skin may appear slightly yellow and your urine may turn bright yellow or orange for up to 24 to 36 hours as your body eliminates the dye. Your vision will be blurry from the dilation drops for several hours, so you should arrange for someone to drive you home. FFA is generally safe, but patients who are pregnant, have severe allergies to fluorescein, or have certain kidney conditions should inform their doctor beforehand.
 
 At International Eye Hospital, our retina specialists use FFA alongside OCT and other advanced diagnostics to provide comprehensive care for complex retinal diseases, ensuring accurate diagnosis and effective treatment planning.`,
-    phone: "+255 784 104 300",
+    phone: "+255 725 829 595",
   },
   {
     slug: "corneal-topography",
@@ -174,7 +174,7 @@ The procedure is quick and completely painless. You simply sit in front of the t
 Corneal topography is essential for diagnosing and monitoring keratoconus, a progressive condition where the cornea thins and bulges into a cone shape. It is also used to evaluate corneal astigmatism, fit contact lenses (especially for patients with irregular corneas), assess corneal scars and opacities, and evaluate the effects of corneal transplant surgery. The test can detect early signs of corneal abnormalities before they affect vision significantly.
 
 At International Eye Hospital, our advanced corneal topography system provides the precision needed for accurate diagnosis, customized contact lens fitting, and safe surgical planning, ensuring the best possible outcomes for your vision.`,
-    phone: "+255 784 104 300",
+    phone: "+255 725 829 595",
   },
   {
     slug: "keratometry",
@@ -190,7 +190,7 @@ Keratometry plays a vital role in several aspects of eye care. It is indispensab
 While keratometry provides valuable information about the central cornea, it is sometimes combined with corneal topography for a more comprehensive assessment, particularly when evaluating irregular corneas or planning complex surgeries.
 
 At International Eye Hospital, we use modern automated keratometers that provide fast, accurate measurements as part of our comprehensive eye examination and pre-surgical assessment protocols.`,
-    phone: "+255 784 104 300",
+    phone: "+255 725 829 595",
   },
   {
     slug: "pachymetry",
@@ -204,7 +204,7 @@ There are two main types of pachymetry: ultrasonic and optical. Ultrasonic pachy
 Pachymetry is especially important in glaucoma diagnosis and management. Eye pressure is measured by how much force is needed to flatten a small area of the cornea. If your cornea is thinner than average, eye pressure may read lower than it actually is, potentially masking glaucoma. Conversely, a thicker cornea may give falsely high readings. Knowing your corneal thickness allows your doctor to interpret eye pressure measurements more accurately and assess your true risk for glaucoma.
 
 At International Eye Hospital, pachymetry is performed as part of our comprehensive glaucoma evaluations and pre-surgical screenings, ensuring accurate diagnoses and safe treatment recommendations.`,
-    phone: "+255 784 104 300",
+    phone: "+255 725 829 595",
   },
   {
     slug: "tonometry",
@@ -220,7 +220,7 @@ Normal eye pressure typically ranges between 10 and 21 mmHg (millimeters of merc
 Tonometry is recommended for all adults during routine eye exams, but it is especially important if you have risk factors for glaucoma, including being over 60 years old, having a family history of glaucoma, being of African or Hispanic descent, having diabetes or high blood pressure, or having had a previous eye injury.
 
 At International Eye Hospital, we perform accurate tonometry as part of every comprehensive eye examination, using the most appropriate method for each patient's comfort and clinical needs.`,
-    phone: "+255 784 104 300",
+    phone: "+255 725 829 595",
   },
   {
     slug: "visual-field",
@@ -236,7 +236,7 @@ Visual field testing is crucial for diagnosing and monitoring glaucoma, as the d
 For patients with diagnosed glaucoma, visual field tests are typically repeated every 6 to 12 months to monitor for progressive vision loss. Comparing results over time helps your doctor determine whether your treatment is working effectively or if adjustments are needed.
 
 At International Eye Hospital, our advanced automated perimetry equipment provides precise, reproducible visual field measurements, enabling early detection and careful monitoring of conditions that threaten your sight.`,
-    phone: "+255 784 104 300",
+    phone: "+255 725 829 595",
   },
   {
     slug: "a-scan",
@@ -252,7 +252,7 @@ In addition to axial length, A-scan biometry measures other important parameters
 A-scan biometry is essential for all patients undergoing cataract surgery. Without accurate measurements, the implanted lens may have incorrect power, resulting in less-than-optimal vision that may require glasses or additional correction. In some cases, particularly when the cornea is too cloudy for optical biometry, A-scan ultrasound is the only reliable method for obtaining these critical measurements.
 
 At International Eye Hospital, we use modern immersion and contact A-scan techniques to ensure the highest accuracy for IOL calculations, contributing to excellent visual outcomes for our cataract surgery patients.`,
-    phone: "+255 784 104 300",
+    phone: "+255 725 829 595",
   },
   {
     slug: "automated-refractor",
@@ -268,7 +268,7 @@ Automated refractors are highly accurate and consistent, reducing the chance of 
 In addition to determining eyeglass and contact lens prescriptions, automated refraction is valuable for screening children for vision problems, monitoring changes in vision over time, and assessing whether symptoms like headaches or eye strain may be related to uncorrected refractive errors.
 
 At International Eye Hospital, our state-of-the-art automated refractors provide fast, accurate baseline measurements as part of our comprehensive vision assessment, ensuring that every patient receives a precisely tailored prescription for optimal visual clarity and comfort.`,
-    phone: "+255 784 104 300",
+    phone: "+255 725 829 595",
   },
   {
     slug: "lens-meter",
@@ -284,7 +284,7 @@ Lens meters are used for multiple purposes in eye care. When you receive new gla
 In our optic department, the lens meter is also used to verify the accuracy of lenses cut and fitted into frames, ensuring proper alignment of the optical centers with your pupils. Misaligned optical centers can cause eye strain, headaches, and distorted vision, so this verification step is crucial for your visual comfort.
 
 At International Eye Hospital, every pair of glasses is verified with our precision lens meter before delivery, guaranteeing that your spectacles meet the highest standards of optical accuracy and quality.`,
-    phone: "+255 784 104 300",
+    phone: "+255 725 829 595",
   },
   {
     slug: "argon-laser",
@@ -300,7 +300,7 @@ ALT is typically considered when eye drops are not sufficiently controlling eye 
 After the procedure, you may experience mild irritation, blurred vision, or light sensitivity for a few hours. Your doctor will prescribe anti-inflammatory eye drops to use for several days. A follow-up appointment is usually scheduled within 1 to 2 weeks to check your eye pressure and assess the treatment's effectiveness. Most patients return to normal activities the day after the procedure.
 
 At International Eye Hospital, ALT is one of several advanced glaucoma treatment options we offer. Our specialists carefully evaluate each patient to determine whether laser therapy, medication, or surgical intervention is the most appropriate approach for managing their glaucoma and preserving vision.`,
-    phone: "+255 784 104 300",
+    phone: "+255 725 829 595",
   },
   {
     slug: "yag-laser",
@@ -316,7 +316,7 @@ During the procedure, you sit at the laser machine with your chin on a support. 
 Vision typically improves within hours to a day or two after the procedure. Most patients notice significantly clearer vision almost immediately. You may experience some floaters — small dark spots or cobweb shapes in your vision — for a few days to weeks after the procedure as microscopic capsule fragments settle. These usually diminish over time. The effect of YAG laser capsulotomy is permanent — once the opening is created, PCO cannot recur in that area.
 
 At International Eye Hospital, our experienced ophthalmologists perform YAG laser capsulotomy using advanced laser systems, providing a safe, effective solution for patients whose vision has become cloudy after cataract surgery.`,
-    phone: "+255 784 104 300",
+    phone: "+255 725 829 595",
   },
 ];
 

@@ -50,7 +50,7 @@ export default function ContactForm() {
       `Hello, I have sent a message through your website.\nName: ${form.firstName} ${form.lastName}\nPhone: ${form.phone}\nEmail: ${form.email}\nSubject: ${form.subject}\nMessage: ${form.message}`
     );
     setTimeout(() => {
-      window.open(`https://wa.me/255695586632?text=${msg}`, "_blank");
+      window.open(`https://wa.me/255725829595?text=${msg}`, "_blank");
     }, 1500);
   };
 

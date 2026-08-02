@@ -215,7 +215,7 @@ END $$;
 -- ============================================
 INSERT INTO site_settings (key, value, description) VALUES
   ('site_name', 'International Eye Hospital', 'Website name'),
-  ('site_phone', '+255 784 104 300', 'Primary contact phone'),
+  ('site_phone', '+255 725 829 595', 'Primary contact phone'),
   ('site_email', 'info@eye.co.tz', 'Primary contact email'),
   ('site_address', 'Tropical Center, New Bagamoyo Road, Dar es Salaam, Tanzania', 'Physical address'),
   ('working_hours_weekday', '8:30 AM – 5:30 PM', 'Weekday working hours'),

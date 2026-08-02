@@ -9,13 +9,13 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Contact Us | International Eye Hospital",
-  description: "Contact International Eye Hospital in Dar es Salaam. Call +255 784 104 300 or email info@eye.co.tz.",
+  description: "Contact International Eye Hospital in Dar es Salaam. Call +255 725 829 595 or email info@eye.co.tz.",
   alternates: {
     canonical: "https://www.internationaleyehospital.com/contact",
   },
   openGraph: {
     title: "Contact Us | International Eye Hospital",
-    description: "Contact International Eye Hospital in Dar es Salaam. Call +255 784 104 300 or email info@eye.co.tz.",
+    description: "Contact International Eye Hospital in Dar es Salaam. Call +255 725 829 595 or email info@eye.co.tz.",
     images: [
       {
         url: "/images/hero/slide-1.jpeg",
@@ -64,8 +64,8 @@ export default function ContactPage() {
                   {
                     icon: Phone,
                     title: "Phone",
-                    lines: ["+255 784 104 300"],
-                    href: "tel:+255784104300",
+                    lines: ["+255 725 829 595"],
+                    href: "tel:+255725829595",
                   },
                   {
                     icon: Mail,

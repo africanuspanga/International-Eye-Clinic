@@ -281,11 +281,11 @@ export default function DoctorDetailPage({ doctor }: Props) {
                       ))}
                     </div>
                     <a
-                      href="tel:+255784104300"
+                      href="tel:+255725829595"
                       className="mt-5 inline-flex items-center gap-2 bg-[#1a2a6c] hover:bg-[#243688] text-white font-semibold px-5 py-2.5 rounded-full text-sm transition-colors w-full justify-center"
                       style={{ fontFamily: "'Poppins', sans-serif" }}
                     >
-                      <Phone size={14} /> +255 784 104 300
+                      <Phone size={14} /> +255 725 829 595
                     </a>
                   </div>
                 </div>

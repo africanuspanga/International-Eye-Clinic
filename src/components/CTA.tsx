@@ -25,7 +25,7 @@ export default function CTA() {
             <Calendar size={18} />
             Book Appointment
           </Link>
-          <a href="tel:+255784104300"
+          <a href="tel:+255725829595"
             className="inline-flex items-center gap-2.5 border-2 border-white/50 hover:border-white text-white font-semibold px-9 py-4 rounded-full text-base transition-all hover:-translate-y-0.5"
             style={{ fontFamily: "'Poppins', sans-serif" }}>
             <Phone size={18} />

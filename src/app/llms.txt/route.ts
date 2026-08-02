@@ -13,7 +13,7 @@ International Eye Hospital (AN AMERICAN HEALTHCARE INSTITUTE) is a specialized e
 
 - **Name**: International Eye Hospital
 - **Location**: Tropical Center, New Bagamoyo Road, P.O. Box 2083, Dar es Salaam, Tanzania
-- **Phone**: +255 784 104 300
+- **Phone**: +255 725 829 595
 - **Email**: info@eye.co.tz
 - **Website**: https://www.internationaleyehospital.com
 - **Instagram**: @internationaleyehospital (https://www.instagram.com/internationaleyehospital/)
@@ -67,8 +67,8 @@ Strabismus, Cataract, Conjunctivitis, Diabetic Retinopathy, Dry Eye, Glaucoma, K
 ## Important Notes
 
 - All content is available in both English and Swahili.
-- Book appointments online or call +255 784 104 300.
-- Emergency contact: +255 784 104 300.
+- Book appointments online or call +255 725 829 595.
+- Emergency contact: +255 725 829 595.
 `;
 
   return new NextResponse(llms, {

@@ -107,7 +107,7 @@ export const metadata: Metadata = {
   manifest: "/manifest.json",
   other: {
     "msapplication-TileColor": "#ffffff",
-    "contact:phone": "+255 784 104 300",
+    "contact:phone": "+255 725 829 595",
     "contact:email": "info@eye.co.tz",
   },
 };

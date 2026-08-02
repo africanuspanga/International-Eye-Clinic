@@ -13,6 +13,11 @@ export type BlogSection = {
   type: "heading" | "paragraph" | "list" | "tip";
   text?: string;
   items?: string[];
+  /**
+   * Optional inline reference. When present on a paragraph, the first
+   * occurrence of `anchor` inside `text` is rendered as a link to `href`.
+   */
+  link?: { href: string; anchor: string };
 };
 
 export const blogPosts: BlogPost[] = [
@@ -174,6 +179,15 @@ export const blogPosts: BlogPost[] = [
       {
         type: "paragraph",
         text: "Your eyes provide a unique window into your overall health. During a comprehensive eye exam, your doctor may detect early signs of systemic conditions such as diabetes, high blood pressure, high cholesterol, autoimmune diseases, and even certain types of cancer. This makes regular eye exams an essential part of your preventive healthcare routine.",
+      },
+      {
+        type: "heading",
+        text: "A Note on Official Announcements and Vacancies",
+      },
+      {
+        type: "paragraph",
+        text: "We are often asked whether International Eye Hospital is hiring. Every official job announcement, vacancy, or internship opening from International Eye Hospital is published here on this website. We do not recruit through agents, we never ask for any payment at any stage of an application, and we do not authorise third parties to advertise positions on our behalf. While many candidates follow job listing platforms for general career guidance, any announcement from this clinic will always be published on this website first.",
+        link: { href: "https://www.cvchapchap.com/", anchor: "job listing platforms" },
       },
       {
         type: "tip",

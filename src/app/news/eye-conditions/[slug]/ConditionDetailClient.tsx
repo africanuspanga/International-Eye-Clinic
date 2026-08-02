@@ -401,11 +401,11 @@ export default function ConditionDetailClient({ condition, allConditions }: Prop
               {isSwahili ? "Weka Miadi" : "Book Appointment"}
             </Link>
             <a
-              href="tel:+255784104300"
+              href="tel:+255725829595"
               className="border-2 border-[#e62d26]/20 hover:border-[#e62d26] text-[#e62d26] font-semibold px-8 py-3.5 rounded-full text-sm transition-colors"
               style={{ fontFamily: "'Poppins', sans-serif" }}
             >
-              +255 784 104 300
+              +255 725 829 595
             </a>
           </div>
         </div>

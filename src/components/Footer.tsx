@@ -61,9 +61,9 @@ export default function Footer() {
                 </span>
               </li>
               <li>
-                <a href="tel:+255784104300" className="flex items-center gap-2.5 text-white/80 hover:text-white text-sm transition-colors font-bold" style={{ fontFamily: "'Poppins', sans-serif" }}>
+                <a href="tel:+255725829595" className="flex items-center gap-2.5 text-white/80 hover:text-white text-sm transition-colors font-bold" style={{ fontFamily: "'Poppins', sans-serif" }}>
                   <Phone size={14} className="text-[#1a2a6c] flex-shrink-0" />
-                  +255 784 104 300
+                  +255 725 829 595
                 </a>
               </li>
               <li>
@@ -136,8 +136,8 @@ export default function Footer() {
 
             <div className="mt-5 bg-[#1a2a6c]/20 border border-[#1a2a6c]/30 rounded-xl p-4">
               <p className="text-[#1a2a6c] text-xs font-bold mb-1" style={{ fontFamily: "'Poppins', sans-serif" }}>Emergency?</p>
-              <a href="tel:+255784104300" className="text-white font-bold text-sm hover:text-white/80 transition-colors" style={{ fontFamily: "'Poppins', sans-serif" }}>
-                +255 784 104 300
+              <a href="tel:+255725829595" className="text-white font-bold text-sm hover:text-white/80 transition-colors" style={{ fontFamily: "'Poppins', sans-serif" }}>
+                +255 725 829 595
               </a>
             </div>
           </div>

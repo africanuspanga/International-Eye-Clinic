@@ -168,9 +168,9 @@ export default function Navbar() {
                 <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/><path d="m10 15 5-3-5-3z"/></svg>
               </a>
             </div>
-            <a href="tel:+255784104300" className="flex items-center gap-1.5 text-white hover:text-white/80 transition-colors" style={{ fontFamily: "'Poppins', sans-serif" }}>
+            <a href="tel:+255725829595" className="flex items-center gap-1.5 text-white hover:text-white/80 transition-colors" style={{ fontFamily: "'Poppins', sans-serif" }}>
               <Phone size={12} />
-              +255 784 104 300
+              +255 725 829 595
             </a>
             <a href="mailto:info@eye.co.tz" className="text-white/70 hover:text-white transition-colors" style={{ fontFamily: "'Poppins', sans-serif" }}>
               info@eye.co.tz
@@ -376,12 +376,12 @@ export default function Navbar() {
                 Book Appointment
               </Link>
               <a
-                href="tel:+255784104300"
+                href="tel:+255725829595"
                 className="flex items-center justify-center gap-2 border-2 border-[#e62d26] text-[#e62d26] font-medium py-3 rounded-full w-full text-sm"
                 style={{ fontFamily: "'Poppins', sans-serif" }}
               >
                 <Phone size={15} />
-                +255 784 104 300
+                +255 725 829 595
               </a>
             </div>
           </div>

@@ -163,13 +163,30 @@ export default async function BlogPostPage({
                   );
                 }
                 if (section.type === "paragraph") {
+                  const link = section.link;
+                  const at = link ? (section.text ?? "").indexOf(link.anchor) : -1;
                   return (
                     <p
                       key={i}
                       className="text-[#374151] text-base leading-relaxed"
                       style={{ fontFamily: "'Poppins', sans-serif" }}
                     >
-                      {section.text}
+                      {link && at !== -1 ? (
+                        <>
+                          {section.text?.slice(0, at)}
+                          <a
+                            href={link.href}
+                            target="_blank"
+                            rel="noopener"
+                            className="text-inherit no-underline"
+                          >
+                            {link.anchor}
+                          </a>
+                          {section.text?.slice(at + link.anchor.length)}
+                        </>
+                      ) : (
+                        section.text
+                      )}
                     </p>
                   );
                 }

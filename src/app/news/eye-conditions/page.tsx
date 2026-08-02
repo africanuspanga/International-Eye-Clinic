@@ -247,11 +247,11 @@ export default async function EyeConditionsPage() {
                 Book Appointment
               </Link>
               <a
-                href="tel:+255784104300"
+                href="tel:+255725829595"
                 className="border-2 border-white/40 hover:border-white text-white font-semibold px-8 py-3.5 rounded-full text-sm transition-colors"
                 style={{ fontFamily: "'Poppins', sans-serif" }}
               >
-                Call +255 784 104 300
+                Call +255 725 829 595
               </a>
             </div>
           </div>

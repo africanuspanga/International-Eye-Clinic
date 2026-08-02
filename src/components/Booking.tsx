@@ -76,7 +76,7 @@ export default function Booking() {
             {/* Contact options */}
             <div className="space-y-4">
               {[
-                { icon: Phone, label: "Call us directly", value: "+255 XXX XXX XXX", href: "tel:+255XXXXXXX" },
+                { icon: Phone, label: "Call us directly", value: "+255 725 829 595", href: "tel:+255725829595" },
                 { icon: Mail, label: "Email us", value: "info@internationaleye.co.tz", href: "mailto:info@internationaleye.co.tz" },
               ].map((c) => {
                 const Icon = c.icon;
@@ -130,7 +130,7 @@ export default function Booking() {
                   We&apos;ll contact you within 2 hours to confirm your appointment.
                 </p>
                 <a
-                  href="https://wa.me/255695586632"
+                  href="https://wa.me/255725829595"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="bg-[#25D366] text-white font-[family-name:var(--font-dm-sans)] font-semibold px-8 py-3 rounded-full hover:bg-[#1da851] transition-colors"
@@ -294,7 +294,7 @@ export default function Booking() {
                       </p>
                       {[
                         { label: "Full Name", key: "name", type: "text", icon: User, placeholder: "Your full name" },
-                        { label: "Phone Number", key: "phone", type: "tel", icon: Phone, placeholder: "+255 XXX XXX XXX" },
+                        { label: "Phone Number", key: "phone", type: "tel", icon: Phone, placeholder: "+255 725 829 595" },
                         { label: "Email Address", key: "email", type: "email", icon: Mail, placeholder: "your@email.com" },
                       ].map((f) => {
                         const Icon = f.icon;

@@ -6,7 +6,7 @@ export const siteConfig = {
   locale: "en_TZ",
   language: "en",
   country: "TZ",
-  phone: "+255 784 104 300",
+  phone: "+255 725 829 595",
   email: "info@eye.co.tz",
   address: {
     street: "Tropical Center, New Bagamoyo Road",
