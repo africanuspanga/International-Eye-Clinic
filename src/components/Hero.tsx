@@ -5,7 +5,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { ChevronDown } from "lucide-react";
 
-const slides = [
+const slides: { src: string; alt: string; ad?: boolean }[] = [
+  { src: "/NEW%20HERO%20SECTION.jpeg", alt: "International Eye Hospital promotion", ad: true },
   { src: "/images/hero/slide-1.jpeg", alt: "International Eye Hospital — Advanced eye care in Dar es Salaam" },
   { src: "/images/hero/slide-2.jpeg", alt: "Modern eye clinic facility and equipment" },
   { src: "/images/hero/slide-3.jpeg", alt: "Expert ophthalmologists providing specialized care" },
@@ -27,6 +28,8 @@ export default function Hero() {
     const timer = setInterval(nextSlide, SLIDE_INTERVAL);
     return () => clearInterval(timer);
   }, [isPaused, nextSlide]);
+
+  const isAd = slides[current].ad === true;
 
   return (
     <section
@@ -54,11 +57,16 @@ export default function Hero() {
         </div>
       ))}
 
-      {/* Dark overlay */}
-      <div className="absolute inset-0 bg-gradient-to-r from-[#e62d26]/50 via-[#e62d26]/35 to-[#e62d26]/10 z-[2]" />
-      <div className="absolute inset-0 bg-gradient-to-t from-[#e62d26]/20 via-transparent to-transparent z-[2]" />
+      {/* Dark overlay (hidden on advert slides so the artwork stays clean) */}
+      {!isAd && (
+        <>
+          <div className="absolute inset-0 bg-gradient-to-r from-[#e62d26]/50 via-[#e62d26]/35 to-[#e62d26]/10 z-[2]" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#e62d26]/20 via-transparent to-transparent z-[2]" />
+        </>
+      )}
 
-      {/* Content */}
+      {/* Content (hidden on advert slides — the image already carries its own copy) */}
+      {!isAd && (
       <div className="relative z-10 h-full flex items-center">
         <div className="max-w-7xl mx-auto px-6 w-full">
           <div className="max-w-2xl">
@@ -110,6 +118,7 @@ export default function Hero() {
           </div>
         </div>
       </div>
+      )}
 
       {/* Slide indicators */}
       <div className="absolute bottom-16 left-1/2 -translate-x-1/2 z-10 flex items-center gap-3">
