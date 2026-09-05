@@ -7,6 +7,8 @@ import { ChevronDown } from "lucide-react";
 
 const slides: { src: string; alt: string; ad?: boolean }[] = [
   { src: "/NEW%20HERO%20SECTION.jpeg", alt: "International Eye Hospital promotion", ad: true },
+  { src: "/images/hero/ad-smart-lenses.jpeg", alt: "Smart Lenses — see clearly at all distances. Book your smart lenses today, call 0784 104 300", ad: true },
+  { src: "/images/hero/ad-dental-clinic.jpeg", alt: "Grand opening of the Dental Clinic — up to 30% discount plus a free dental consultation", ad: true },
   { src: "/images/hero/slide-1.jpeg", alt: "International Eye Hospital — Advanced eye care in Dar es Salaam" },
   { src: "/images/hero/slide-2.jpeg", alt: "Modern eye clinic facility and equipment" },
   { src: "/images/hero/slide-3.jpeg", alt: "Expert ophthalmologists providing specialized care" },
