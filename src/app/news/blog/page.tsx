@@ -4,7 +4,9 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsApp from "@/components/WhatsApp";
 import PageHero from "@/components/PageHero";
-import { blogPosts } from "@/lib/blog-data";
+import { getPosts } from "@/lib/cms/content";
+
+export const revalidate = 3600;
 import { Clock, ArrowRight } from "lucide-react";
 import type { Metadata } from "next";
 
@@ -30,7 +32,8 @@ export const metadata: Metadata = {
   },
 };
 
-export default function BlogListPage() {
+export default async function BlogListPage() {
+  const blogPosts = await getPosts();
   return (
     <>
       <Navbar />

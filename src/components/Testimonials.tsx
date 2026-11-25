@@ -2,67 +2,13 @@
 
 import { useState } from "react";
 import { Quote, Star, ChevronLeft, ChevronRight } from "lucide-react";
+import type { PatientTestimonial } from "@/lib/cms/content";
 
-const testimonials = [
-  {
-    name: "Amina Hassan",
-    location: "Dar es Salaam",
-    procedure: "Cataract Surgery",
-    rating: 5,
-    initials: "AH",
-    color: "#e62d26",
-    text: "I had been struggling with cloudy vision for years, too afraid to seek help. International Eye Hospital changed my life completely. The doctors were kind, patient, and incredibly skilled. My vision is now clearer than it has been in decades. I am forever grateful.",
-  },
-  {
-    name: "John Mkwawa",
-    location: "Dodoma",
-    procedure: "Glaucoma Treatment",
-    rating: 5,
-    initials: "JM",
-    color: "#1a2a6c",
-    text: "After struggling with high eye pressure for years, the glaucoma treatment at International Eye Hospital has preserved my vision. The doctors were thorough, the monitoring is excellent, and the staff made me feel completely at ease from the moment I walked in. Truly world-class care.",
-  },
-  {
-    name: "Fatuma Ali",
-    location: "Zanzibar",
-    procedure: "Glaucoma Treatment",
-    rating: 5,
-    initials: "FA",
-    color: "#1a6c3a",
-    text: "I was diagnosed with glaucoma and was terrified of losing my sight. Prof. Dr. Guler and his team put my fears to rest with their expertise and compassion. My condition is now well-managed and my vision is preserved. I recommend this hospital to everyone.",
-  },
-  {
-    name: "David Mwangi",
-    location: "Mwanza",
-    procedure: "Retina Treatment",
-    rating: 5,
-    initials: "DM",
-    color: "#1a5a6c",
-    text: "The retina specialists here are extraordinary. I came with diabetic eye complications that had gone untreated. They were professional, thorough, and genuinely caring. The advanced equipment they use is as good as anything I have seen abroad.",
-  },
-  {
-    name: "Sarah Kimani",
-    location: "Arusha",
-    procedure: "General Eye Exam",
-    rating: 5,
-    initials: "SK",
-    color: "#6c1a5a",
-    text: "Even for a routine eye check, the experience was exceptional. The facility is immaculate, modern, and calming. The doctor took time to explain everything clearly. This is how healthcare should feel everywhere in Tanzania.",
-  },
-  {
-    name: "Omar Juma",
-    location: "Dar es Salaam",
-    procedure: "Cornea Transplant",
-    rating: 5,
-    initials: "OJ",
-    color: "#6c3a1a",
-    text: "My cornea transplant was performed with absolute precision. The surgical team's confidence and competence put me completely at ease. Six months later, my vision is outstanding. A life-changing experience I am deeply thankful for.",
-  },
-];
 
-export default function Testimonials() {
+export default function Testimonials({ testimonials }: { testimonials: PatientTestimonial[] }) {
   const [current, setCurrent] = useState(0);
   const perPage = 3;
+
   const max = Math.ceil(testimonials.length / perPage) - 1;
   const slice = testimonials.slice(current * perPage, current * perPage + perPage);
 

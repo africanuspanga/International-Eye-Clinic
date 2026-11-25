@@ -3,6 +3,7 @@ import Link from "next/link";
 import { MapPin, Phone, Mail, Clock, Share2, Camera, PlayCircle } from "lucide-react";
 import InstagramIcon from "./InstagramIcon";
 import XIcon from "./XIcon";
+import { getContact } from "@/lib/cms/content";
 
 const quickLinks = [
   { label: "Home", href: "/" },
@@ -22,17 +23,26 @@ const services = [
   { label: "General Eye Examination", href: "/services/general-exam" },
 ];
 
-const hours = [
-  { day: "Monday", time: "8:30 AM – 5:30 PM" },
-  { day: "Tuesday", time: "8:30 AM – 5:30 PM" },
-  { day: "Wednesday", time: "8:30 AM – 5:30 PM" },
-  { day: "Thursday", time: "8:30 AM – 5:30 PM" },
-  { day: "Friday", time: "8:30 AM – 5:30 PM" },
-  { day: "Saturday", time: "8:30 AM – 2:00 PM" },
-  { day: "Sunday", time: "Closed" },
-];
+const DEFAULT_SOCIALS = {
+  instagram: "https://www.instagram.com/ieh_tz?igsh=MTF3aHZya3Q0bnVoZA%3D%3D&utm_source=qr",
+  facebook: "https://www.facebook.com/IEH.TZ/",
+  x: "https://x.com/IEH_tz",
+};
 
-export default function Footer() {
+export default async function Footer() {
+  const contact = await getContact();
+  const tel = `tel:+${contact.phone.replace(/\D/g, "")}`;
+  const hours = [
+    ...["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"].map((day) => ({ day, time: contact.hoursWeekday })),
+    { day: "Saturday", time: contact.hoursSaturday },
+    { day: "Sunday", time: contact.hoursSunday },
+  ];
+  const social = {
+    instagram: contact.instagram ?? DEFAULT_SOCIALS.instagram,
+    facebook: contact.facebook ?? DEFAULT_SOCIALS.facebook,
+    x: contact.x ?? DEFAULT_SOCIALS.x,
+    youtube: contact.youtube ?? "",
+  };
   return (
     <footer id="contact" className="bg-[#e62d26]">
       {/* Top border */}
@@ -55,40 +65,48 @@ export default function Footer() {
 
             <ul className="space-y-3 mb-7">
               <li>
-                <span className="flex items-start gap-2.5 text-white/80 text-sm font-bold" style={{ fontFamily: "'Poppins', sans-serif" }}>
+                <span className="flex items-start gap-2.5 text-white/80 text-sm font-bold whitespace-pre-line" style={{ fontFamily: "'Poppins', sans-serif" }}>
                   <MapPin size={15} className="text-[#1a2a6c] mt-0.5 flex-shrink-0" />
-                  Tropical Center, New Bagamoyo Road,<br />P.O. Box 2083, Dar es Salaam, Tanzania
+                  {contact.address}
                 </span>
               </li>
               <li>
-                <a href="tel:+255725829595" className="flex items-center gap-2.5 text-white/80 hover:text-white text-sm transition-colors font-bold" style={{ fontFamily: "'Poppins', sans-serif" }}>
+                <a href={tel} className="flex items-center gap-2.5 text-white/80 hover:text-white text-sm transition-colors font-bold" style={{ fontFamily: "'Poppins', sans-serif" }}>
                   <Phone size={14} className="text-[#1a2a6c] flex-shrink-0" />
-                  +255 725 829 595
+                  {contact.phone}
                 </a>
               </li>
               <li>
-                <a href="mailto:info@eye.co.tz" className="flex items-center gap-2.5 text-white/80 hover:text-white text-sm transition-colors font-bold" style={{ fontFamily: "'Poppins', sans-serif" }}>
+                <a href={`mailto:${contact.email}`} className="flex items-center gap-2.5 text-white/80 hover:text-white text-sm transition-colors font-bold" style={{ fontFamily: "'Poppins', sans-serif" }}>
                   <Mail size={14} className="text-[#1a2a6c] flex-shrink-0" />
-                  info@eye.co.tz
+                  {contact.email}
                 </a>
               </li>
             </ul>
 
             <div className="flex gap-2.5">
-              <a href="https://www.instagram.com/ieh_tz?igsh=MTF3aHZya3Q0bnVoZA%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer"
-                className="w-8 h-8 rounded-full bg-white/10 hover:bg-[#1a2a6c] flex items-center justify-center text-white/50 hover:text-white transition-all"
-                title="@ieh_tz">
-                <InstagramIcon size={14} />
-              </a>
-              <a href="https://www.facebook.com/IEH.TZ/" target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full bg-white/10 hover:bg-[#1a2a6c] flex items-center justify-center text-white/50 hover:text-white transition-all" title="Facebook">
-                <Camera size={14} />
-              </a>
-              <a href="https://x.com/IEH_tz" target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full bg-white/10 hover:bg-[#1a2a6c] flex items-center justify-center text-white/50 hover:text-white transition-all" title="X">
-                <XIcon size={14} />
-              </a>
-              <a href="#" className="w-8 h-8 rounded-full bg-white/10 hover:bg-[#1a2a6c] flex items-center justify-center text-white/50 hover:text-white transition-all">
-                <PlayCircle size={14} />
-              </a>
+              {social.instagram && (
+                <a href={social.instagram} target="_blank" rel="noopener noreferrer"
+                  className="w-8 h-8 rounded-full bg-white/10 hover:bg-[#1a2a6c] flex items-center justify-center text-white/50 hover:text-white transition-all"
+                  title="@ieh_tz">
+                  <InstagramIcon size={14} />
+                </a>
+              )}
+              {social.facebook && (
+                <a href={social.facebook} target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full bg-white/10 hover:bg-[#1a2a6c] flex items-center justify-center text-white/50 hover:text-white transition-all" title="Facebook">
+                  <Camera size={14} />
+                </a>
+              )}
+              {social.x && (
+                <a href={social.x} target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full bg-white/10 hover:bg-[#1a2a6c] flex items-center justify-center text-white/50 hover:text-white transition-all" title="X">
+                  <XIcon size={14} />
+                </a>
+              )}
+              {social.youtube && (
+                <a href={social.youtube} target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full bg-white/10 hover:bg-[#1a2a6c] flex items-center justify-center text-white/50 hover:text-white transition-all" title="YouTube">
+                  <PlayCircle size={14} />
+                </a>
+              )}
             </div>
           </div>
 
@@ -136,8 +154,8 @@ export default function Footer() {
 
             <div className="mt-5 bg-[#1a2a6c]/20 border border-[#1a2a6c]/30 rounded-xl p-4">
               <p className="text-[#1a2a6c] text-xs font-bold mb-1" style={{ fontFamily: "'Poppins', sans-serif" }}>Emergency?</p>
-              <a href="tel:+255725829595" className="text-white font-bold text-sm hover:text-white/80 transition-colors" style={{ fontFamily: "'Poppins', sans-serif" }}>
-                +255 725 829 595
+              <a href={tel} className="text-white font-bold text-sm hover:text-white/80 transition-colors" style={{ fontFamily: "'Poppins', sans-serif" }}>
+                {contact.phone}
               </a>
             </div>
           </div>

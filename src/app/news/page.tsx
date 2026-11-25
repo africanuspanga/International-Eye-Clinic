@@ -5,7 +5,9 @@ import PageHero from "@/components/PageHero";
 import Link from "next/link";
 import Image from "next/image";
 import { BookOpen, Image as ImageIcon, Video, FileText, Star, Download, Clock, ArrowRight } from "lucide-react";
-import { blogPosts } from "@/lib/blog-data";
+import { getPosts } from "@/lib/cms/content";
+
+export const revalidate = 3600;
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -37,7 +39,8 @@ const categories = [
   { icon: Download, label: "Brochures", href: "/news/brochures", desc: "Download patient guides, service brochures, and health information booklets.", color: "bg-teal-50 text-teal-600" },
 ];
 
-export default function NewsPage() {
+export default async function NewsPage() {
+  const blogPosts = (await getPosts()).slice(0, 3);
   return (
     <>
       <Navbar />

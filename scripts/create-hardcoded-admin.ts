@@ -1,8 +1,16 @@
 import { createClient } from "@supabase/supabase-js";
 
+// Credentials come from .env.local — never hardcode the service-role key.
+// Run with: node --experimental-strip-types --env-file=.env.local scripts/<name>.ts
+function requireEnv(name: string): string {
+  const value = process.env[name];
+  if (!value) throw new Error(`Missing ${name} — see .env.local`);
+  return value;
+}
+
 const supabase = createClient(
-  "https://btcppgoomgdvrvexyojb.supabase.co",
-  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJ0Y3BwZ29vbWdkdnJ2ZXh5b2piIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc3Njc0OTYwMiwiZXhwIjoyMDkyMzI1NjAyfQ.6DTf0FHeFTk-2iCepEA2lpUuFWpcopYceb7iDICDMmI",
+  requireEnv("NEXT_PUBLIC_SUPABASE_URL"),
+  requireEnv("SUPABASE_SERVICE_ROLE_KEY"),
   {
     auth: {
       autoRefreshToken: false,
@@ -13,32 +21,32 @@ const supabase = createClient(
 
 async function createAdmin() {
   const email = "info@eye.co.tz";
-  const password = "Eye@2026";
+  const password = process.env.ADMIN_PASSWORD || "Eye@2026";
 
-  // First try to delete existing user with same email
   const { data: users } = await supabase.auth.admin.listUsers();
   const existing = users?.users?.find((u) => u.email === email);
+
   if (existing) {
-    console.log("Deleting existing user...");
-    await supabase.auth.admin.deleteUser(existing.id);
+    const { error } = await supabase.auth.admin.updateUserById(existing.id, {
+      password,
+      app_metadata: { ...existing.app_metadata, role: "admin" },
+    });
+    if (error) throw error;
+    console.log(`Updated ${email}: password reset and admin role granted.`);
+    return;
   }
 
-  console.log(`Creating admin user: ${email}`);
-
-  const { data, error } = await supabase.auth.admin.createUser({
+  const { error } = await supabase.auth.admin.createUser({
     email,
     password,
     email_confirm: true,
+    app_metadata: { role: "admin" },
   });
-
-  if (error) {
-    console.error("Error:", error.message);
-    process.exit(1);
-  }
-
-  console.log("Admin user created successfully!");
-  console.log("Email:", email);
-  console.log("Password:", password);
+  if (error) throw error;
+  console.log(`Created admin ${email}.`);
 }
 
-createAdmin().catch(console.error);
+createAdmin().catch((e) => {
+  console.error(e);
+  process.exit(1);
+});

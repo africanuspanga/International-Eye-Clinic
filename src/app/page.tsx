@@ -16,6 +16,9 @@ import WhatsApp from "@/components/WhatsApp";
 import AppointmentSection from "@/components/AppointmentSection";
 import { BreadcrumbJsonLd } from "@/components/StructuredData";
 import type { Metadata } from "next";
+import { getHeroSlides, getTestimonials } from "@/lib/cms/content";
+
+export const revalidate = 3600;
 
 export const metadata: Metadata = {
   title: "International Eye Hospital | World-Class Eye Care in Tanzania",
@@ -40,7 +43,8 @@ export const metadata: Metadata = {
   },
 };
 
-export default function Home() {
+export default async function Home() {
+  const [slides, testimonials] = await Promise.all([getHeroSlides(), getTestimonials()]);
   return (
     <>
       <BreadcrumbJsonLd
@@ -48,7 +52,7 @@ export default function Home() {
       />
       <Navbar />
       <main>
-        <Hero />
+        <Hero slides={slides} />
         <SearchBar />
         <QuickBook />
         <AppointmentSection />
@@ -58,7 +62,7 @@ export default function Home() {
         <PromoSection />
         <Doctors />
         <Gallery />
-        <Testimonials />
+        {testimonials.length > 0 && <Testimonials testimonials={testimonials} />}
         <BlogPreview />
         <CTA />
       </main>

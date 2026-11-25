@@ -1,9 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
-import { blogPosts } from "@/lib/blog-data";
+import { getPosts } from "@/lib/cms/content";
 import { Clock, ArrowRight } from "lucide-react";
 
-export default function BlogPreview() {
+export default async function BlogPreview() {
+  const blogPosts = (await getPosts()).slice(0, 3);
+  if (blogPosts.length === 0) return null;
   return (
     <section className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-6">

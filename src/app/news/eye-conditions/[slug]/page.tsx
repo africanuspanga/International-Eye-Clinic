@@ -4,8 +4,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsApp from "@/components/WhatsApp";
 import PageHero from "@/components/PageHero";
-import { createClient } from "@/lib/supabase/server";
-import { getConditionBySlug, eyeConditions as fallbackConditions } from "@/lib/eye-conditions-data";
+import { getCondition, getConditions } from "@/lib/cms/content";
 import { TranslationProvider } from "@/lib/translation-context";
 import ConditionDetailClient from "./ConditionDetailClient";
 import { BreadcrumbJsonLd, MedicalWebPageJsonLd } from "@/components/StructuredData";
@@ -14,20 +13,15 @@ interface Props {
   params: Promise<{ slug: string }>;
 }
 
-export const dynamic = "force-dynamic";
+export const revalidate = 3600;
+
+export async function generateStaticParams() {
+  return (await getConditions()).map((c) => ({ slug: c.slug }));
+}
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
-  const supabase = await createClient();
-  const { data: dbCondition } = await supabase
-    .from("eye_conditions")
-    .select("name, short_desc")
-    .eq("slug", slug)
-    .eq("is_published", true)
-    .single();
-
-  const fallback = getConditionBySlug(slug);
-  const condition = dbCondition || fallback;
+  const condition = await getCondition(slug);
 
   if (!condition) {
     return {
@@ -36,13 +30,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
   return {
     title: `${condition.name} | Eye Conditions | International Eye Hospital`,
-    description: dbCondition ? dbCondition.short_desc : fallback?.shortDesc || "",
+    description: condition.shortDesc,
     alternates: {
       canonical: `https://www.internationaleyehospital.com/news/eye-conditions/${slug}`,
     },
     openGraph: {
       title: `${condition.name} | Eye Conditions | International Eye Hospital`,
-      description: dbCondition ? dbCondition.short_desc : fallback?.shortDesc || "",
+      description: condition.shortDesc,
       url: `https://www.internationaleyehospital.com/news/eye-conditions/${slug}`,
       type: "article",
       images: [
@@ -59,53 +53,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function EyeConditionDetailPage({ params }: Props) {
   const { slug } = await params;
-  const supabase = await createClient();
-
-  const { data: dbCondition } = await supabase
-    .from("eye_conditions")
-    .select("*")
-    .eq("slug", slug)
-    .eq("is_published", true)
-    .single();
-
-  let condition: any;
-
-  if (dbCondition) {
-    condition = {
-      slug: dbCondition.slug,
-      name: dbCondition.name,
-      shortDesc: dbCondition.short_desc,
-      overview: dbCondition.overview,
-      symptoms: dbCondition.symptoms,
-      causes: dbCondition.causes,
-      treatments: dbCondition.treatments,
-      whenToSeeDoctor: dbCondition.when_to_see_doctor,
-      swahili: {
-        overview: dbCondition.swahili_overview,
-        symptoms: dbCondition.swahili_symptoms,
-        causes: dbCondition.swahili_causes,
-        treatments: dbCondition.swahili_treatments,
-        whenToSeeDoctor: dbCondition.swahili_when_to_see_doctor,
-      },
-    };
-  } else {
-    const fallback = getConditionBySlug(slug);
-    if (!fallback) {
-      notFound();
-    }
-    condition = fallback;
-  }
-
-  // Get all conditions for related links
-  const { data: allDbConditions } = await supabase
-    .from("eye_conditions")
-    .select("slug, name, short_desc")
-    .eq("is_published", true)
-    .order("sort_order", { ascending: true });
-
-  const allConditions = allDbConditions && allDbConditions.length > 0
-    ? allDbConditions.map((c) => ({ slug: c.slug, name: c.name, shortDesc: c.short_desc }))
-    : fallbackConditions;
+  const [condition, allConditions] = await Promise.all([getCondition(slug), getConditions()]);
+  if (!condition) notFound();
 
   return (
     <TranslationProvider>
@@ -136,7 +85,10 @@ export default async function EyeConditionDetailPage({ params }: Props) {
           ]}
           cta={{ label: "Book Consultation", href: "/appointment" }}
         />
-        <ConditionDetailClient condition={condition} allConditions={allConditions} />
+        <ConditionDetailClient
+          condition={condition}
+          allConditions={allConditions.map((c) => ({ slug: c.slug, name: c.name, shortDesc: c.shortDesc }))}
+        />
       </main>
       <Footer />
       <WhatsApp />

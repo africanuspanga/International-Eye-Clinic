@@ -4,8 +4,7 @@ import WhatsApp from "@/components/WhatsApp";
 import PageHero from "@/components/PageHero";
 import Link from "next/link";
 import { ArrowRight, Eye } from "lucide-react";
-import { createClient } from "@/lib/supabase/server";
-import { eyeConditions as fallbackConditions } from "@/lib/eye-conditions-data";
+import { getConditions } from "@/lib/cms/content";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -30,19 +29,10 @@ export const metadata: Metadata = {
   },
 };
 
-export const dynamic = "force-dynamic";
+export const revalidate = 3600;
 
 export default async function EyeConditionsPage() {
-  const supabase = await createClient();
-  const { data: dbConditions } = await supabase
-    .from("eye_conditions")
-    .select("slug, name, short_desc")
-    .eq("is_published", true)
-    .order("sort_order", { ascending: true });
-
-  const conditions = dbConditions && dbConditions.length > 0
-    ? dbConditions
-    : fallbackConditions.map((c) => ({ slug: c.slug, name: c.name, short_desc: c.shortDesc }));
+  const conditions = (await getConditions()).map((c) => ({ slug: c.slug, name: c.name, short_desc: c.shortDesc }));
 
   return (
     <>

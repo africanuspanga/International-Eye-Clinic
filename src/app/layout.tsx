@@ -6,7 +6,8 @@ import {
   LocalBusinessJsonLd,
   WebsiteJsonLd,
 } from "@/components/StructuredData";
-import { Analytics } from "@/components/Analytics";
+import { GoogleTagManagerNoScript, GoogleTags } from "@/components/site/google-tags";
+import { getSettings } from "@/lib/cms/content";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -30,7 +31,7 @@ export const viewport: Viewport = {
   themeColor: "#ffffff",
 };
 
-export const metadata: Metadata = {
+const baseMetadata: Metadata = {
   metadataBase: new URL("https://www.internationaleyehospital.com"),
   title: {
     default: "International Eye Hospital | World-Class Eye Care in Tanzania",
@@ -96,10 +97,6 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://www.internationaleyehospital.com",
   },
-  verification: {
-    // Replace with your real Google Search Console verification code
-    // google: "your-real-verification-code",
-  },
   icons: {
     icon: "/icon.png",
     apple: "/icon.png",
@@ -111,6 +108,14 @@ export const metadata: Metadata = {
     "contact:email": "info@eye.co.tz",
   },
 };
+
+export async function generateMetadata(): Promise<Metadata> {
+  const settings = await getSettings();
+  const verification = (settings.google_site_verification ?? "").trim();
+  return /^[A-Za-z0-9_-]{10,100}$/.test(verification)
+    ? { ...baseMetadata, verification: { google: verification } }
+    : baseMetadata;
+}
 
 export default function RootLayout({
   children,
@@ -129,8 +134,9 @@ export default function RootLayout({
         style={{ fontFamily: "'Poppins', system-ui, sans-serif" }}
         className="antialiased min-h-full flex flex-col"
       >
+        <GoogleTagManagerNoScript />
         {children}
-        <Analytics />
+        <GoogleTags />
       </body>
     </html>
   );

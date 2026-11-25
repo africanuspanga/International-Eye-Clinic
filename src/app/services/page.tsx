@@ -6,6 +6,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import type { Metadata } from "next";
+import { getServiceCards } from "@/lib/cms/content";
+
+export const revalidate = 3600;
 
 export const metadata: Metadata = {
   title: "Our Services | International Eye Hospital",
@@ -27,74 +30,9 @@ export const metadata: Metadata = {
   },
 };
 
-const servicesList = [
-  {
-    title: "Cataract Surgery",
-    href: "/services/cataract",
-    image: "/images/eye examination 8.jpg",
-    desc: "Modern surgical techniques to remove clouded lenses and restore clear vision using premium intraocular lenses.",
-    category: "Surgery",
-  },
-  {
-    title: "Multifocal Cataract Surgery",
-    href: "/services/multifocal-cataract",
-    image: "/images/eye examination 8.jpg",
-    desc: "Advanced cataract treatment with premium multifocal lenses for clear vision at all distances with reduced dependence on glasses.",
-    category: "Surgery",
-  },
 
-  {
-    title: "Glaucoma",
-    href: "/services/glaucoma",
-    image: "/images/eye test 1.jpg",
-    desc: "Early detection and long-term management of glaucoma to preserve your optic nerve and vision.",
-    category: "Medical",
-  },
-  {
-    title: "Retina – Diabetic Retinopathy",
-    href: "/services/retina",
-    image: "/images/optic 4.jpg",
-    desc: "Expert retina care including treatment for diabetic retinopathy, macular degeneration, and retinal detachment.",
-    category: "Specialist",
-  },
-  {
-    title: "Keratoconus Crosslinking",
-    href: "/services/keratoconus",
-    image: "/images/eye examination 5.jpg",
-    desc: "Corneal crosslinking and specialty contact lens management for keratoconus patients.",
-    category: "Specialist",
-  },
-  {
-    title: "Cornea Transplant",
-    href: "/services/cornea",
-    image: "/images/eye examination 9.jpg",
-    desc: "Full-thickness and lamellar corneal transplantation by our experienced corneal surgeons.",
-    category: "Surgery",
-  },
-  {
-    title: "Optic Department",
-    href: "/services/optic",
-    image: "/images/eye examination 6.jpg",
-    desc: "Prescription glasses and contact lens services with the latest optical technology.",
-    category: "General",
-  },
-  {
-    title: "General Eye Examination",
-    href: "/services/general-exam",
-    image: "/images/eye examination 1.jpg",
-    desc: "Comprehensive eye health assessment for all ages — ideal for annual check-ups and early detection.",
-    category: "General",
-  },
-  {
-    title: "Eye Tests (Diagnostics)",
-    href: "/services/eye-tests",
-    image: "/images/eye test 2.jpg",
-    desc: "OCT, FFA, Corneal Topography, Tonometry, Visual Field, A-Scan and full diagnostic testing.",
-    category: "Diagnostics",
-  },
-];
-
-export default function ServicesPage() {
+export default async function ServicesPage() {
+  const servicesList = await getServiceCards();
   return (
     <>
       <Navbar />
@@ -112,10 +50,10 @@ export default function ServicesPage() {
           <div className="max-w-7xl mx-auto px-6">
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-7">
               {servicesList.map((s) => (
-                <Link key={s.title} href={s.href}
+                <Link key={s.href} href={s.href}
                   className="group bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-xl hover:shadow-black/10 hover:border-[#e62d26]/20 transition-all hover-lift">
                   <div className="relative h-52 overflow-hidden">
-                    <Image src={s.image} alt={s.title} fill className="object-cover group-hover:scale-105 transition-transform duration-500" />
+                    {s.image && <Image src={s.image} alt={s.title} fill sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" className="object-cover group-hover:scale-105 transition-transform duration-500" />}
                     <div className="absolute inset-0 bg-gradient-to-t from-[#e62d26]/70 to-transparent" />
                     <span className="absolute top-3 left-3 bg-[#1a2a6c] text-white text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded-full" style={{ fontFamily: "'Poppins', sans-serif" }}>
                       {s.category}

@@ -1,8 +1,16 @@
 import { createClient } from "@supabase/supabase-js";
 
+// Credentials come from .env.local — never hardcode the service-role key.
+// Run with: node --experimental-strip-types --env-file=.env.local scripts/<name>.ts
+function requireEnv(name: string): string {
+  const value = process.env[name];
+  if (!value) throw new Error(`Missing ${name} — see .env.local`);
+  return value;
+}
+
 const supabase = createClient(
-  "https://btcppgoomgdvrvexyojb.supabase.co",
-  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJ0Y3BwZ29vbWdkdnJ2ZXh5b2piIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc3Njc0OTYwMiwiZXhwIjoyMDkyMzI1NjAyfQ.6DTf0FHeFTk-2iCepEA2lpUuFWpcopYceb7iDICDMmI",
+  requireEnv("NEXT_PUBLIC_SUPABASE_URL"),
+  requireEnv("SUPABASE_SERVICE_ROLE_KEY"),
   {
     auth: {
       autoRefreshToken: false,

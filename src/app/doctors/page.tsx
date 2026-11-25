@@ -6,6 +6,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { GraduationCap, Award, ArrowRight } from "lucide-react";
 import type { Metadata } from "next";
+import { getDoctors } from "@/lib/cms/content";
+
+export const revalidate = 3600;
 
 export const metadata: Metadata = {
   title: "Our Doctors | International Eye Hospital",
@@ -27,65 +30,14 @@ export const metadata: Metadata = {
   },
 };
 
-const doctors = [
-  {
-    name: "Dr. Muammer Coskun",
-    title: "Consultant Ophthalmologist / Eye Surgeon",
-    specialty: ["Cataract Surgery", "Glaucoma Surgery", "Laser Eye Procedures", "Medical Retina", "Pterygium Surgery"],
-    experience: "20+",
-    education: "Ege University Faculty of Medicine",
-    membership: "Turkish Ophthalmology Society",
-    href: "/doctors/muammer-coskun",
-    image: "/doctors/muammer-coskun.jpeg",
-    bio: "Experienced ophthalmologist and eye surgeon with more than two decades of clinical and surgical experience across leading hospitals in Turkey and Nigeria. His areas of experience include cataract surgery, glaucoma surgery, pterygium surgery, YAG laser, argon laser, medical retina treatments, and other ophthalmic procedures.",
-  },
-  {
-    name: "Dr. Vangilisasi Msola",
-    title: "Ophthalmologist, Epidemiologist & Data Scientist",
-    specialty: ["General Ophthalmology", "Public Health Eye Care", "Clinical Research", "Health Data", "Medical Teaching"],
-    experience: "5+",
-    education: "University of the Witwatersrand, Mzumbe University",
-    membership: "Tanzania Ophthalmologist Society",
-    href: "/doctors/vangilisasi-msola",
-    image: "/doctors/vangilisasi-msola.jpeg",
-    bio: "Tanzanian ophthalmologist with advanced training in ophthalmology, epidemiology, implementation science, and corporate management. He has worked with International Eye Hospital since June 2022 and has broad experience in clinical ophthalmology, research, public health, teaching, and health data analysis.",
-  },
-  {
-    name: "Dr. Zayd Mohamed Sangey",
-    title: "Ophthalmologist",
-    specialty: ["Cornea", "Refractive & External Eye Diseases", "Cataract", "Glaucoma", "Medical Retina", "Uveitis", "Pediatric Ophthalmology"],
-    experience: "3+",
-    education: "Muhimbili University of Health and Allied Sciences",
-    membership: "Tanzania Ophthalmology Society",
-    href: "/doctors/zayd-sangey",
-    image: "/doctors/zayd-sangey.jpeg",
-    bio: "A compassionate ophthalmologist focused on improving vision through preventive, corrective, medical, and surgical eye care. Trained at Muhimbili, he provides specialist care with special interests in cornea, refractive and external eye diseases, cataract, glaucoma, medical retina, uveitis, and pediatric ophthalmology.",
-  },
-  {
-    name: "Dr. Harley H. Mkini",
-    title: "Optometrist",
-    specialty: ["Refraction", "Contact Lenses", "Low Vision", "Pediatric Optometry", "Diabetic Eye Clinic", "Glaucoma Clinic"],
-    experience: "4+",
-    education: "Kilimanjaro Christian Medical University College",
-    membership: "IACLE, Myopia Society",
-    href: "/doctors/harley-mkini",
-    image: "/doctors/harley-mkini.jpeg",
-    bio: "Optometrist and primary eye care provider with experience in refraction, ophthalmic dispensing, low vision rehabilitation, binocular vision assessment, pediatric and geriatric optometry, contact lenses, glaucoma clinic support, diabetic eye clinic support, and ocular disease management. He has served at International Eye Hospital since August 2021.",
-  },
-  {
-    name: "Dr. Michael Machimu",
-    title: "Optometrist",
-    specialty: ["Vision Testing", "Corrective Lenses", "Eye Condition Assessment", "Patient Eye Care", "Preventive Vision Care"],
-    experience: "3+",
-    education: "Kilimanjaro Christian Medical University College",
-    membership: "",
-    href: "/doctors/michael-machimu",
-    image: "/doctors/michael-machimu.jpeg",
-    bio: "A skilled optometrist providing professional vision assessment, corrective lens support, and patient-focused eye care services. He holds a Bachelor of Science in Optometry from Kilimanjaro Christian Medical University College and is currently pursuing a Master of Science in Applied Epidemiology and Biostatistics.",
-  },
-];
 
-export default function DoctorsPage() {
+export default async function DoctorsPage() {
+  const doctors = (await getDoctors()).map((d) => ({
+    ...d,
+    specialty: d.specialties,
+    href: `/doctors/${d.slug}`,
+    bio: d.bio || d.shortBio,
+  }));
   return (
     <>
       <Navbar />
@@ -106,7 +58,7 @@ export default function DoctorsPage() {
                 <div key={doc.name} className="group bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl hover:shadow-black/10 hover:border-[#e62d26]/20 transition-all overflow-hidden hover-lift">
                   {/* Photo */}
                   <div className="relative h-80 bg-[#fdecea]">
-                    <Image src={doc.image} alt={doc.name} fill sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw" className={`object-cover ${doc.name === "Dr. Harley H. Mkini" ? "object-center" : "object-top"}`} />
+                    <Image src={doc.image} alt={doc.name} fill sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw" className={`object-cover ${doc.imagePosition === "center" ? "object-center" : "object-top"}`} />
                     <div className="absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-[#e62d26] to-transparent" />
                     <div className="absolute top-4 right-4 bg-[#1a2a6c] text-white rounded-xl px-3 py-1.5 text-center">
                       <div className="text-lg font-bold leading-none" style={{ fontFamily: "'Merriweather', serif" }}>{doc.experience}</div>

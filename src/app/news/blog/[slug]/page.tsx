@@ -4,13 +4,16 @@ import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsApp from "@/components/WhatsApp";
-import { blogPosts, getBlogPost } from "@/lib/blog-data";
+import { getPost, getPosts } from "@/lib/cms/content";
+import { RichText } from "@/components/cms/RichText";
 import { ArrowLeft, Clock, Tag, Calendar } from "lucide-react";
 import { BreadcrumbJsonLd, BlogPostingJsonLd } from "@/components/StructuredData";
 import type { Metadata } from "next";
 
+export const revalidate = 3600;
+
 export async function generateStaticParams() {
-  return blogPosts.map((post) => ({ slug: post.slug }));
+  return (await getPosts()).map((post) => ({ slug: post.slug }));
 }
 
 export async function generateMetadata({
@@ -19,7 +22,7 @@ export async function generateMetadata({
   params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
   const { slug } = await params;
-  const post = getBlogPost(slug);
+  const post = await getPost(slug);
   if (!post) return {};
   return {
     title: `${post.title} | International Eye Hospital`,
@@ -56,10 +59,10 @@ export default async function BlogPostPage({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const post = getBlogPost(slug);
+  const [post, blogPosts] = await Promise.all([getPost(slug), getPosts()]);
   if (!post) notFound();
 
-  const otherPosts = blogPosts.filter((p) => p.slug !== slug);
+  const otherPosts = blogPosts.filter((p) => p.slug !== slug).slice(0, 4);
 
   return (
     <>
@@ -76,7 +79,7 @@ export default async function BlogPostPage({
         description={post.excerpt}
         url={`/news/blog/${slug}`}
         image={post.image}
-        datePublished={new Date(post.date).toISOString()}
+        datePublished={new Date(`${post.isoDate}T00:00:00Z`).toISOString()}
         authorName="International Eye Hospital"
       />
       <Navbar />
@@ -150,79 +153,13 @@ export default async function BlogPostPage({
             </p>
 
             <div className="space-y-6">
-              {post.content.map((section, i) => {
-                if (section.type === "heading") {
-                  return (
-                    <h2
-                      key={i}
-                      className="text-xl font-bold text-[#e62d26] mt-8 mb-2"
-                      style={{ fontFamily: "'Merriweather', serif" }}
-                    >
-                      {section.text}
-                    </h2>
-                  );
-                }
-                if (section.type === "paragraph") {
-                  const link = section.link;
-                  const at = link ? (section.text ?? "").indexOf(link.anchor) : -1;
-                  return (
-                    <p
-                      key={i}
-                      className="text-[#374151] text-base leading-relaxed"
-                      style={{ fontFamily: "'Poppins', sans-serif" }}
-                    >
-                      {link && at !== -1 ? (
-                        <>
-                          {section.text?.slice(0, at)}
-                          <a
-                            href={link.href}
-                            target="_blank"
-                            rel="noopener"
-                            className="text-inherit no-underline"
-                          >
-                            {link.anchor}
-                          </a>
-                          {section.text?.slice(at + link.anchor.length)}
-                        </>
-                      ) : (
-                        section.text
-                      )}
-                    </p>
-                  );
-                }
-                if (section.type === "list") {
-                  return (
-                    <ul key={i} className="space-y-2 pl-2">
-                      {section.items?.map((item, j) => (
-                        <li
-                          key={j}
-                          className="flex items-start gap-3 text-[#374151] text-sm leading-relaxed"
-                          style={{ fontFamily: "'Poppins', sans-serif" }}
-                        >
-                          <span className="w-1.5 h-1.5 rounded-full bg-[#1a2a6c] mt-2 flex-shrink-0" />
-                          {item}
-                        </li>
-                      ))}
-                    </ul>
-                  );
-                }
-                if (section.type === "tip") {
-                  return (
-                    <div
-                      key={i}
-                      className="bg-[#fdecea] border-l-4 border-[#e62d26] rounded-r-xl p-5 mt-8"
-                    >
-                      <p
-                        className="text-[#e62d26] text-sm leading-relaxed font-medium"
-                        style={{ fontFamily: "'Poppins', sans-serif" }}
-                      >
-                        💡 {section.text}
-                      </p>
-                    </div>
-                  );
-                }
-                return null;
-              })}
+              <RichText
+                source={post.content}
+                quotePrefix="💡 "
+                classes={{
+                  a: "text-inherit no-underline",
+                }}
+              />
             </div>
 
             {/* CTA */}

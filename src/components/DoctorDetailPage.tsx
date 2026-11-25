@@ -6,14 +6,14 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, MapPin, GraduationCap, Award, Stethoscope, Languages, Users, Calendar, Phone } from "lucide-react";
 import type { Doctor } from "@/lib/doctors-data";
-import { doctors } from "@/lib/doctors-data";
 
 interface Props {
   doctor: Doctor;
+  allDoctors: Pick<Doctor, "slug" | "name" | "title" | "image">[];
 }
 
-export default function DoctorDetailPage({ doctor }: Props) {
-  const otherDoctors = doctors.filter((d) => d.slug !== doctor.slug);
+export default function DoctorDetailPage({ doctor, allDoctors }: Props) {
+  const otherDoctors = allDoctors.filter((d) => d.slug !== doctor.slug);
 
   const infoCards = [
     { icon: MapPin, label: "Place of Birth", value: doctor.birthPlace },

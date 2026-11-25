@@ -5,6 +5,9 @@ import WhatsApp from "@/components/WhatsApp";
 import PageHero from "@/components/PageHero";
 import Link from "next/link";
 import type { Metadata } from "next";
+import { getGallery } from "@/lib/cms/content";
+
+export const revalidate = 3600;
 
 export const metadata: Metadata = {
   title: "Gallery | International Eye Hospital",
@@ -25,33 +28,11 @@ export const metadata: Metadata = {
   },
 };
 
-const galleryImages = [
-  { src: "/images/new images/eye.jpg", alt: "Close-up eye detail", category: "Clinical" },
-  { src: "/images/eye examination 1.jpg", alt: "Patient eye examination", category: "Examination" },
-  { src: "/images/eye examination 6.jpg", alt: "Slit-lamp examination", category: "Examination" },
-  { src: "/images/eye examination 8.jpg", alt: "Advanced diagnostic exam", category: "Examination" },
-  { src: "/images/eye examination 9.jpg", alt: "Ophthalmology consultation", category: "Examination" },
-  { src: "/images/eye test 1.jpg", alt: "Visual acuity test", category: "Eye Tests" },
-  { src: "/images/eye test 2.jpg", alt: "Automated refraction", category: "Eye Tests" },
-  { src: "/images/eye 2.jpg", alt: "Anterior segment detail", category: "Clinical" },
-  { src: "/images/eye 3.jpg", alt: "Retinal imaging", category: "Clinical" },
-  { src: "/images/lasik 1.jpg", alt: "LASIK laser vision correction", category: "Surgery" },
-  { src: "/images/lasik 2.jpg", alt: "Advanced laser eye surgery", category: "Surgery" },
-  { src: "/images/optic 4.jpg", alt: "Optic nerve evaluation", category: "Diagnostics" },
-  { src: "/images/staff 3.jpg", alt: "Medical team", category: "Our Team" },
-  { src: "/images/staff-3.jpg", alt: "Clinical staff", category: "Our Team" },
-  { src: "/images/new images/gallery-patient-glasses.jpg", alt: "Patient trying on prescription glasses", category: "Eye Tests" },
-  { src: "/images/new images/gallery-surgery-equipment.jpg", alt: "Advanced ophthalmic surgical microscope and laser suite", category: "Surgery" },
-  { src: "/images/new images/gallery-diagnostic-equipment.jpg", alt: "TOPCON CV-3000 automated phoropter and diagnostic station", category: "Diagnostics" },
-  { src: "/images/new images/gallery-phaco-machine.jpg", alt: "Bausch & Lomb Stellaris PC phacoemulsification system", category: "Surgery" },
-  { src: "/images/new images/gallery-laser-suite.jpg", alt: "VISX Star S4 laser vision correction suite", category: "Surgery" },
-  { src: "/images/new images/gallery-lensmeter.jpg", alt: "Auto lensmeter measuring prescription eyeglasses", category: "Eye Tests" },
-  { src: "/images/new images/gallery-doctors-team.jpg", alt: "Ophthalmologists with slit-lamp examination equipment", category: "Our Team" },
-];
 
-const categories = ["All", "Examination", "Eye Tests", "Surgery", "Clinical", "Diagnostics", "Our Team"];
 
-export default function GalleryPage() {
+export default async function GalleryPage() {
+  const galleryImages = await getGallery();
+  const categories = ["All", ...Array.from(new Set(galleryImages.map((img) => img.category).filter(Boolean)))];
   return (
     <>
       <Navbar />

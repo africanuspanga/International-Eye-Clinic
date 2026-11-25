@@ -6,16 +6,15 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, Phone, BookOpen } from "lucide-react";
 import type { ServiceDetail } from "@/lib/services-data";
-import { servicesDetail } from "@/lib/services-data";
+import { RichText } from "@/components/cms/RichText";
 
 interface Props {
   service: ServiceDetail;
+  allServices: Pick<ServiceDetail, "slug" | "title">[];
 }
 
-export default function ServiceDetailPage({ service }: Props) {
-  const paragraphs = service.content.split("\n\n").filter((p) => p.trim());
-
-  const otherServices = servicesDetail
+export default function ServiceDetailPage({ service, allServices }: Props) {
+  const otherServices = allServices
     .filter((s) => s.slug !== service.slug)
     .slice(0, 4);
 
@@ -41,27 +40,28 @@ export default function ServiceDetailPage({ service }: Props) {
               {/* Main Content */}
               <div className="lg:col-span-2">
                 {/* Image */}
-                <div className="relative h-80 sm:h-96 rounded-2xl overflow-hidden mb-10">
-                  <Image
-                    src={service.image}
-                    alt={service.title}
-                    fill
-                    className="object-cover"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#e62d26]/60 to-transparent" />
-                </div>
+                {service.image && (
+                  <div className="relative h-80 sm:h-96 rounded-2xl overflow-hidden mb-10">
+                    <Image
+                      src={service.image}
+                      alt={service.title}
+                      fill
+                      sizes="(max-width: 1024px) 100vw, 66vw"
+                      className="object-cover"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#e62d26]/60 to-transparent" />
+                  </div>
+                )}
 
                 {/* Text */}
                 <div className="space-y-6">
-                  {paragraphs.map((para, i) => (
-                    <p
-                      key={i}
-                      className="text-[#374151] leading-[1.8] text-[15px]"
-                      style={{ fontFamily: "'Poppins', sans-serif" }}
-                    >
-                      {para}
-                    </p>
-                  ))}
+                  <RichText
+                    source={service.content}
+                    classes={{
+                      p: "text-[#374151] leading-[1.8] text-[15px]",
+                      li: "flex items-start gap-3 text-[#374151] leading-[1.8] text-[15px] before:mt-3 before:h-1.5 before:w-1.5 before:shrink-0 before:rounded-full before:bg-[#e62d26] before:content-['']",
+                    }}
+                  />
                 </div>
 
                 {/* CTA Box */}

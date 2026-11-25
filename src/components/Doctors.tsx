@@ -1,66 +1,16 @@
 import Image from "next/image";
 import Link from "next/link";
 import { GraduationCap, Award, ArrowRight } from "lucide-react";
+import { getDoctors } from "@/lib/cms/content";
 
-const doctors = [
-  {
-    name: "Dr. Muammer Coskun",
-    title: "Consultant Ophthalmologist / Eye Surgeon",
-    specialty: ["Cataract Surgery", "Glaucoma Surgery", "Laser Eye Procedures", "Medical Retina", "Pterygium Surgery"],
-    experience: "20+",
-    education: "Ege University Faculty of Medicine",
-    membership: "Turkish Ophthalmology Society",
-    href: "/doctors/muammer-coskun",
-    image: "/doctors/muammer-coskun.jpeg",
-    bio: "Experienced ophthalmologist and eye surgeon with more than two decades of clinical and surgical experience across leading hospitals in Turkey and Nigeria.",
-  },
-  {
-    name: "Dr. Vangilisasi Msola",
-    title: "Ophthalmologist, Epidemiologist & Data Scientist",
-    specialty: ["General Ophthalmology", "Public Health Eye Care", "Clinical Research", "Health Data", "Medical Teaching"],
-    experience: "5+",
-    education: "University of the Witwatersrand",
-    membership: "Tanzania Ophthalmologist Society",
-    href: "/doctors/vangilisasi-msola",
-    image: "/doctors/vangilisasi-msola.jpeg",
-    bio: "Tanzanian ophthalmologist with additional expertise in epidemiology, implementation science, data science, health research, and medical teaching.",
-  },
-  {
-    name: "Dr. Zayd Mohamed Sangey",
-    title: "Ophthalmologist",
-    specialty: ["Cornea", "Refractive & External Eye Diseases", "Cataract", "Glaucoma", "Medical Retina", "Uveitis", "Pediatric Ophthalmology"],
-    experience: "3+",
-    education: "Muhimbili University of Health and Allied Sciences",
-    membership: "Tanzania Ophthalmology Society",
-    href: "/doctors/zayd-sangey",
-    image: "/doctors/zayd-sangey.jpeg",
-    bio: "A compassionate ophthalmologist focused on improving vision through preventive, corrective, medical, and surgical eye care.",
-  },
-  {
-    name: "Dr. Harley H. Mkini",
-    title: "Optometrist",
-    specialty: ["Refraction", "Contact Lenses", "Low Vision", "Pediatric Optometry", "Diabetic Eye Clinic", "Glaucoma Clinic"],
-    experience: "4+",
-    education: "Kilimanjaro Christian Medical University College",
-    membership: "IACLE, Myopia Society",
-    href: "/doctors/harley-mkini",
-    image: "/doctors/harley-mkini.jpeg",
-    bio: "Optometrist and primary eye care provider experienced in refraction, contact lenses, low vision rehabilitation, glaucoma clinic support, and diabetic eye clinic support.",
-  },
-  {
-    name: "Dr. Michael Machimu",
-    title: "Optometrist",
-    specialty: ["Vision Testing", "Corrective Lenses", "Eye Condition Assessment", "Patient Eye Care", "Preventive Vision Care"],
-    experience: "3+",
-    education: "Kilimanjaro Christian Medical University College",
-    membership: "",
-    href: "/doctors/michael-machimu",
-    image: "/doctors/michael-machimu.jpeg",
-    bio: "A skilled optometrist providing professional vision assessment, corrective lens support, and patient-focused eye care services.",
-  },
-];
 
-export default function Doctors() {
+export default async function Doctors() {
+  const doctors = (await getDoctors()).map((d) => ({
+    ...d,
+    specialty: d.specialties,
+    href: `/doctors/${d.slug}`,
+    bio: d.shortBio || d.bio,
+  }));
   return (
     <section id="doctors" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-6">
@@ -89,7 +39,7 @@ export default function Doctors() {
                   alt={doc.name}
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                  className={`object-cover group-hover:scale-105 transition-transform duration-500 ${doc.name === "Dr. Harley H. Mkini" ? "object-center" : "object-top"}`}
+                  className={`object-cover group-hover:scale-105 transition-transform duration-500 ${doc.imagePosition === "center" ? "object-center" : "object-top"}`}
                 />
                 {/* Overlay at bottom */}
                 <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-[#e62d26] to-transparent" />

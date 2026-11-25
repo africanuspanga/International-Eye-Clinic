@@ -1,25 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
+import { getGallery, spanClass } from "@/lib/cms/content";
 
-const images = [
-  { src: "/images/new images/eye.jpg", alt: "Eye close-up", span: "col-span-2 row-span-2" },
-  { src: "/images/eye examination 1.jpg", alt: "Eye examination" },
-  { src: "/images/lasik 1.jpg", alt: "LASIK vision correction" },
-  { src: "/images/eye 2.jpg", alt: "Eye detail", span: "col-span-2" },
-  { src: "/images/new images/gallery-surgery-equipment.jpg", alt: "Surgical microscope suite", span: "row-span-2" },
-  { src: "/images/eye test 1.jpg", alt: "Eye test" },
-  { src: "/images/optic 4.jpg", alt: "Optic examination" },
-  { src: "/images/new images/gallery-doctors-team.jpg", alt: "Doctors with diagnostic equipment", span: "col-span-2" },
-  { src: "/images/lasik 2.jpg", alt: "Advanced laser surgery" },
-  { src: "/images/eye examination 6.jpg", alt: "Patient examination" },
-  { src: "/images/staff-3.jpg", alt: "Medical staff", span: "row-span-2" },
-  { src: "/images/new images/gallery-patient-glasses.jpg", alt: "Patient trying on glasses" },
-  { src: "/images/eye examination 8.jpg", alt: "Advanced eye exam" },
-  { src: "/images/new images/gallery-diagnostic-equipment.jpg", alt: "Diagnostic phoropter station" },
-  { src: "/images/eye test 2.jpg", alt: "Vision testing" },
-];
 
-export default function Gallery() {
+export default async function Gallery() {
+  const images = (await getGallery()).filter((img) => img.showOnHome);
+  if (images.length === 0) return null;
   return (
     <section id="gallery" className="py-20 bg-[#f5f6fa]">
       <div className="max-w-7xl mx-auto px-6">
@@ -35,7 +21,7 @@ export default function Gallery() {
 
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 auto-rows-[180px] gap-3">
           {images.map((img, i) => (
-            <div key={i} className={`relative overflow-hidden rounded-xl group ${img.span ?? ""}`}>
+            <div key={i} className={`relative overflow-hidden rounded-xl group ${spanClass(img.span)}`}>
               <Image src={img.src} alt={img.alt} fill className="object-cover group-hover:scale-105 transition-transform duration-500" sizes="25vw" />
               <div className="absolute inset-0 bg-[#e62d26]/0 group-hover:bg-[#e62d26]/40 transition-all duration-300" />
               <div className="absolute bottom-3 left-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">

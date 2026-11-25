@@ -1,5 +1,7 @@
 import { NextResponse } from "next/server";
-import { createClient } from "@/lib/supabase/server";
+import { getConditions, getDoctors, getPosts, getServicePages } from "@/lib/cms/content";
+
+export const revalidate = 3600;
 
 const baseUrl = "https://www.internationaleyehospital.com";
 
@@ -12,32 +14,8 @@ const staticRoutes = [
   { path: "/about/quality", priority: 0.6, changefreq: "monthly" },
   { path: "/about/why-us", priority: 0.6, changefreq: "monthly" },
   { path: "/services", priority: 0.9, changefreq: "weekly" },
-  { path: "/services/cataract", priority: 0.8, changefreq: "monthly" },
-  { path: "/services/glaucoma", priority: 0.8, changefreq: "monthly" },
-  { path: "/services/retina", priority: 0.8, changefreq: "monthly" },
-  { path: "/services/keratoconus", priority: 0.8, changefreq: "monthly" },
-  { path: "/services/cornea", priority: 0.8, changefreq: "monthly" },
-  { path: "/services/optic", priority: 0.7, changefreq: "monthly" },
-  { path: "/services/general-exam", priority: 0.8, changefreq: "monthly" },
   { path: "/services/eye-tests", priority: 0.7, changefreq: "monthly" },
-  { path: "/services/oct", priority: 0.7, changefreq: "monthly" },
-  { path: "/services/ffa", priority: 0.7, changefreq: "monthly" },
-  { path: "/services/corneal-topography", priority: 0.7, changefreq: "monthly" },
-  { path: "/services/keratometry", priority: 0.7, changefreq: "monthly" },
-  { path: "/services/pachymetry", priority: 0.7, changefreq: "monthly" },
-  { path: "/services/tonometry", priority: 0.7, changefreq: "monthly" },
-  { path: "/services/visual-field", priority: 0.7, changefreq: "monthly" },
-  { path: "/services/a-scan", priority: 0.7, changefreq: "monthly" },
-  { path: "/services/automated-refractor", priority: 0.7, changefreq: "monthly" },
-  { path: "/services/lens-meter", priority: 0.7, changefreq: "monthly" },
-  { path: "/services/argon-laser", priority: 0.7, changefreq: "monthly" },
-  { path: "/services/yag-laser", priority: 0.7, changefreq: "monthly" },
   { path: "/doctors", priority: 0.8, changefreq: "monthly" },
-  { path: "/doctors/muammer-coskun", priority: 0.7, changefreq: "monthly" },
-  { path: "/doctors/vangilisasi-msola", priority: 0.7, changefreq: "monthly" },
-  { path: "/doctors/zayd-sangey", priority: 0.7, changefreq: "monthly" },
-  { path: "/doctors/harley-mkini", priority: 0.7, changefreq: "monthly" },
-  { path: "/doctors/michael-machimu", priority: 0.7, changefreq: "monthly" },
   { path: "/news", priority: 0.7, changefreq: "weekly" },
   { path: "/news/blog", priority: 0.7, changefreq: "weekly" },
   { path: "/news/eye-conditions", priority: 0.8, changefreq: "weekly" },
@@ -47,79 +25,27 @@ const staticRoutes = [
 ];
 
 export async function GET() {
-  const supabase = await createClient();
-
   const today = new Date().toISOString().split("T")[0];
-
-  // Fetch dynamic content from Supabase
-  const [
-    { data: blogPosts },
-    { data: eyeConditions },
-    { data: doctors },
-  ] = await Promise.all([
-    supabase
-      .from("blog_posts")
-      .select("slug, updated_at")
-      .eq("is_published", true)
-      .order("published_date", { ascending: false }),
-    supabase
-      .from("eye_conditions")
-      .select("slug, updated_at")
-      .eq("is_published", true)
-      .order("sort_order", { ascending: true }),
-    supabase
-      .from("doctors")
-      .select("slug, updated_at")
-      .eq("is_active", true)
-      .order("sort_order", { ascending: true }),
+  const [posts, conditions, doctors, services] = await Promise.all([
+    getPosts(),
+    getConditions(),
+    getDoctors(),
+    getServicePages(),
   ]);
 
-  const dynamicUrls: string[] = [];
-
-  // Blog posts
-  if (blogPosts) {
-    for (const post of blogPosts) {
-      const lastmod = post.updated_at
-        ? post.updated_at.split("T")[0]
-        : today;
-      dynamicUrls.push(`  <url>
-    <loc>${baseUrl}/news/blog/${post.slug}</loc>
+  const entry = (path: string, lastmod: string, changefreq: string, priority: number) => `  <url>
+    <loc>${baseUrl}${encodeURI(path)}</loc>
     <lastmod>${lastmod}</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>`);
-    }
-  }
+    <changefreq>${changefreq}</changefreq>
+    <priority>${priority}</priority>
+  </url>`;
 
-  // Eye conditions
-  if (eyeConditions) {
-    for (const condition of eyeConditions) {
-      const lastmod = condition.updated_at
-        ? condition.updated_at.split("T")[0]
-        : today;
-      dynamicUrls.push(`  <url>
-    <loc>${baseUrl}/news/eye-conditions/${condition.slug}</loc>
-    <lastmod>${lastmod}</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>`);
-    }
-  }
-
-  // Doctors
-  if (doctors) {
-    for (const doctor of doctors) {
-      const lastmod = doctor.updated_at
-        ? doctor.updated_at.split("T")[0]
-        : today;
-      dynamicUrls.push(`  <url>
-    <loc>${baseUrl}/doctors/${doctor.slug}</loc>
-    <lastmod>${lastmod}</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>`);
-    }
-  }
+  const dynamicUrls: string[] = [
+    ...services.map((svc) => entry(`/services/${svc.slug}`, today, "monthly", svc.showInList ? 0.8 : 0.7)),
+    ...doctors.map((d) => entry(`/doctors/${d.slug}`, today, "monthly", 0.7)),
+    ...posts.map((p) => entry(`/news/blog/${p.slug}`, p.isoDate || today, "monthly", 0.6)),
+    ...conditions.map((c) => entry(`/news/eye-conditions/${c.slug}`, today, "monthly", 0.6)),
+  ];
 
   const staticUrls = staticRoutes.map(
     (route) => `  <url>

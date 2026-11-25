@@ -2,30 +2,26 @@
 
 import { useState, useEffect, useCallback } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { ChevronDown } from "lucide-react";
+import type { HeroSlide } from "@/lib/cms/content";
 
-const slides: { src: string; alt: string }[] = [
-  { src: "/images/hero/poster-glaucoma.png", alt: "Glaucoma — damage to the optic nerve that can lead to total loss of vision if not detected and treated early. Call 0784 104 300" },
-  { src: "/images/hero/poster-glaucoma-causes.png", alt: "Causes and symptoms of glaucoma — age, ethnicity and family history. Call 0784 104 300" },
-  { src: "/images/hero/poster-glaucoma-prevention.png", alt: "Glaucoma prevention and treatment — early detection through regular eye exams. Call 0784 104 300" },
-  { src: "/images/hero/poster-smart-lenses.png", alt: "Smart Lenses — faida za kutumia. Weka oda yako sasa" },
-];
 
 const SLIDE_INTERVAL = 5000;
 
-export default function Hero() {
+export default function Hero({ slides }: { slides: HeroSlide[] }) {
   const [current, setCurrent] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
 
   const nextSlide = useCallback(() => {
     setCurrent((prev) => (prev + 1) % slides.length);
-  }, []);
+  }, [slides.length]);
 
   useEffect(() => {
-    if (isPaused) return;
+    if (isPaused || slides.length < 2) return;
     const timer = setInterval(nextSlide, SLIDE_INTERVAL);
     return () => clearInterval(timer);
-  }, [isPaused, nextSlide]);
+  }, [isPaused, nextSlide, slides.length]);
 
   return (
     <section
@@ -37,7 +33,7 @@ export default function Hero() {
       {/* Slides */}
       {slides.map((slide, index) => (
         <div
-          key={slide.src}
+          key={`${slide.src}-${index}`}
           className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
             index === current ? "opacity-100 z-[1]" : "opacity-0 z-0"
           }`}
@@ -50,6 +46,14 @@ export default function Hero() {
             className="object-cover object-center"
             sizes="100vw"
           />
+          {slide.href && (
+            <Link
+              href={slide.href}
+              aria-label={slide.alt}
+              tabIndex={index === current ? 0 : -1}
+              className="absolute inset-0 z-[2]"
+            />
+          )}
         </div>
       ))}
 

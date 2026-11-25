@@ -1,34 +1,23 @@
-import { redirect } from "next/navigation";
-import { createClient } from "@/lib/supabase/server";
-import AdminSidebar from "./AdminSidebar";
 import type { Metadata } from "next";
+import { AdminShell } from "@/components/admin/AdminShell";
+import { requireAdmin } from "@/lib/cms/auth";
+import { SITE_ADMIN } from "@/lib/cms/collections";
 
 export const metadata: Metadata = {
-  title: "Admin Dashboard",
-  robots: {
-    index: false,
-    follow: false,
-  },
+  title: `Admin · ${SITE_ADMIN.name}`,
+  robots: { index: false, follow: false },
 };
 
-export default async function AdminLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
-  const supabase = await createClient();
-  const { data, error } = await supabase.auth.getUser();
-
-  if (!data.user) {
-    redirect("/login");
-  }
+export default async function AdminLayout({ children }: { children: React.ReactNode }) {
+  const { supabase, user } = await requireAdmin();
+  const { count } = await supabase
+    .from("submissions")
+    .select("id", { count: "exact", head: true })
+    .eq("status", "new");
 
   return (
-    <div className="min-h-screen bg-[#f5f6fa] flex">
-      <AdminSidebar userEmail={data.user.email || ""} />
-      <main className="flex-1 overflow-y-auto">
-        <div className="p-6 lg:p-10">{children}</div>
-      </main>
-    </div>
+    <AdminShell userEmail={user.email ?? ""} newSubmissions={count ?? 0}>
+      {children}
+    </AdminShell>
   );
 }

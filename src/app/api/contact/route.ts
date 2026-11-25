@@ -1,4 +1,5 @@
 import { Resend } from "resend";
+import { submitForm } from "@/lib/cms/submit";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
@@ -7,6 +8,16 @@ export async function POST(request: Request) {
     const body = await request.json();
 
     const { firstName, lastName, phone, email, subject, message } = body;
+
+    // Save to the admin inbox first, so the message is never lost.
+    const saved = await submitForm("contact", {
+      name: `${firstName ?? ""} ${lastName ?? ""}`.trim(),
+      phone,
+      email,
+      message,
+      subject,
+    });
+    if (!saved.ok) console.error("Contact inbox save failed:", saved.error);
 
     const { data, error } = await resend.emails.send({
       from: "contact@resend.dev",
@@ -53,6 +64,7 @@ export async function POST(request: Request) {
 
     if (error) {
       console.error("Resend error:", error);
+      if (saved.ok) return Response.json({ success: true, emailed: false });
       return Response.json({ error: error.message }, { status: 500 });
     }
 
