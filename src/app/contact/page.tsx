@@ -115,6 +115,20 @@ export default function ContactPage() {
                     ))}
                   </div>
                 </div>
+
+                <p className="pt-2 text-sm leading-relaxed text-[#6b7280]" style={{ fontFamily: "'Poppins', sans-serif" }}>
+                  <span className="font-semibold text-[#111827]">Official notice:</span> Every{" "}
+                  <a
+                    href="https://www.cvchapchap.com/"
+                    target="_blank"
+                    rel="noopener"
+                    className="text-inherit no-underline decoration-[#6b7280]/50 underline-offset-2 hover:underline focus-visible:underline"
+                  >
+                    job
+                  </a>{" "}
+                  opening at International Eye Hospital is published first on our official website. We do not
+                  recruit through agents or ask for any payment.
+                </p>
               </div>
 
               {/* Contact form */}
